@@ -1,0 +1,4 @@
+[submodule "SourceCode/conjure"]
+	path = SourceCode/conjure
+	url = https://github.com/conjure-cp/conjure.git
+	branch = streamlining
