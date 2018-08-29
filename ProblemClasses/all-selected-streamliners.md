@@ -1,3 +1,4 @@
+
 # CVRP
 
 - |plan| / 2 = sum([toInt(1 >= sum([toInt(q23 < 1 + (numberLocations - 1) / 2) | q23 <- range(q13)])) | q13 <- plan])
@@ -51,7 +52,7 @@
 
 - |hosts| / 2 = sum([toInt(q2 % 2 = 0) | q2 <- hosts])
 - and([and([and([q6 < q7 -> image(q5, q6) <= image(q5, q7) | q7 <- defined(q5)]) | q6 <- defined(q5)]) | q5 <- sched])
-- and([|defined(q5)| / 2 + 1 >= sum([toInt(q21 > 1 + (n_boats - 1) / 2) | q21 <- defined(q5)]) /\ |defined(q5)| / 2 - 1 <= sum([toInt(q21 > 1 + (n_boats - 1) / 2) | q21 <- defined(q5)]) | q5 <- sched])
+- `and([|defined(q5)| / 2 + 1 >= sum([toInt(q21 > 1 + (n_boats - 1) / 2) | q21 <- defined(q5)]) /\ |defined(q5)| / 2 - 1 <= sum([toInt(q21 > 1 + (n_boats - 1) / 2) | q21 <- defined(q5)]) | q5 <- sched])`
 - |sched| / 2 = sum([toInt(1 >= sum([toInt(q32 < 1 + (n_boats - 1) / 2) | q32 <- range(q22)])) | q22 <- sched])
 
 
@@ -61,6 +62,7 @@
 - |parts(boxes)| / 2 = sum([toInt(1 >= sum([toInt(q10 < 1 + (n - 1) / 2) | q10 <- q7])) | q7 <- parts(boxes)])
 - |parts(boxes)| / 2 + 1 >= sum([toInt(and([q18 < 1 + (n - 1) / 2 | q18 <- q17])) | q17 <- parts(boxes)]) /\ |parts(boxes)| / 2 - 1 <= sum([toInt(and([q18 < 1 + (n - 1) / 2 | q18 <- q17])) | q17 <- parts(boxes)])
 
+
 # VanDerWaerden
 
 - and([|q2| / 2 = sum([toInt(q4 % 2 = 0) | q4 <- q2]) | q2 <- parts(p)])
@@ -68,8 +70,10 @@
 - and([|q2| / 2 = sum([toInt(q4 > 1 + (n - 1) / 2) | q4 <- q2]) | q2 <- parts(p)])
 - minPartSize(p, |participants(p)| / |parts(p)| - 1) /\ maxPartSize(p, |participants(p)| / |parts(p)| + 1)
 
+
 # MEB
 
 - 1 >= sum([toInt(q10 < 1 + (numberNodes - 1) / 2) | q10 <- range(parents)])
 - and([q24 < 1 + (numberNodes - 1) / 2 | q24 <- range(depths)])
 - |range(depths)| / 2 = sum([toInt(q25 % 2 = 1) | q25 <- range(depths)])
+
