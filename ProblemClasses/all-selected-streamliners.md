@@ -12,7 +12,7 @@
 # EFPA
 
 - and([and([image(q1, min(defined(q1))) <= image(q1, q6) | q6 <- defined(q1)]) | q1 <- c])
-- and([|range(q1)| / 2 = sum([toInt(q10 % 2 = 0) | q10 <- range(q1)]) | q1 <- c])"},
+- and([|range(q1)| / 2 = sum([toInt(q10 % 2 = 0) | q10 <- range(q1)]) | q1 <- c])
 - 1 >= sum([toInt(and([and([q38 < q39 -> image(q35, q38) >= image(q35, q39) | q39 <- defined(q35)]) | q38 <- defined(q35)])) | q35 <- c])
 - 1 >= sum([toInt(and([q43 < 1 + (numChars - 1) / 2 | q43 <- range(q35)])) | q35 <- c])
 
