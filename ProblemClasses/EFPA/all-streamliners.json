@@ -1,0 +1,432 @@
+{"1": {"onVariable:" "c"
+       "groups:" ["FuncIncreaseDecrease"]
+       "constraint:" "and([and([and([q2 < q3 -> image(q1, q2) <= image(q1, q3)                    | q3 <- defined(q1)])               | q2 <- defined(q1)])          | q1 <- c])"},
+ "2": {"onVariable:" "c"
+       "groups:" ["FuncIncreaseDecrease"]
+       "constraint:" "and([and([and([q4 < q5 -> image(q1, q4) >= image(q1, q5)                    | q5 <- defined(q1)])               | q4 <- defined(q1)])          | q1 <- c])"},
+ "3": {"onVariable:" "c"
+       "groups:" ["FuncIncreaseDecrease"]
+       "constraint:" "and([and([image(q1, min(defined(q1))) <= image(q1, q6)               | q6 <- defined(q1)])          | q1 <- c])"},
+ "4": {"onVariable:" "c"
+       "groups:" ["FuncIncreaseDecrease"]
+       "constraint:" "and([and([image(q1, max(defined(q1))) >= image(q1, q7)               | q7 <- defined(q1)])          | q1 <- c])"},
+ "5": {"onVariable:" "c"
+       "groups:" ["IntOddEven"]
+       "constraint:" "and([and([q9 % 2 = 1 | q9 <- range(q1)]) | q1 <- c])"},
+ "6": {"onVariable:" "c"
+       "groups:" ["IntOddEven"]
+       "constraint:" "and([and([q9 % 2 = 0 | q9 <- range(q1)]) | q1 <- c])"},
+ "7": {"onVariable:" "c"
+       "groups:" ["IntLowHigh"]
+       "constraint:" "and([and([q9 < 1 + (numChars - 1) / 2 | q9 <- range(q1)])          | q1 <- c])"},
+ "8": {"onVariable:" "c"
+       "groups:" ["IntLowHigh"]
+       "constraint:" "and([and([q9 > 1 + (numChars - 1) / 2 | q9 <- range(q1)])          | q1 <- c])"},
+ "9": {"onVariable:" "c"
+       "groups:" ["IntOddEven"]
+       "constraint:" "and([|range(q1)| / 2 = sum([toInt(q10 % 2 = 1) | q10 <- range(q1)])          | q1 <- c])"},
+ "10": {"onVariable:" "c"
+        "groups:" ["IntOddEven"]
+        "constraint:" "and([|range(q1)| / 2 = sum([toInt(q10 % 2 = 0) | q10 <- range(q1)])          | q1 <- c])"},
+ "11": {"onVariable:" "c"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "and([|range(q1)| / 2 =      sum([toInt(q10 < 1 + (numChars - 1) / 2) | q10 <- range(q1)])          | q1 <- c])"},
+ "12": {"onVariable:" "c"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "and([|range(q1)| / 2 =      sum([toInt(q10 > 1 + (numChars - 1) / 2) | q10 <- range(q1)])          | q1 <- c])"},
+ "13": {"onVariable:" "c"
+        "groups:" ["IntOddEven"]
+        "constraint:" "and([1 >= sum([toInt(q11 % 2 = 1) | q11 <- range(q1)]) | q1 <- c])"},
+ "14": {"onVariable:" "c"
+        "groups:" ["IntOddEven"]
+        "constraint:" "and([1 >= sum([toInt(q11 % 2 = 0) | q11 <- range(q1)]) | q1 <- c])"},
+ "15": {"onVariable:" "c"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "and([1 >=      sum([toInt(q11 < 1 + (numChars - 1) / 2) | q11 <- range(q1)])          | q1 <- c])"},
+ "16": {"onVariable:" "c"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "and([1 >=      sum([toInt(q11 > 1 + (numChars - 1) / 2) | q11 <- range(q1)])          | q1 <- c])"},
+ "17": {"onVariable:" "c"
+        "groups:" ["IntOddEven"]
+        "constraint:" "and([|range(q1)| / 2 + 1 >=      sum([toInt(q12 % 2 = 1) | q12 <- range(q1)])      /\\      |range(q1)| / 2 - 1 <= sum([toInt(q12 % 2 = 1) | q12 <- range(q1)])          | q1 <- c])"},
+ "18": {"onVariable:" "c"
+        "groups:" ["IntOddEven"]
+        "constraint:" "and([|range(q1)| / 2 + 1 >=      sum([toInt(q12 % 2 = 0) | q12 <- range(q1)])      /\\      |range(q1)| / 2 - 1 <= sum([toInt(q12 % 2 = 0) | q12 <- range(q1)])          | q1 <- c])"},
+ "19": {"onVariable:" "c"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "and([|range(q1)| / 2 + 1 >=      sum([toInt(q12 < 1 + (numChars - 1) / 2) | q12 <- range(q1)])      /\\      |range(q1)| / 2 - 1 <=      sum([toInt(q12 < 1 + (numChars - 1) / 2) | q12 <- range(q1)])          | q1 <- c])"},
+ "20": {"onVariable:" "c"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "and([|range(q1)| / 2 + 1 >=      sum([toInt(q12 > 1 + (numChars - 1) / 2) | q12 <- range(q1)])      /\\      |range(q1)| / 2 - 1 <=      sum([toInt(q12 > 1 + (numChars - 1) / 2) | q12 <- range(q1)])          | q1 <- c])"},
+ "21": {"onVariable:" "c"
+        "groups:" ["IntOddEven"]
+        "constraint:" "and([and([q14 % 2 = 1 | q14 <- defined(q1)]) | q1 <- c])"},
+ "22": {"onVariable:" "c"
+        "groups:" ["IntOddEven"]
+        "constraint:" "and([and([q14 % 2 = 0 | q14 <- defined(q1)]) | q1 <- c])"},
+ "23": {"onVariable:" "c"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "and([and([q14 < 1 + (wordLength - 1) / 2 | q14 <- defined(q1)])          | q1 <- c])"},
+ "24": {"onVariable:" "c"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "and([and([q14 > 1 + (wordLength - 1) / 2 | q14 <- defined(q1)])          | q1 <- c])"},
+ "25": {"onVariable:" "c"
+        "groups:" ["IntOddEven"]
+        "constraint:" "and([|defined(q1)| / 2 =      sum([toInt(q15 % 2 = 1) | q15 <- defined(q1)])          | q1 <- c])"},
+ "26": {"onVariable:" "c"
+        "groups:" ["IntOddEven"]
+        "constraint:" "and([|defined(q1)| / 2 =      sum([toInt(q15 % 2 = 0) | q15 <- defined(q1)])          | q1 <- c])"},
+ "27": {"onVariable:" "c"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "and([|defined(q1)| / 2 =      sum([toInt(q15 < 1 + (wordLength - 1) / 2) | q15 <- defined(q1)])          | q1 <- c])"},
+ "28": {"onVariable:" "c"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "and([|defined(q1)| / 2 =      sum([toInt(q15 > 1 + (wordLength - 1) / 2) | q15 <- defined(q1)])          | q1 <- c])"},
+ "29": {"onVariable:" "c"
+        "groups:" ["IntOddEven"]
+        "constraint:" "and([1 >= sum([toInt(q16 % 2 = 1) | q16 <- defined(q1)])          | q1 <- c])"},
+ "30": {"onVariable:" "c"
+        "groups:" ["IntOddEven"]
+        "constraint:" "and([1 >= sum([toInt(q16 % 2 = 0) | q16 <- defined(q1)])          | q1 <- c])"},
+ "31": {"onVariable:" "c"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "and([1 >=      sum([toInt(q16 < 1 + (wordLength - 1) / 2) | q16 <- defined(q1)])          | q1 <- c])"},
+ "32": {"onVariable:" "c"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "and([1 >=      sum([toInt(q16 > 1 + (wordLength - 1) / 2) | q16 <- defined(q1)])          | q1 <- c])"},
+ "33": {"onVariable:" "c"
+        "groups:" ["IntOddEven"]
+        "constraint:" "and([|defined(q1)| / 2 + 1 >=      sum([toInt(q17 % 2 = 1) | q17 <- defined(q1)])      /\\      |defined(q1)| / 2 - 1 <=      sum([toInt(q17 % 2 = 1) | q17 <- defined(q1)])          | q1 <- c])"},
+ "34": {"onVariable:" "c"
+        "groups:" ["IntOddEven"]
+        "constraint:" "and([|defined(q1)| / 2 + 1 >=      sum([toInt(q17 % 2 = 0) | q17 <- defined(q1)])      /\\      |defined(q1)| / 2 - 1 <=      sum([toInt(q17 % 2 = 0) | q17 <- defined(q1)])          | q1 <- c])"},
+ "35": {"onVariable:" "c"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "and([|defined(q1)| / 2 + 1 >=      sum([toInt(q17 < 1 + (wordLength - 1) / 2) | q17 <- defined(q1)])      /\\      |defined(q1)| / 2 - 1 <=      sum([toInt(q17 < 1 + (wordLength - 1) / 2) | q17 <- defined(q1)])          | q1 <- c])"},
+ "36": {"onVariable:" "c"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "and([|defined(q1)| / 2 + 1 >=      sum([toInt(q17 > 1 + (wordLength - 1) / 2) | q17 <- defined(q1)])      /\\      |defined(q1)| / 2 - 1 <=      sum([toInt(q17 > 1 + (wordLength - 1) / 2) | q17 <- defined(q1)])          | q1 <- c])"},
+ "37": {"onVariable:" "c"
+        "groups:" ["FuncIncreaseDecrease"]
+        "constraint:" "|c| / 2 = sum([toInt(and([and([q19 < q20 ->                      image(q18, q19) <= image(q18, q20)                          | q20 <- defined(q18)])                     | q19 <- defined(q18)]))          | q18 <- c])"},
+ "38": {"onVariable:" "c"
+        "groups:" ["FuncIncreaseDecrease"]
+        "constraint:" "|c| / 2 = sum([toInt(and([and([q21 < q22 ->                      image(q18, q21) >= image(q18, q22)                          | q22 <- defined(q18)])                     | q21 <- defined(q18)]))          | q18 <- c])"},
+ "39": {"onVariable:" "c"
+        "groups:" ["FuncIncreaseDecrease"]
+        "constraint:" "|c| / 2 = sum([toInt(and([image(q18, min(defined(q18))) <= image(q18, q23)                     | q23 <- defined(q18)]))          | q18 <- c])"},
+ "40": {"onVariable:" "c"
+        "groups:" ["FuncIncreaseDecrease"]
+        "constraint:" "|c| / 2 = sum([toInt(and([image(q18, max(defined(q18))) >= image(q18, q24)                     | q24 <- defined(q18)]))          | q18 <- c])"},
+ "41": {"onVariable:" "c"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|c| / 2 = sum([toInt(and([q26 % 2 = 1 | q26 <- range(q18)])) | q18 <- c])"},
+ "42": {"onVariable:" "c"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|c| / 2 = sum([toInt(and([q26 % 2 = 0 | q26 <- range(q18)])) | q18 <- c])"},
+ "43": {"onVariable:" "c"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|c| / 2 = sum([toInt(and([q26 < 1 + (numChars - 1) / 2 | q26 <- range(q18)]))          | q18 <- c])"},
+ "44": {"onVariable:" "c"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|c| / 2 = sum([toInt(and([q26 > 1 + (numChars - 1) / 2 | q26 <- range(q18)]))          | q18 <- c])"},
+ "45": {"onVariable:" "c"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|c| / 2 = sum([toInt(|range(q18)| / 2 =            sum([toInt(q27 % 2 = 1) | q27 <- range(q18)]))          | q18 <- c])"},
+ "46": {"onVariable:" "c"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|c| / 2 = sum([toInt(|range(q18)| / 2 =            sum([toInt(q27 % 2 = 0) | q27 <- range(q18)]))          | q18 <- c])"},
+ "47": {"onVariable:" "c"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|c| / 2 = sum([toInt(|range(q18)| / 2 =            sum([toInt(q27 < 1 + (numChars - 1) / 2) | q27 <- range(q18)]))          | q18 <- c])"},
+ "48": {"onVariable:" "c"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|c| / 2 = sum([toInt(|range(q18)| / 2 =            sum([toInt(q27 > 1 + (numChars - 1) / 2) | q27 <- range(q18)]))          | q18 <- c])"},
+ "49": {"onVariable:" "c"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|c| / 2 = sum([toInt(1 >= sum([toInt(q28 % 2 = 1) | q28 <- range(q18)]))          | q18 <- c])"},
+ "50": {"onVariable:" "c"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|c| / 2 = sum([toInt(1 >= sum([toInt(q28 % 2 = 0) | q28 <- range(q18)]))          | q18 <- c])"},
+ "51": {"onVariable:" "c"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|c| / 2 = sum([toInt(1 >=            sum([toInt(q28 < 1 + (numChars - 1) / 2) | q28 <- range(q18)]))          | q18 <- c])"},
+ "52": {"onVariable:" "c"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|c| / 2 = sum([toInt(1 >=            sum([toInt(q28 > 1 + (numChars - 1) / 2) | q28 <- range(q18)]))          | q18 <- c])"},
+ "53": {"onVariable:" "c"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|c| / 2 = sum([toInt(|range(q18)| / 2 + 1 >=            sum([toInt(q29 % 2 = 1) | q29 <- range(q18)])            /\\            |range(q18)| / 2 - 1 <=            sum([toInt(q29 % 2 = 1) | q29 <- range(q18)]))          | q18 <- c])"},
+ "54": {"onVariable:" "c"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|c| / 2 = sum([toInt(|range(q18)| / 2 + 1 >=            sum([toInt(q29 % 2 = 0) | q29 <- range(q18)])            /\\            |range(q18)| / 2 - 1 <=            sum([toInt(q29 % 2 = 0) | q29 <- range(q18)]))          | q18 <- c])"},
+ "55": {"onVariable:" "c"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|c| / 2 = sum([toInt(|range(q18)| / 2 + 1 >=            sum([toInt(q29 < 1 + (numChars - 1) / 2) | q29 <- range(q18)])            /\\            |range(q18)| / 2 - 1 <=            sum([toInt(q29 < 1 + (numChars - 1) / 2) | q29 <- range(q18)]))          | q18 <- c])"},
+ "56": {"onVariable:" "c"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|c| / 2 = sum([toInt(|range(q18)| / 2 + 1 >=            sum([toInt(q29 > 1 + (numChars - 1) / 2) | q29 <- range(q18)])            /\\            |range(q18)| / 2 - 1 <=            sum([toInt(q29 > 1 + (numChars - 1) / 2) | q29 <- range(q18)]))          | q18 <- c])"},
+ "57": {"onVariable:" "c"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|c| / 2 = sum([toInt(and([q31 % 2 = 1 | q31 <- defined(q18)])) | q18 <- c])"},
+ "58": {"onVariable:" "c"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|c| / 2 = sum([toInt(and([q31 % 2 = 0 | q31 <- defined(q18)])) | q18 <- c])"},
+ "59": {"onVariable:" "c"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|c| / 2 = sum([toInt(and([q31 < 1 + (wordLength - 1) / 2                     | q31 <- defined(q18)]))          | q18 <- c])"},
+ "60": {"onVariable:" "c"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|c| / 2 = sum([toInt(and([q31 > 1 + (wordLength - 1) / 2                     | q31 <- defined(q18)]))          | q18 <- c])"},
+ "61": {"onVariable:" "c"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|c| / 2 = sum([toInt(|defined(q18)| / 2 =            sum([toInt(q32 % 2 = 1) | q32 <- defined(q18)]))          | q18 <- c])"},
+ "62": {"onVariable:" "c"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|c| / 2 = sum([toInt(|defined(q18)| / 2 =            sum([toInt(q32 % 2 = 0) | q32 <- defined(q18)]))          | q18 <- c])"},
+ "63": {"onVariable:" "c"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|c| / 2 = sum([toInt(|defined(q18)| / 2 =            sum([toInt(q32 < 1 + (wordLength - 1) / 2) | q32 <- defined(q18)]))          | q18 <- c])"},
+ "64": {"onVariable:" "c"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|c| / 2 = sum([toInt(|defined(q18)| / 2 =            sum([toInt(q32 > 1 + (wordLength - 1) / 2) | q32 <- defined(q18)]))          | q18 <- c])"},
+ "65": {"onVariable:" "c"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|c| / 2 = sum([toInt(1 >= sum([toInt(q33 % 2 = 1) | q33 <- defined(q18)]))          | q18 <- c])"},
+ "66": {"onVariable:" "c"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|c| / 2 = sum([toInt(1 >= sum([toInt(q33 % 2 = 0) | q33 <- defined(q18)]))          | q18 <- c])"},
+ "67": {"onVariable:" "c"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|c| / 2 = sum([toInt(1 >=            sum([toInt(q33 < 1 + (wordLength - 1) / 2) | q33 <- defined(q18)]))          | q18 <- c])"},
+ "68": {"onVariable:" "c"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|c| / 2 = sum([toInt(1 >=            sum([toInt(q33 > 1 + (wordLength - 1) / 2) | q33 <- defined(q18)]))          | q18 <- c])"},
+ "69": {"onVariable:" "c"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|c| / 2 = sum([toInt(|defined(q18)| / 2 + 1 >=            sum([toInt(q34 % 2 = 1) | q34 <- defined(q18)])            /\\            |defined(q18)| / 2 - 1 <=            sum([toInt(q34 % 2 = 1) | q34 <- defined(q18)]))          | q18 <- c])"},
+ "70": {"onVariable:" "c"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|c| / 2 = sum([toInt(|defined(q18)| / 2 + 1 >=            sum([toInt(q34 % 2 = 0) | q34 <- defined(q18)])            /\\            |defined(q18)| / 2 - 1 <=            sum([toInt(q34 % 2 = 0) | q34 <- defined(q18)]))          | q18 <- c])"},
+ "71": {"onVariable:" "c"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|c| / 2 = sum([toInt(|defined(q18)| / 2 + 1 >=            sum([toInt(q34 < 1 + (wordLength - 1) / 2) | q34 <- defined(q18)])            /\\            |defined(q18)| / 2 - 1 <=            sum([toInt(q34 < 1 + (wordLength - 1) / 2) | q34 <- defined(q18)]))          | q18 <- c])"},
+ "72": {"onVariable:" "c"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|c| / 2 = sum([toInt(|defined(q18)| / 2 + 1 >=            sum([toInt(q34 > 1 + (wordLength - 1) / 2) | q34 <- defined(q18)])            /\\            |defined(q18)| / 2 - 1 <=            sum([toInt(q34 > 1 + (wordLength - 1) / 2) | q34 <- defined(q18)]))          | q18 <- c])"},
+ "73": {"onVariable:" "c"
+        "groups:" ["FuncIncreaseDecrease"]
+        "constraint:" "1 >= sum([toInt(and([and([q36 < q37 ->                      image(q35, q36) <= image(q35, q37)                          | q37 <- defined(q35)])                     | q36 <- defined(q35)]))          | q35 <- c])"},
+ "74": {"onVariable:" "c"
+        "groups:" ["FuncIncreaseDecrease"]
+        "constraint:" "1 >= sum([toInt(and([and([q38 < q39 ->                      image(q35, q38) >= image(q35, q39)                          | q39 <- defined(q35)])                     | q38 <- defined(q35)]))          | q35 <- c])"},
+ "75": {"onVariable:" "c"
+        "groups:" ["FuncIncreaseDecrease"]
+        "constraint:" "1 >= sum([toInt(and([image(q35, min(defined(q35))) <= image(q35, q40)                     | q40 <- defined(q35)]))          | q35 <- c])"},
+ "76": {"onVariable:" "c"
+        "groups:" ["FuncIncreaseDecrease"]
+        "constraint:" "1 >= sum([toInt(and([image(q35, max(defined(q35))) >= image(q35, q41)                     | q41 <- defined(q35)]))          | q35 <- c])"},
+ "77": {"onVariable:" "c"
+        "groups:" ["IntOddEven"]
+        "constraint:" "1 >= sum([toInt(and([q43 % 2 = 1 | q43 <- range(q35)])) | q35 <- c])"},
+ "78": {"onVariable:" "c"
+        "groups:" ["IntOddEven"]
+        "constraint:" "1 >= sum([toInt(and([q43 % 2 = 0 | q43 <- range(q35)])) | q35 <- c])"},
+ "79": {"onVariable:" "c"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "1 >= sum([toInt(and([q43 < 1 + (numChars - 1) / 2 | q43 <- range(q35)]))          | q35 <- c])"},
+ "80": {"onVariable:" "c"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "1 >= sum([toInt(and([q43 > 1 + (numChars - 1) / 2 | q43 <- range(q35)]))          | q35 <- c])"},
+ "81": {"onVariable:" "c"
+        "groups:" ["IntOddEven"]
+        "constraint:" "1 >= sum([toInt(|range(q35)| / 2 =            sum([toInt(q44 % 2 = 1) | q44 <- range(q35)]))          | q35 <- c])"},
+ "82": {"onVariable:" "c"
+        "groups:" ["IntOddEven"]
+        "constraint:" "1 >= sum([toInt(|range(q35)| / 2 =            sum([toInt(q44 % 2 = 0) | q44 <- range(q35)]))          | q35 <- c])"},
+ "83": {"onVariable:" "c"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "1 >= sum([toInt(|range(q35)| / 2 =            sum([toInt(q44 < 1 + (numChars - 1) / 2) | q44 <- range(q35)]))          | q35 <- c])"},
+ "84": {"onVariable:" "c"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "1 >= sum([toInt(|range(q35)| / 2 =            sum([toInt(q44 > 1 + (numChars - 1) / 2) | q44 <- range(q35)]))          | q35 <- c])"},
+ "85": {"onVariable:" "c"
+        "groups:" ["IntOddEven"]
+        "constraint:" "1 >= sum([toInt(1 >= sum([toInt(q45 % 2 = 1) | q45 <- range(q35)]))          | q35 <- c])"},
+ "86": {"onVariable:" "c"
+        "groups:" ["IntOddEven"]
+        "constraint:" "1 >= sum([toInt(1 >= sum([toInt(q45 % 2 = 0) | q45 <- range(q35)]))          | q35 <- c])"},
+ "87": {"onVariable:" "c"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "1 >= sum([toInt(1 >=            sum([toInt(q45 < 1 + (numChars - 1) / 2) | q45 <- range(q35)]))          | q35 <- c])"},
+ "88": {"onVariable:" "c"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "1 >= sum([toInt(1 >=            sum([toInt(q45 > 1 + (numChars - 1) / 2) | q45 <- range(q35)]))          | q35 <- c])"},
+ "89": {"onVariable:" "c"
+        "groups:" ["IntOddEven"]
+        "constraint:" "1 >= sum([toInt(|range(q35)| / 2 + 1 >=            sum([toInt(q46 % 2 = 1) | q46 <- range(q35)])            /\\            |range(q35)| / 2 - 1 <=            sum([toInt(q46 % 2 = 1) | q46 <- range(q35)]))          | q35 <- c])"},
+ "90": {"onVariable:" "c"
+        "groups:" ["IntOddEven"]
+        "constraint:" "1 >= sum([toInt(|range(q35)| / 2 + 1 >=            sum([toInt(q46 % 2 = 0) | q46 <- range(q35)])            /\\            |range(q35)| / 2 - 1 <=            sum([toInt(q46 % 2 = 0) | q46 <- range(q35)]))          | q35 <- c])"},
+ "91": {"onVariable:" "c"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "1 >= sum([toInt(|range(q35)| / 2 + 1 >=            sum([toInt(q46 < 1 + (numChars - 1) / 2) | q46 <- range(q35)])            /\\            |range(q35)| / 2 - 1 <=            sum([toInt(q46 < 1 + (numChars - 1) / 2) | q46 <- range(q35)]))          | q35 <- c])"},
+ "92": {"onVariable:" "c"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "1 >= sum([toInt(|range(q35)| / 2 + 1 >=            sum([toInt(q46 > 1 + (numChars - 1) / 2) | q46 <- range(q35)])            /\\            |range(q35)| / 2 - 1 <=            sum([toInt(q46 > 1 + (numChars - 1) / 2) | q46 <- range(q35)]))          | q35 <- c])"},
+ "93": {"onVariable:" "c"
+        "groups:" ["IntOddEven"]
+        "constraint:" "1 >= sum([toInt(and([q48 % 2 = 1 | q48 <- defined(q35)])) | q35 <- c])"},
+ "94": {"onVariable:" "c"
+        "groups:" ["IntOddEven"]
+        "constraint:" "1 >= sum([toInt(and([q48 % 2 = 0 | q48 <- defined(q35)])) | q35 <- c])"},
+ "95": {"onVariable:" "c"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "1 >= sum([toInt(and([q48 < 1 + (wordLength - 1) / 2                     | q48 <- defined(q35)]))          | q35 <- c])"},
+ "96": {"onVariable:" "c"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "1 >= sum([toInt(and([q48 > 1 + (wordLength - 1) / 2                     | q48 <- defined(q35)]))          | q35 <- c])"},
+ "97": {"onVariable:" "c"
+        "groups:" ["IntOddEven"]
+        "constraint:" "1 >= sum([toInt(|defined(q35)| / 2 =            sum([toInt(q49 % 2 = 1) | q49 <- defined(q35)]))          | q35 <- c])"},
+ "98": {"onVariable:" "c"
+        "groups:" ["IntOddEven"]
+        "constraint:" "1 >= sum([toInt(|defined(q35)| / 2 =            sum([toInt(q49 % 2 = 0) | q49 <- defined(q35)]))          | q35 <- c])"},
+ "99": {"onVariable:" "c"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "1 >= sum([toInt(|defined(q35)| / 2 =            sum([toInt(q49 < 1 + (wordLength - 1) / 2) | q49 <- defined(q35)]))          | q35 <- c])"},
+ "100": {"onVariable:" "c"
+         "groups:" ["IntLowHigh"]
+         "constraint:" "1 >= sum([toInt(|defined(q35)| / 2 =            sum([toInt(q49 > 1 + (wordLength - 1) / 2) | q49 <- defined(q35)]))          | q35 <- c])"},
+ "101": {"onVariable:" "c"
+         "groups:" ["IntOddEven"]
+         "constraint:" "1 >= sum([toInt(1 >= sum([toInt(q50 % 2 = 1) | q50 <- defined(q35)]))          | q35 <- c])"},
+ "102": {"onVariable:" "c"
+         "groups:" ["IntOddEven"]
+         "constraint:" "1 >= sum([toInt(1 >= sum([toInt(q50 % 2 = 0) | q50 <- defined(q35)]))          | q35 <- c])"},
+ "103": {"onVariable:" "c"
+         "groups:" ["IntLowHigh"]
+         "constraint:" "1 >= sum([toInt(1 >=            sum([toInt(q50 < 1 + (wordLength - 1) / 2) | q50 <- defined(q35)]))          | q35 <- c])"},
+ "104": {"onVariable:" "c"
+         "groups:" ["IntLowHigh"]
+         "constraint:" "1 >= sum([toInt(1 >=            sum([toInt(q50 > 1 + (wordLength - 1) / 2) | q50 <- defined(q35)]))          | q35 <- c])"},
+ "105": {"onVariable:" "c"
+         "groups:" ["IntOddEven"]
+         "constraint:" "1 >= sum([toInt(|defined(q35)| / 2 + 1 >=            sum([toInt(q51 % 2 = 1) | q51 <- defined(q35)])            /\\            |defined(q35)| / 2 - 1 <=            sum([toInt(q51 % 2 = 1) | q51 <- defined(q35)]))          | q35 <- c])"},
+ "106": {"onVariable:" "c"
+         "groups:" ["IntOddEven"]
+         "constraint:" "1 >= sum([toInt(|defined(q35)| / 2 + 1 >=            sum([toInt(q51 % 2 = 0) | q51 <- defined(q35)])            /\\            |defined(q35)| / 2 - 1 <=            sum([toInt(q51 % 2 = 0) | q51 <- defined(q35)]))          | q35 <- c])"},
+ "107": {"onVariable:" "c"
+         "groups:" ["IntLowHigh"]
+         "constraint:" "1 >= sum([toInt(|defined(q35)| / 2 + 1 >=            sum([toInt(q51 < 1 + (wordLength - 1) / 2) | q51 <- defined(q35)])            /\\            |defined(q35)| / 2 - 1 <=            sum([toInt(q51 < 1 + (wordLength - 1) / 2) | q51 <- defined(q35)]))          | q35 <- c])"},
+ "108": {"onVariable:" "c"
+         "groups:" ["IntLowHigh"]
+         "constraint:" "1 >= sum([toInt(|defined(q35)| / 2 + 1 >=            sum([toInt(q51 > 1 + (wordLength - 1) / 2) | q51 <- defined(q35)])            /\\            |defined(q35)| / 2 - 1 <=            sum([toInt(q51 > 1 + (wordLength - 1) / 2) | q51 <- defined(q35)]))          | q35 <- c])"},
+ "109": {"onVariable:" "c"
+         "groups:" ["FuncIncreaseDecrease"]
+         "constraint:" "|c| / 2 + 1 >= sum([toInt(and([and([q53 < q54 ->                      image(q52, q53) <= image(q52, q54)                          | q54 <- defined(q52)])                     | q53 <- defined(q52)]))          | q52 <- c]) /\\ |c| / 2 - 1 <= sum([toInt(and([and([q53 < q54 ->                      image(q52, q53) <= image(q52, q54)                          | q54 <- defined(q52)])                     | q53 <- defined(q52)]))          | q52 <- c])"},
+ "110": {"onVariable:" "c"
+         "groups:" ["FuncIncreaseDecrease"]
+         "constraint:" "|c| / 2 + 1 >= sum([toInt(and([and([q55 < q56 ->                      image(q52, q55) >= image(q52, q56)                          | q56 <- defined(q52)])                     | q55 <- defined(q52)]))          | q52 <- c]) /\\ |c| / 2 - 1 <= sum([toInt(and([and([q55 < q56 ->                      image(q52, q55) >= image(q52, q56)                          | q56 <- defined(q52)])                     | q55 <- defined(q52)]))          | q52 <- c])"},
+ "111": {"onVariable:" "c"
+         "groups:" ["FuncIncreaseDecrease"]
+         "constraint:" "|c| / 2 + 1 >= sum([toInt(and([image(q52, min(defined(q52))) <= image(q52, q57)                     | q57 <- defined(q52)]))          | q52 <- c]) /\\ |c| / 2 - 1 <= sum([toInt(and([image(q52, min(defined(q52))) <= image(q52, q57)                     | q57 <- defined(q52)]))          | q52 <- c])"},
+ "112": {"onVariable:" "c"
+         "groups:" ["FuncIncreaseDecrease"]
+         "constraint:" "|c| / 2 + 1 >= sum([toInt(and([image(q52, max(defined(q52))) >= image(q52, q58)                     | q58 <- defined(q52)]))          | q52 <- c]) /\\ |c| / 2 - 1 <= sum([toInt(and([image(q52, max(defined(q52))) >= image(q52, q58)                     | q58 <- defined(q52)]))          | q52 <- c])"},
+ "113": {"onVariable:" "c"
+         "groups:" ["IntOddEven"]
+         "constraint:" "|c| / 2 + 1 >= sum([toInt(and([q60 % 2 = 1 | q60 <- range(q52)])) | q52 <- c]) /\\ |c| / 2 - 1 <= sum([toInt(and([q60 % 2 = 1 | q60 <- range(q52)])) | q52 <- c])"},
+ "114": {"onVariable:" "c"
+         "groups:" ["IntOddEven"]
+         "constraint:" "|c| / 2 + 1 >= sum([toInt(and([q60 % 2 = 0 | q60 <- range(q52)])) | q52 <- c]) /\\ |c| / 2 - 1 <= sum([toInt(and([q60 % 2 = 0 | q60 <- range(q52)])) | q52 <- c])"},
+ "115": {"onVariable:" "c"
+         "groups:" ["IntLowHigh"]
+         "constraint:" "|c| / 2 + 1 >= sum([toInt(and([q60 < 1 + (numChars - 1) / 2 | q60 <- range(q52)]))          | q52 <- c]) /\\ |c| / 2 - 1 <= sum([toInt(and([q60 < 1 + (numChars - 1) / 2 | q60 <- range(q52)]))          | q52 <- c])"},
+ "116": {"onVariable:" "c"
+         "groups:" ["IntLowHigh"]
+         "constraint:" "|c| / 2 + 1 >= sum([toInt(and([q60 > 1 + (numChars - 1) / 2 | q60 <- range(q52)]))          | q52 <- c]) /\\ |c| / 2 - 1 <= sum([toInt(and([q60 > 1 + (numChars - 1) / 2 | q60 <- range(q52)]))          | q52 <- c])"},
+ "117": {"onVariable:" "c"
+         "groups:" ["IntOddEven"]
+         "constraint:" "|c| / 2 + 1 >= sum([toInt(|range(q52)| / 2 =            sum([toInt(q61 % 2 = 1) | q61 <- range(q52)]))          | q52 <- c]) /\\ |c| / 2 - 1 <= sum([toInt(|range(q52)| / 2 =            sum([toInt(q61 % 2 = 1) | q61 <- range(q52)]))          | q52 <- c])"},
+ "118": {"onVariable:" "c"
+         "groups:" ["IntOddEven"]
+         "constraint:" "|c| / 2 + 1 >= sum([toInt(|range(q52)| / 2 =            sum([toInt(q61 % 2 = 0) | q61 <- range(q52)]))          | q52 <- c]) /\\ |c| / 2 - 1 <= sum([toInt(|range(q52)| / 2 =            sum([toInt(q61 % 2 = 0) | q61 <- range(q52)]))          | q52 <- c])"},
+ "119": {"onVariable:" "c"
+         "groups:" ["IntLowHigh"]
+         "constraint:" "|c| / 2 + 1 >= sum([toInt(|range(q52)| / 2 =            sum([toInt(q61 < 1 + (numChars - 1) / 2) | q61 <- range(q52)]))          | q52 <- c]) /\\ |c| / 2 - 1 <= sum([toInt(|range(q52)| / 2 =            sum([toInt(q61 < 1 + (numChars - 1) / 2) | q61 <- range(q52)]))          | q52 <- c])"},
+ "120": {"onVariable:" "c"
+         "groups:" ["IntLowHigh"]
+         "constraint:" "|c| / 2 + 1 >= sum([toInt(|range(q52)| / 2 =            sum([toInt(q61 > 1 + (numChars - 1) / 2) | q61 <- range(q52)]))          | q52 <- c]) /\\ |c| / 2 - 1 <= sum([toInt(|range(q52)| / 2 =            sum([toInt(q61 > 1 + (numChars - 1) / 2) | q61 <- range(q52)]))          | q52 <- c])"},
+ "121": {"onVariable:" "c"
+         "groups:" ["IntOddEven"]
+         "constraint:" "|c| / 2 + 1 >= sum([toInt(1 >= sum([toInt(q62 % 2 = 1) | q62 <- range(q52)]))          | q52 <- c]) /\\ |c| / 2 - 1 <= sum([toInt(1 >= sum([toInt(q62 % 2 = 1) | q62 <- range(q52)]))          | q52 <- c])"},
+ "122": {"onVariable:" "c"
+         "groups:" ["IntOddEven"]
+         "constraint:" "|c| / 2 + 1 >= sum([toInt(1 >= sum([toInt(q62 % 2 = 0) | q62 <- range(q52)]))          | q52 <- c]) /\\ |c| / 2 - 1 <= sum([toInt(1 >= sum([toInt(q62 % 2 = 0) | q62 <- range(q52)]))          | q52 <- c])"},
+ "123": {"onVariable:" "c"
+         "groups:" ["IntLowHigh"]
+         "constraint:" "|c| / 2 + 1 >= sum([toInt(1 >=            sum([toInt(q62 < 1 + (numChars - 1) / 2) | q62 <- range(q52)]))          | q52 <- c]) /\\ |c| / 2 - 1 <= sum([toInt(1 >=            sum([toInt(q62 < 1 + (numChars - 1) / 2) | q62 <- range(q52)]))          | q52 <- c])"},
+ "124": {"onVariable:" "c"
+         "groups:" ["IntLowHigh"]
+         "constraint:" "|c| / 2 + 1 >= sum([toInt(1 >=            sum([toInt(q62 > 1 + (numChars - 1) / 2) | q62 <- range(q52)]))          | q52 <- c]) /\\ |c| / 2 - 1 <= sum([toInt(1 >=            sum([toInt(q62 > 1 + (numChars - 1) / 2) | q62 <- range(q52)]))          | q52 <- c])"},
+ "125": {"onVariable:" "c"
+         "groups:" ["IntOddEven"]
+         "constraint:" "|c| / 2 + 1 >= sum([toInt(|range(q52)| / 2 + 1 >=            sum([toInt(q63 % 2 = 1) | q63 <- range(q52)])            /\\            |range(q52)| / 2 - 1 <=            sum([toInt(q63 % 2 = 1) | q63 <- range(q52)]))          | q52 <- c]) /\\ |c| / 2 - 1 <= sum([toInt(|range(q52)| / 2 + 1 >=            sum([toInt(q63 % 2 = 1) | q63 <- range(q52)])            /\\            |range(q52)| / 2 - 1 <=            sum([toInt(q63 % 2 = 1) | q63 <- range(q52)]))          | q52 <- c])"},
+ "126": {"onVariable:" "c"
+         "groups:" ["IntOddEven"]
+         "constraint:" "|c| / 2 + 1 >= sum([toInt(|range(q52)| / 2 + 1 >=            sum([toInt(q63 % 2 = 0) | q63 <- range(q52)])            /\\            |range(q52)| / 2 - 1 <=            sum([toInt(q63 % 2 = 0) | q63 <- range(q52)]))          | q52 <- c]) /\\ |c| / 2 - 1 <= sum([toInt(|range(q52)| / 2 + 1 >=            sum([toInt(q63 % 2 = 0) | q63 <- range(q52)])            /\\            |range(q52)| / 2 - 1 <=            sum([toInt(q63 % 2 = 0) | q63 <- range(q52)]))          | q52 <- c])"},
+ "127": {"onVariable:" "c"
+         "groups:" ["IntLowHigh"]
+         "constraint:" "|c| / 2 + 1 >= sum([toInt(|range(q52)| / 2 + 1 >=            sum([toInt(q63 < 1 + (numChars - 1) / 2) | q63 <- range(q52)])            /\\            |range(q52)| / 2 - 1 <=            sum([toInt(q63 < 1 + (numChars - 1) / 2) | q63 <- range(q52)]))          | q52 <- c]) /\\ |c| / 2 - 1 <= sum([toInt(|range(q52)| / 2 + 1 >=            sum([toInt(q63 < 1 + (numChars - 1) / 2) | q63 <- range(q52)])            /\\            |range(q52)| / 2 - 1 <=            sum([toInt(q63 < 1 + (numChars - 1) / 2) | q63 <- range(q52)]))          | q52 <- c])"},
+ "128": {"onVariable:" "c"
+         "groups:" ["IntLowHigh"]
+         "constraint:" "|c| / 2 + 1 >= sum([toInt(|range(q52)| / 2 + 1 >=            sum([toInt(q63 > 1 + (numChars - 1) / 2) | q63 <- range(q52)])            /\\            |range(q52)| / 2 - 1 <=            sum([toInt(q63 > 1 + (numChars - 1) / 2) | q63 <- range(q52)]))          | q52 <- c]) /\\ |c| / 2 - 1 <= sum([toInt(|range(q52)| / 2 + 1 >=            sum([toInt(q63 > 1 + (numChars - 1) / 2) | q63 <- range(q52)])            /\\            |range(q52)| / 2 - 1 <=            sum([toInt(q63 > 1 + (numChars - 1) / 2) | q63 <- range(q52)]))          | q52 <- c])"},
+ "129": {"onVariable:" "c"
+         "groups:" ["IntOddEven"]
+         "constraint:" "|c| / 2 + 1 >= sum([toInt(and([q65 % 2 = 1 | q65 <- defined(q52)])) | q52 <- c]) /\\ |c| / 2 - 1 <= sum([toInt(and([q65 % 2 = 1 | q65 <- defined(q52)])) | q52 <- c])"},
+ "130": {"onVariable:" "c"
+         "groups:" ["IntOddEven"]
+         "constraint:" "|c| / 2 + 1 >= sum([toInt(and([q65 % 2 = 0 | q65 <- defined(q52)])) | q52 <- c]) /\\ |c| / 2 - 1 <= sum([toInt(and([q65 % 2 = 0 | q65 <- defined(q52)])) | q52 <- c])"},
+ "131": {"onVariable:" "c"
+         "groups:" ["IntLowHigh"]
+         "constraint:" "|c| / 2 + 1 >= sum([toInt(and([q65 < 1 + (wordLength - 1) / 2                     | q65 <- defined(q52)]))          | q52 <- c]) /\\ |c| / 2 - 1 <= sum([toInt(and([q65 < 1 + (wordLength - 1) / 2                     | q65 <- defined(q52)]))          | q52 <- c])"},
+ "132": {"onVariable:" "c"
+         "groups:" ["IntLowHigh"]
+         "constraint:" "|c| / 2 + 1 >= sum([toInt(and([q65 > 1 + (wordLength - 1) / 2                     | q65 <- defined(q52)]))          | q52 <- c]) /\\ |c| / 2 - 1 <= sum([toInt(and([q65 > 1 + (wordLength - 1) / 2                     | q65 <- defined(q52)]))          | q52 <- c])"},
+ "133": {"onVariable:" "c"
+         "groups:" ["IntOddEven"]
+         "constraint:" "|c| / 2 + 1 >= sum([toInt(|defined(q52)| / 2 =            sum([toInt(q66 % 2 = 1) | q66 <- defined(q52)]))          | q52 <- c]) /\\ |c| / 2 - 1 <= sum([toInt(|defined(q52)| / 2 =            sum([toInt(q66 % 2 = 1) | q66 <- defined(q52)]))          | q52 <- c])"},
+ "134": {"onVariable:" "c"
+         "groups:" ["IntOddEven"]
+         "constraint:" "|c| / 2 + 1 >= sum([toInt(|defined(q52)| / 2 =            sum([toInt(q66 % 2 = 0) | q66 <- defined(q52)]))          | q52 <- c]) /\\ |c| / 2 - 1 <= sum([toInt(|defined(q52)| / 2 =            sum([toInt(q66 % 2 = 0) | q66 <- defined(q52)]))          | q52 <- c])"},
+ "135": {"onVariable:" "c"
+         "groups:" ["IntLowHigh"]
+         "constraint:" "|c| / 2 + 1 >= sum([toInt(|defined(q52)| / 2 =            sum([toInt(q66 < 1 + (wordLength - 1) / 2) | q66 <- defined(q52)]))          | q52 <- c]) /\\ |c| / 2 - 1 <= sum([toInt(|defined(q52)| / 2 =            sum([toInt(q66 < 1 + (wordLength - 1) / 2) | q66 <- defined(q52)]))          | q52 <- c])"},
+ "136": {"onVariable:" "c"
+         "groups:" ["IntLowHigh"]
+         "constraint:" "|c| / 2 + 1 >= sum([toInt(|defined(q52)| / 2 =            sum([toInt(q66 > 1 + (wordLength - 1) / 2) | q66 <- defined(q52)]))          | q52 <- c]) /\\ |c| / 2 - 1 <= sum([toInt(|defined(q52)| / 2 =            sum([toInt(q66 > 1 + (wordLength - 1) / 2) | q66 <- defined(q52)]))          | q52 <- c])"},
+ "137": {"onVariable:" "c"
+         "groups:" ["IntOddEven"]
+         "constraint:" "|c| / 2 + 1 >= sum([toInt(1 >= sum([toInt(q67 % 2 = 1) | q67 <- defined(q52)]))          | q52 <- c]) /\\ |c| / 2 - 1 <= sum([toInt(1 >= sum([toInt(q67 % 2 = 1) | q67 <- defined(q52)]))          | q52 <- c])"},
+ "138": {"onVariable:" "c"
+         "groups:" ["IntOddEven"]
+         "constraint:" "|c| / 2 + 1 >= sum([toInt(1 >= sum([toInt(q67 % 2 = 0) | q67 <- defined(q52)]))          | q52 <- c]) /\\ |c| / 2 - 1 <= sum([toInt(1 >= sum([toInt(q67 % 2 = 0) | q67 <- defined(q52)]))          | q52 <- c])"},
+ "139": {"onVariable:" "c"
+         "groups:" ["IntLowHigh"]
+         "constraint:" "|c| / 2 + 1 >= sum([toInt(1 >=            sum([toInt(q67 < 1 + (wordLength - 1) / 2) | q67 <- defined(q52)]))          | q52 <- c]) /\\ |c| / 2 - 1 <= sum([toInt(1 >=            sum([toInt(q67 < 1 + (wordLength - 1) / 2) | q67 <- defined(q52)]))          | q52 <- c])"},
+ "140": {"onVariable:" "c"
+         "groups:" ["IntLowHigh"]
+         "constraint:" "|c| / 2 + 1 >= sum([toInt(1 >=            sum([toInt(q67 > 1 + (wordLength - 1) / 2) | q67 <- defined(q52)]))          | q52 <- c]) /\\ |c| / 2 - 1 <= sum([toInt(1 >=            sum([toInt(q67 > 1 + (wordLength - 1) / 2) | q67 <- defined(q52)]))          | q52 <- c])"},
+ "141": {"onVariable:" "c"
+         "groups:" ["IntOddEven"]
+         "constraint:" "|c| / 2 + 1 >= sum([toInt(|defined(q52)| / 2 + 1 >=            sum([toInt(q68 % 2 = 1) | q68 <- defined(q52)])            /\\            |defined(q52)| / 2 - 1 <=            sum([toInt(q68 % 2 = 1) | q68 <- defined(q52)]))          | q52 <- c]) /\\ |c| / 2 - 1 <= sum([toInt(|defined(q52)| / 2 + 1 >=            sum([toInt(q68 % 2 = 1) | q68 <- defined(q52)])            /\\            |defined(q52)| / 2 - 1 <=            sum([toInt(q68 % 2 = 1) | q68 <- defined(q52)]))          | q52 <- c])"},
+ "142": {"onVariable:" "c"
+         "groups:" ["IntOddEven"]
+         "constraint:" "|c| / 2 + 1 >= sum([toInt(|defined(q52)| / 2 + 1 >=            sum([toInt(q68 % 2 = 0) | q68 <- defined(q52)])            /\\            |defined(q52)| / 2 - 1 <=            sum([toInt(q68 % 2 = 0) | q68 <- defined(q52)]))          | q52 <- c]) /\\ |c| / 2 - 1 <= sum([toInt(|defined(q52)| / 2 + 1 >=            sum([toInt(q68 % 2 = 0) | q68 <- defined(q52)])            /\\            |defined(q52)| / 2 - 1 <=            sum([toInt(q68 % 2 = 0) | q68 <- defined(q52)]))          | q52 <- c])"},
+ "143": {"onVariable:" "c"
+         "groups:" ["IntLowHigh"]
+         "constraint:" "|c| / 2 + 1 >= sum([toInt(|defined(q52)| / 2 + 1 >=            sum([toInt(q68 < 1 + (wordLength - 1) / 2) | q68 <- defined(q52)])            /\\            |defined(q52)| / 2 - 1 <=            sum([toInt(q68 < 1 + (wordLength - 1) / 2) | q68 <- defined(q52)]))          | q52 <- c]) /\\ |c| / 2 - 1 <= sum([toInt(|defined(q52)| / 2 + 1 >=            sum([toInt(q68 < 1 + (wordLength - 1) / 2) | q68 <- defined(q52)])            /\\            |defined(q52)| / 2 - 1 <=            sum([toInt(q68 < 1 + (wordLength - 1) / 2) | q68 <- defined(q52)]))          | q52 <- c])"},
+ "144": {"onVariable:" "c"
+         "groups:" ["IntLowHigh"]
+         "constraint:" "|c| / 2 + 1 >= sum([toInt(|defined(q52)| / 2 + 1 >=            sum([toInt(q68 > 1 + (wordLength - 1) / 2) | q68 <- defined(q52)])            /\\            |defined(q52)| / 2 - 1 <=            sum([toInt(q68 > 1 + (wordLength - 1) / 2) | q68 <- defined(q52)]))          | q52 <- c]) /\\ |c| / 2 - 1 <= sum([toInt(|defined(q52)| / 2 + 1 >=            sum([toInt(q68 > 1 + (wordLength - 1) / 2) | q68 <- defined(q52)])            /\\            |defined(q52)| / 2 - 1 <=            sum([toInt(q68 > 1 + (wordLength - 1) / 2) | q68 <- defined(q52)]))          | q52 <- c])"}}

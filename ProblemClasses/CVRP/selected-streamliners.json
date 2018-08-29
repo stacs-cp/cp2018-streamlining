@@ -1,0 +1,4 @@
+{ "35": {"onVariable:" "plan"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|plan| / 2 = sum([toInt(1 >=            sum([toInt(q23 < 1 + (numberLocations - 1) / 2)                     | q23 <- range(q13)]))          | q13 <- plan])"}
+    }

@@ -1,0 +1,5 @@
+{
+ "20": {"onVariable:" "car"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|range(car)| / 2 + 1 >= sum([toInt(q11 > 1 + (n_classes - 1) / 2) | q11 <- range(car)]) /\\ |range(car)| / 2 - 1 <= sum([toInt(q11 > 1 + (n_classes - 1) / 2) | q11 <- range(car)])"},
+ }

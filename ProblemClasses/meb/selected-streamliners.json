@@ -1,0 +1,11 @@
+{
+ "15": {"onVariable:" "parents"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "1 >= sum([toInt(q10 < 1 + (numberNodes - 1) / 2)          | q10 <- range(parents)])"},
+ "43": {"onVariable:" "depths"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "and([q24 < 1 + (numberNodes - 1) / 2 | q24 <- range(depths)])"},
+ "45": {"onVariable:" "depths"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|range(depths)| / 2 = sum([toInt(q25 % 2 = 1) | q25 <- range(depths)])"},
+}

@@ -1,0 +1,195 @@
+{"1": {"onVariable:" "p"
+       "groups:" ["IntOddEven"]
+       "constraint:" "and([and([q3 % 2 = 1 | q3 <- q2]) | q2 <- parts(p)])"},
+ "2": {"onVariable:" "p"
+       "groups:" ["IntOddEven"]
+       "constraint:" "and([and([q3 % 2 = 0 | q3 <- q2]) | q2 <- parts(p)])"},
+ "3": {"onVariable:" "p"
+       "groups:" ["IntLowHigh"]
+       "constraint:" "and([and([q3 < 1 + (n - 1) / 2 | q3 <- q2]) | q2 <- parts(p)])"},
+ "4": {"onVariable:" "p"
+       "groups:" ["IntLowHigh"]
+       "constraint:" "and([and([q3 > 1 + (n - 1) / 2 | q3 <- q2]) | q2 <- parts(p)])"},
+ "5": {"onVariable:" "p"
+       "groups:" ["IntOddEven"]
+       "constraint:" "and([|q2| / 2 = sum([toInt(q4 % 2 = 1) | q4 <- q2])          | q2 <- parts(p)])"},
+ "6": {"onVariable:" "p"
+       "groups:" ["IntOddEven"]
+       "constraint:" "and([|q2| / 2 = sum([toInt(q4 % 2 = 0) | q4 <- q2])          | q2 <- parts(p)])"},
+ "7": {"onVariable:" "p"
+       "groups:" ["IntLowHigh"]
+       "constraint:" "and([|q2| / 2 = sum([toInt(q4 < 1 + (n - 1) / 2) | q4 <- q2])          | q2 <- parts(p)])"},
+ "8": {"onVariable:" "p"
+       "groups:" ["IntLowHigh"]
+       "constraint:" "and([|q2| / 2 = sum([toInt(q4 > 1 + (n - 1) / 2) | q4 <- q2])          | q2 <- parts(p)])"},
+ "9": {"onVariable:" "p"
+       "groups:" ["IntOddEven"]
+       "constraint:" "and([1 >= sum([toInt(q5 % 2 = 1) | q5 <- q2]) | q2 <- parts(p)])"},
+ "10": {"onVariable:" "p"
+        "groups:" ["IntOddEven"]
+        "constraint:" "and([1 >= sum([toInt(q5 % 2 = 0) | q5 <- q2]) | q2 <- parts(p)])"},
+ "11": {"onVariable:" "p"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "and([1 >= sum([toInt(q5 < 1 + (n - 1) / 2) | q5 <- q2])          | q2 <- parts(p)])"},
+ "12": {"onVariable:" "p"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "and([1 >= sum([toInt(q5 > 1 + (n - 1) / 2) | q5 <- q2])          | q2 <- parts(p)])"},
+ "13": {"onVariable:" "p"
+        "groups:" ["IntOddEven"]
+        "constraint:" "and([|q2| / 2 + 1 >= sum([toInt(q6 % 2 = 1) | q6 <- q2]) /\\      |q2| / 2 - 1 <= sum([toInt(q6 % 2 = 1) | q6 <- q2])          | q2 <- parts(p)])"},
+ "14": {"onVariable:" "p"
+        "groups:" ["IntOddEven"]
+        "constraint:" "and([|q2| / 2 + 1 >= sum([toInt(q6 % 2 = 0) | q6 <- q2]) /\\      |q2| / 2 - 1 <= sum([toInt(q6 % 2 = 0) | q6 <- q2])          | q2 <- parts(p)])"},
+ "15": {"onVariable:" "p"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "and([|q2| / 2 + 1 >= sum([toInt(q6 < 1 + (n - 1) / 2) | q6 <- q2])      /\\ |q2| / 2 - 1 <= sum([toInt(q6 < 1 + (n - 1) / 2) | q6 <- q2])          | q2 <- parts(p)])"},
+ "16": {"onVariable:" "p"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "and([|q2| / 2 + 1 >= sum([toInt(q6 > 1 + (n - 1) / 2) | q6 <- q2])      /\\ |q2| / 2 - 1 <= sum([toInt(q6 > 1 + (n - 1) / 2) | q6 <- q2])          | q2 <- parts(p)])"},
+ "17": {"onVariable:" "p"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|parts(p)| / 2 = sum([toInt(and([q8 % 2 = 1 | q8 <- q7])) | q7 <- parts(p)])"},
+ "18": {"onVariable:" "p"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|parts(p)| / 2 = sum([toInt(and([q8 % 2 = 0 | q8 <- q7])) | q7 <- parts(p)])"},
+ "19": {"onVariable:" "p"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|parts(p)| / 2 = sum([toInt(and([q8 < 1 + (n - 1) / 2 | q8 <- q7]))          | q7 <- parts(p)])"},
+ "20": {"onVariable:" "p"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|parts(p)| / 2 = sum([toInt(and([q8 > 1 + (n - 1) / 2 | q8 <- q7]))          | q7 <- parts(p)])"},
+ "21": {"onVariable:" "p"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|parts(p)| / 2 = sum([toInt(|q7| / 2 = sum([toInt(q9 % 2 = 1) | q9 <- q7]))          | q7 <- parts(p)])"},
+ "22": {"onVariable:" "p"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|parts(p)| / 2 = sum([toInt(|q7| / 2 = sum([toInt(q9 % 2 = 0) | q9 <- q7]))          | q7 <- parts(p)])"},
+ "23": {"onVariable:" "p"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|parts(p)| / 2 = sum([toInt(|q7| / 2 =            sum([toInt(q9 < 1 + (n - 1) / 2) | q9 <- q7]))          | q7 <- parts(p)])"},
+ "24": {"onVariable:" "p"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|parts(p)| / 2 = sum([toInt(|q7| / 2 =            sum([toInt(q9 > 1 + (n - 1) / 2) | q9 <- q7]))          | q7 <- parts(p)])"},
+ "25": {"onVariable:" "p"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|parts(p)| / 2 = sum([toInt(1 >= sum([toInt(q10 % 2 = 1) | q10 <- q7]))          | q7 <- parts(p)])"},
+ "26": {"onVariable:" "p"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|parts(p)| / 2 = sum([toInt(1 >= sum([toInt(q10 % 2 = 0) | q10 <- q7]))          | q7 <- parts(p)])"},
+ "27": {"onVariable:" "p"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|parts(p)| / 2 = sum([toInt(1 >= sum([toInt(q10 < 1 + (n - 1) / 2) | q10 <- q7]))          | q7 <- parts(p)])"},
+ "28": {"onVariable:" "p"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|parts(p)| / 2 = sum([toInt(1 >= sum([toInt(q10 > 1 + (n - 1) / 2) | q10 <- q7]))          | q7 <- parts(p)])"},
+ "29": {"onVariable:" "p"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|parts(p)| / 2 = sum([toInt(|q7| / 2 + 1 >= sum([toInt(q11 % 2 = 1) | q11 <- q7]) /\\            |q7| / 2 - 1 <= sum([toInt(q11 % 2 = 1) | q11 <- q7]))          | q7 <- parts(p)])"},
+ "30": {"onVariable:" "p"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|parts(p)| / 2 = sum([toInt(|q7| / 2 + 1 >= sum([toInt(q11 % 2 = 0) | q11 <- q7]) /\\            |q7| / 2 - 1 <= sum([toInt(q11 % 2 = 0) | q11 <- q7]))          | q7 <- parts(p)])"},
+ "31": {"onVariable:" "p"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|parts(p)| / 2 = sum([toInt(|q7| / 2 + 1 >=            sum([toInt(q11 < 1 + (n - 1) / 2) | q11 <- q7])            /\\ |q7| / 2 - 1 <= sum([toInt(q11 < 1 + (n - 1) / 2) | q11 <- q7]))          | q7 <- parts(p)])"},
+ "32": {"onVariable:" "p"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|parts(p)| / 2 = sum([toInt(|q7| / 2 + 1 >=            sum([toInt(q11 > 1 + (n - 1) / 2) | q11 <- q7])            /\\ |q7| / 2 - 1 <= sum([toInt(q11 > 1 + (n - 1) / 2) | q11 <- q7]))          | q7 <- parts(p)])"},
+ "33": {"onVariable:" "p"
+        "groups:" ["IntOddEven"]
+        "constraint:" "1 >= sum([toInt(and([q13 % 2 = 1 | q13 <- q12])) | q12 <- parts(p)])"},
+ "34": {"onVariable:" "p"
+        "groups:" ["IntOddEven"]
+        "constraint:" "1 >= sum([toInt(and([q13 % 2 = 0 | q13 <- q12])) | q12 <- parts(p)])"},
+ "35": {"onVariable:" "p"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "1 >= sum([toInt(and([q13 < 1 + (n - 1) / 2 | q13 <- q12]))          | q12 <- parts(p)])"},
+ "36": {"onVariable:" "p"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "1 >= sum([toInt(and([q13 > 1 + (n - 1) / 2 | q13 <- q12]))          | q12 <- parts(p)])"},
+ "37": {"onVariable:" "p"
+        "groups:" ["IntOddEven"]
+        "constraint:" "1 >= sum([toInt(|q12| / 2 = sum([toInt(q14 % 2 = 1) | q14 <- q12]))          | q12 <- parts(p)])"},
+ "38": {"onVariable:" "p"
+        "groups:" ["IntOddEven"]
+        "constraint:" "1 >= sum([toInt(|q12| / 2 = sum([toInt(q14 % 2 = 0) | q14 <- q12]))          | q12 <- parts(p)])"},
+ "39": {"onVariable:" "p"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "1 >= sum([toInt(|q12| / 2 =            sum([toInt(q14 < 1 + (n - 1) / 2) | q14 <- q12]))          | q12 <- parts(p)])"},
+ "40": {"onVariable:" "p"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "1 >= sum([toInt(|q12| / 2 =            sum([toInt(q14 > 1 + (n - 1) / 2) | q14 <- q12]))          | q12 <- parts(p)])"},
+ "41": {"onVariable:" "p"
+        "groups:" ["IntOddEven"]
+        "constraint:" "1 >= sum([toInt(1 >= sum([toInt(q15 % 2 = 1) | q15 <- q12]))          | q12 <- parts(p)])"},
+ "42": {"onVariable:" "p"
+        "groups:" ["IntOddEven"]
+        "constraint:" "1 >= sum([toInt(1 >= sum([toInt(q15 % 2 = 0) | q15 <- q12]))          | q12 <- parts(p)])"},
+ "43": {"onVariable:" "p"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "1 >= sum([toInt(1 >= sum([toInt(q15 < 1 + (n - 1) / 2) | q15 <- q12]))          | q12 <- parts(p)])"},
+ "44": {"onVariable:" "p"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "1 >= sum([toInt(1 >= sum([toInt(q15 > 1 + (n - 1) / 2) | q15 <- q12]))          | q12 <- parts(p)])"},
+ "45": {"onVariable:" "p"
+        "groups:" ["IntOddEven"]
+        "constraint:" "1 >= sum([toInt(|q12| / 2 + 1 >= sum([toInt(q16 % 2 = 1) | q16 <- q12])            /\\ |q12| / 2 - 1 <= sum([toInt(q16 % 2 = 1) | q16 <- q12]))          | q12 <- parts(p)])"},
+ "46": {"onVariable:" "p"
+        "groups:" ["IntOddEven"]
+        "constraint:" "1 >= sum([toInt(|q12| / 2 + 1 >= sum([toInt(q16 % 2 = 0) | q16 <- q12])            /\\ |q12| / 2 - 1 <= sum([toInt(q16 % 2 = 0) | q16 <- q12]))          | q12 <- parts(p)])"},
+ "47": {"onVariable:" "p"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "1 >= sum([toInt(|q12| / 2 + 1 >=            sum([toInt(q16 < 1 + (n - 1) / 2) | q16 <- q12])            /\\            |q12| / 2 - 1 <= sum([toInt(q16 < 1 + (n - 1) / 2) | q16 <- q12]))          | q12 <- parts(p)])"},
+ "48": {"onVariable:" "p"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "1 >= sum([toInt(|q12| / 2 + 1 >=            sum([toInt(q16 > 1 + (n - 1) / 2) | q16 <- q12])            /\\            |q12| / 2 - 1 <= sum([toInt(q16 > 1 + (n - 1) / 2) | q16 <- q12]))          | q12 <- parts(p)])"},
+ "49": {"onVariable:" "p"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|parts(p)| / 2 + 1 >= sum([toInt(and([q18 % 2 = 1 | q18 <- q17])) | q17 <- parts(p)]) /\\ |parts(p)| / 2 - 1 <= sum([toInt(and([q18 % 2 = 1 | q18 <- q17])) | q17 <- parts(p)])"},
+ "50": {"onVariable:" "p"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|parts(p)| / 2 + 1 >= sum([toInt(and([q18 % 2 = 0 | q18 <- q17])) | q17 <- parts(p)]) /\\ |parts(p)| / 2 - 1 <= sum([toInt(and([q18 % 2 = 0 | q18 <- q17])) | q17 <- parts(p)])"},
+ "51": {"onVariable:" "p"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|parts(p)| / 2 + 1 >= sum([toInt(and([q18 < 1 + (n - 1) / 2 | q18 <- q17]))          | q17 <- parts(p)]) /\\ |parts(p)| / 2 - 1 <= sum([toInt(and([q18 < 1 + (n - 1) / 2 | q18 <- q17]))          | q17 <- parts(p)])"},
+ "52": {"onVariable:" "p"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|parts(p)| / 2 + 1 >= sum([toInt(and([q18 > 1 + (n - 1) / 2 | q18 <- q17]))          | q17 <- parts(p)]) /\\ |parts(p)| / 2 - 1 <= sum([toInt(and([q18 > 1 + (n - 1) / 2 | q18 <- q17]))          | q17 <- parts(p)])"},
+ "53": {"onVariable:" "p"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|parts(p)| / 2 + 1 >= sum([toInt(|q17| / 2 = sum([toInt(q19 % 2 = 1) | q19 <- q17]))          | q17 <- parts(p)]) /\\ |parts(p)| / 2 - 1 <= sum([toInt(|q17| / 2 = sum([toInt(q19 % 2 = 1) | q19 <- q17]))          | q17 <- parts(p)])"},
+ "54": {"onVariable:" "p"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|parts(p)| / 2 + 1 >= sum([toInt(|q17| / 2 = sum([toInt(q19 % 2 = 0) | q19 <- q17]))          | q17 <- parts(p)]) /\\ |parts(p)| / 2 - 1 <= sum([toInt(|q17| / 2 = sum([toInt(q19 % 2 = 0) | q19 <- q17]))          | q17 <- parts(p)])"},
+ "55": {"onVariable:" "p"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|parts(p)| / 2 + 1 >= sum([toInt(|q17| / 2 =            sum([toInt(q19 < 1 + (n - 1) / 2) | q19 <- q17]))          | q17 <- parts(p)]) /\\ |parts(p)| / 2 - 1 <= sum([toInt(|q17| / 2 =            sum([toInt(q19 < 1 + (n - 1) / 2) | q19 <- q17]))          | q17 <- parts(p)])"},
+ "56": {"onVariable:" "p"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|parts(p)| / 2 + 1 >= sum([toInt(|q17| / 2 =            sum([toInt(q19 > 1 + (n - 1) / 2) | q19 <- q17]))          | q17 <- parts(p)]) /\\ |parts(p)| / 2 - 1 <= sum([toInt(|q17| / 2 =            sum([toInt(q19 > 1 + (n - 1) / 2) | q19 <- q17]))          | q17 <- parts(p)])"},
+ "57": {"onVariable:" "p"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|parts(p)| / 2 + 1 >= sum([toInt(1 >= sum([toInt(q20 % 2 = 1) | q20 <- q17]))          | q17 <- parts(p)]) /\\ |parts(p)| / 2 - 1 <= sum([toInt(1 >= sum([toInt(q20 % 2 = 1) | q20 <- q17]))          | q17 <- parts(p)])"},
+ "58": {"onVariable:" "p"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|parts(p)| / 2 + 1 >= sum([toInt(1 >= sum([toInt(q20 % 2 = 0) | q20 <- q17]))          | q17 <- parts(p)]) /\\ |parts(p)| / 2 - 1 <= sum([toInt(1 >= sum([toInt(q20 % 2 = 0) | q20 <- q17]))          | q17 <- parts(p)])"},
+ "59": {"onVariable:" "p"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|parts(p)| / 2 + 1 >= sum([toInt(1 >= sum([toInt(q20 < 1 + (n - 1) / 2) | q20 <- q17]))          | q17 <- parts(p)]) /\\ |parts(p)| / 2 - 1 <= sum([toInt(1 >= sum([toInt(q20 < 1 + (n - 1) / 2) | q20 <- q17]))          | q17 <- parts(p)])"},
+ "60": {"onVariable:" "p"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|parts(p)| / 2 + 1 >= sum([toInt(1 >= sum([toInt(q20 > 1 + (n - 1) / 2) | q20 <- q17]))          | q17 <- parts(p)]) /\\ |parts(p)| / 2 - 1 <= sum([toInt(1 >= sum([toInt(q20 > 1 + (n - 1) / 2) | q20 <- q17]))          | q17 <- parts(p)])"},
+ "61": {"onVariable:" "p"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|parts(p)| / 2 + 1 >= sum([toInt(|q17| / 2 + 1 >= sum([toInt(q21 % 2 = 1) | q21 <- q17])            /\\ |q17| / 2 - 1 <= sum([toInt(q21 % 2 = 1) | q21 <- q17]))          | q17 <- parts(p)]) /\\ |parts(p)| / 2 - 1 <= sum([toInt(|q17| / 2 + 1 >= sum([toInt(q21 % 2 = 1) | q21 <- q17])            /\\ |q17| / 2 - 1 <= sum([toInt(q21 % 2 = 1) | q21 <- q17]))          | q17 <- parts(p)])"},
+ "62": {"onVariable:" "p"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|parts(p)| / 2 + 1 >= sum([toInt(|q17| / 2 + 1 >= sum([toInt(q21 % 2 = 0) | q21 <- q17])            /\\ |q17| / 2 - 1 <= sum([toInt(q21 % 2 = 0) | q21 <- q17]))          | q17 <- parts(p)]) /\\ |parts(p)| / 2 - 1 <= sum([toInt(|q17| / 2 + 1 >= sum([toInt(q21 % 2 = 0) | q21 <- q17])            /\\ |q17| / 2 - 1 <= sum([toInt(q21 % 2 = 0) | q21 <- q17]))          | q17 <- parts(p)])"},
+ "63": {"onVariable:" "p"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|parts(p)| / 2 + 1 >= sum([toInt(|q17| / 2 + 1 >=            sum([toInt(q21 < 1 + (n - 1) / 2) | q21 <- q17])            /\\            |q17| / 2 - 1 <= sum([toInt(q21 < 1 + (n - 1) / 2) | q21 <- q17]))          | q17 <- parts(p)]) /\\ |parts(p)| / 2 - 1 <= sum([toInt(|q17| / 2 + 1 >=            sum([toInt(q21 < 1 + (n - 1) / 2) | q21 <- q17])            /\\            |q17| / 2 - 1 <= sum([toInt(q21 < 1 + (n - 1) / 2) | q21 <- q17]))          | q17 <- parts(p)])"},
+ "64": {"onVariable:" "p"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|parts(p)| / 2 + 1 >= sum([toInt(|q17| / 2 + 1 >=            sum([toInt(q21 > 1 + (n - 1) / 2) | q21 <- q17])            /\\            |q17| / 2 - 1 <= sum([toInt(q21 > 1 + (n - 1) / 2) | q21 <- q17]))          | q17 <- parts(p)]) /\\ |parts(p)| / 2 - 1 <= sum([toInt(|q17| / 2 + 1 >=            sum([toInt(q21 > 1 + (n - 1) / 2) | q21 <- q17])            /\\            |q17| / 2 - 1 <= sum([toInt(q21 > 1 + (n - 1) / 2) | q21 <- q17]))          | q17 <- parts(p)])"},
+ "65": {"onVariable:" "p"
+        "groups:" ["PartitionRegular"]
+        "constraint:" "minPartSize(p, |participants(p)| / |parts(p)| - 1) /\\ maxPartSize(p, |participants(p)| / |parts(p)| + 1)"}}

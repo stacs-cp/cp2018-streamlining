@@ -1,0 +1,195 @@
+{"1": {"onVariable:" "boxes"
+       "groups:" ["IntOddEven"]
+       "constraint:" "and([and([q3 % 2 = 1 | q3 <- q2]) | q2 <- parts(boxes)])"},
+ "2": {"onVariable:" "boxes"
+       "groups:" ["IntOddEven"]
+       "constraint:" "and([and([q3 % 2 = 0 | q3 <- q2]) | q2 <- parts(boxes)])"},
+ "3": {"onVariable:" "boxes"
+       "groups:" ["IntLowHigh"]
+       "constraint:" "and([and([q3 < 1 + (n - 1) / 2 | q3 <- q2]) | q2 <- parts(boxes)])"},
+ "4": {"onVariable:" "boxes"
+       "groups:" ["IntLowHigh"]
+       "constraint:" "and([and([q3 > 1 + (n - 1) / 2 | q3 <- q2]) | q2 <- parts(boxes)])"},
+ "5": {"onVariable:" "boxes"
+       "groups:" ["IntOddEven"]
+       "constraint:" "and([|q2| / 2 = sum([toInt(q4 % 2 = 1) | q4 <- q2])          | q2 <- parts(boxes)])"},
+ "6": {"onVariable:" "boxes"
+       "groups:" ["IntOddEven"]
+       "constraint:" "and([|q2| / 2 = sum([toInt(q4 % 2 = 0) | q4 <- q2])          | q2 <- parts(boxes)])"},
+ "7": {"onVariable:" "boxes"
+       "groups:" ["IntLowHigh"]
+       "constraint:" "and([|q2| / 2 = sum([toInt(q4 < 1 + (n - 1) / 2) | q4 <- q2])          | q2 <- parts(boxes)])"},
+ "8": {"onVariable:" "boxes"
+       "groups:" ["IntLowHigh"]
+       "constraint:" "and([|q2| / 2 = sum([toInt(q4 > 1 + (n - 1) / 2) | q4 <- q2])          | q2 <- parts(boxes)])"},
+ "9": {"onVariable:" "boxes"
+       "groups:" ["IntOddEven"]
+       "constraint:" "and([1 >= sum([toInt(q5 % 2 = 1) | q5 <- q2])          | q2 <- parts(boxes)])"},
+ "10": {"onVariable:" "boxes"
+        "groups:" ["IntOddEven"]
+        "constraint:" "and([1 >= sum([toInt(q5 % 2 = 0) | q5 <- q2])          | q2 <- parts(boxes)])"},
+ "11": {"onVariable:" "boxes"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "and([1 >= sum([toInt(q5 < 1 + (n - 1) / 2) | q5 <- q2])          | q2 <- parts(boxes)])"},
+ "12": {"onVariable:" "boxes"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "and([1 >= sum([toInt(q5 > 1 + (n - 1) / 2) | q5 <- q2])          | q2 <- parts(boxes)])"},
+ "13": {"onVariable:" "boxes"
+        "groups:" ["IntOddEven"]
+        "constraint:" "and([|q2| / 2 + 1 >= sum([toInt(q6 % 2 = 1) | q6 <- q2]) /\\      |q2| / 2 - 1 <= sum([toInt(q6 % 2 = 1) | q6 <- q2])          | q2 <- parts(boxes)])"},
+ "14": {"onVariable:" "boxes"
+        "groups:" ["IntOddEven"]
+        "constraint:" "and([|q2| / 2 + 1 >= sum([toInt(q6 % 2 = 0) | q6 <- q2]) /\\      |q2| / 2 - 1 <= sum([toInt(q6 % 2 = 0) | q6 <- q2])          | q2 <- parts(boxes)])"},
+ "15": {"onVariable:" "boxes"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "and([|q2| / 2 + 1 >= sum([toInt(q6 < 1 + (n - 1) / 2) | q6 <- q2])      /\\ |q2| / 2 - 1 <= sum([toInt(q6 < 1 + (n - 1) / 2) | q6 <- q2])          | q2 <- parts(boxes)])"},
+ "16": {"onVariable:" "boxes"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "and([|q2| / 2 + 1 >= sum([toInt(q6 > 1 + (n - 1) / 2) | q6 <- q2])      /\\ |q2| / 2 - 1 <= sum([toInt(q6 > 1 + (n - 1) / 2) | q6 <- q2])          | q2 <- parts(boxes)])"},
+ "17": {"onVariable:" "boxes"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|parts(boxes)| / 2 = sum([toInt(and([q8 % 2 = 1 | q8 <- q7])) | q7 <- parts(boxes)])"},
+ "18": {"onVariable:" "boxes"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|parts(boxes)| / 2 = sum([toInt(and([q8 % 2 = 0 | q8 <- q7])) | q7 <- parts(boxes)])"},
+ "19": {"onVariable:" "boxes"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|parts(boxes)| / 2 = sum([toInt(and([q8 < 1 + (n - 1) / 2 | q8 <- q7]))          | q7 <- parts(boxes)])"},
+ "20": {"onVariable:" "boxes"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|parts(boxes)| / 2 = sum([toInt(and([q8 > 1 + (n - 1) / 2 | q8 <- q7]))          | q7 <- parts(boxes)])"},
+ "21": {"onVariable:" "boxes"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|parts(boxes)| / 2 = sum([toInt(|q7| / 2 = sum([toInt(q9 % 2 = 1) | q9 <- q7]))          | q7 <- parts(boxes)])"},
+ "22": {"onVariable:" "boxes"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|parts(boxes)| / 2 = sum([toInt(|q7| / 2 = sum([toInt(q9 % 2 = 0) | q9 <- q7]))          | q7 <- parts(boxes)])"},
+ "23": {"onVariable:" "boxes"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|parts(boxes)| / 2 = sum([toInt(|q7| / 2 =            sum([toInt(q9 < 1 + (n - 1) / 2) | q9 <- q7]))          | q7 <- parts(boxes)])"},
+ "24": {"onVariable:" "boxes"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|parts(boxes)| / 2 = sum([toInt(|q7| / 2 =            sum([toInt(q9 > 1 + (n - 1) / 2) | q9 <- q7]))          | q7 <- parts(boxes)])"},
+ "25": {"onVariable:" "boxes"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|parts(boxes)| / 2 = sum([toInt(1 >= sum([toInt(q10 % 2 = 1) | q10 <- q7]))          | q7 <- parts(boxes)])"},
+ "26": {"onVariable:" "boxes"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|parts(boxes)| / 2 = sum([toInt(1 >= sum([toInt(q10 % 2 = 0) | q10 <- q7]))          | q7 <- parts(boxes)])"},
+ "27": {"onVariable:" "boxes"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|parts(boxes)| / 2 = sum([toInt(1 >= sum([toInt(q10 < 1 + (n - 1) / 2) | q10 <- q7]))          | q7 <- parts(boxes)])"},
+ "28": {"onVariable:" "boxes"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|parts(boxes)| / 2 = sum([toInt(1 >= sum([toInt(q10 > 1 + (n - 1) / 2) | q10 <- q7]))          | q7 <- parts(boxes)])"},
+ "29": {"onVariable:" "boxes"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|parts(boxes)| / 2 = sum([toInt(|q7| / 2 + 1 >= sum([toInt(q11 % 2 = 1) | q11 <- q7]) /\\            |q7| / 2 - 1 <= sum([toInt(q11 % 2 = 1) | q11 <- q7]))          | q7 <- parts(boxes)])"},
+ "30": {"onVariable:" "boxes"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|parts(boxes)| / 2 = sum([toInt(|q7| / 2 + 1 >= sum([toInt(q11 % 2 = 0) | q11 <- q7]) /\\            |q7| / 2 - 1 <= sum([toInt(q11 % 2 = 0) | q11 <- q7]))          | q7 <- parts(boxes)])"},
+ "31": {"onVariable:" "boxes"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|parts(boxes)| / 2 = sum([toInt(|q7| / 2 + 1 >=            sum([toInt(q11 < 1 + (n - 1) / 2) | q11 <- q7])            /\\ |q7| / 2 - 1 <= sum([toInt(q11 < 1 + (n - 1) / 2) | q11 <- q7]))          | q7 <- parts(boxes)])"},
+ "32": {"onVariable:" "boxes"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|parts(boxes)| / 2 = sum([toInt(|q7| / 2 + 1 >=            sum([toInt(q11 > 1 + (n - 1) / 2) | q11 <- q7])            /\\ |q7| / 2 - 1 <= sum([toInt(q11 > 1 + (n - 1) / 2) | q11 <- q7]))          | q7 <- parts(boxes)])"},
+ "33": {"onVariable:" "boxes"
+        "groups:" ["IntOddEven"]
+        "constraint:" "1 >= sum([toInt(and([q13 % 2 = 1 | q13 <- q12])) | q12 <- parts(boxes)])"},
+ "34": {"onVariable:" "boxes"
+        "groups:" ["IntOddEven"]
+        "constraint:" "1 >= sum([toInt(and([q13 % 2 = 0 | q13 <- q12])) | q12 <- parts(boxes)])"},
+ "35": {"onVariable:" "boxes"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "1 >= sum([toInt(and([q13 < 1 + (n - 1) / 2 | q13 <- q12]))          | q12 <- parts(boxes)])"},
+ "36": {"onVariable:" "boxes"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "1 >= sum([toInt(and([q13 > 1 + (n - 1) / 2 | q13 <- q12]))          | q12 <- parts(boxes)])"},
+ "37": {"onVariable:" "boxes"
+        "groups:" ["IntOddEven"]
+        "constraint:" "1 >= sum([toInt(|q12| / 2 = sum([toInt(q14 % 2 = 1) | q14 <- q12]))          | q12 <- parts(boxes)])"},
+ "38": {"onVariable:" "boxes"
+        "groups:" ["IntOddEven"]
+        "constraint:" "1 >= sum([toInt(|q12| / 2 = sum([toInt(q14 % 2 = 0) | q14 <- q12]))          | q12 <- parts(boxes)])"},
+ "39": {"onVariable:" "boxes"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "1 >= sum([toInt(|q12| / 2 =            sum([toInt(q14 < 1 + (n - 1) / 2) | q14 <- q12]))          | q12 <- parts(boxes)])"},
+ "40": {"onVariable:" "boxes"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "1 >= sum([toInt(|q12| / 2 =            sum([toInt(q14 > 1 + (n - 1) / 2) | q14 <- q12]))          | q12 <- parts(boxes)])"},
+ "41": {"onVariable:" "boxes"
+        "groups:" ["IntOddEven"]
+        "constraint:" "1 >= sum([toInt(1 >= sum([toInt(q15 % 2 = 1) | q15 <- q12]))          | q12 <- parts(boxes)])"},
+ "42": {"onVariable:" "boxes"
+        "groups:" ["IntOddEven"]
+        "constraint:" "1 >= sum([toInt(1 >= sum([toInt(q15 % 2 = 0) | q15 <- q12]))          | q12 <- parts(boxes)])"},
+ "43": {"onVariable:" "boxes"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "1 >= sum([toInt(1 >= sum([toInt(q15 < 1 + (n - 1) / 2) | q15 <- q12]))          | q12 <- parts(boxes)])"},
+ "44": {"onVariable:" "boxes"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "1 >= sum([toInt(1 >= sum([toInt(q15 > 1 + (n - 1) / 2) | q15 <- q12]))          | q12 <- parts(boxes)])"},
+ "45": {"onVariable:" "boxes"
+        "groups:" ["IntOddEven"]
+        "constraint:" "1 >= sum([toInt(|q12| / 2 + 1 >= sum([toInt(q16 % 2 = 1) | q16 <- q12])            /\\ |q12| / 2 - 1 <= sum([toInt(q16 % 2 = 1) | q16 <- q12]))          | q12 <- parts(boxes)])"},
+ "46": {"onVariable:" "boxes"
+        "groups:" ["IntOddEven"]
+        "constraint:" "1 >= sum([toInt(|q12| / 2 + 1 >= sum([toInt(q16 % 2 = 0) | q16 <- q12])            /\\ |q12| / 2 - 1 <= sum([toInt(q16 % 2 = 0) | q16 <- q12]))          | q12 <- parts(boxes)])"},
+ "47": {"onVariable:" "boxes"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "1 >= sum([toInt(|q12| / 2 + 1 >=            sum([toInt(q16 < 1 + (n - 1) / 2) | q16 <- q12])            /\\            |q12| / 2 - 1 <= sum([toInt(q16 < 1 + (n - 1) / 2) | q16 <- q12]))          | q12 <- parts(boxes)])"},
+ "48": {"onVariable:" "boxes"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "1 >= sum([toInt(|q12| / 2 + 1 >=            sum([toInt(q16 > 1 + (n - 1) / 2) | q16 <- q12])            /\\            |q12| / 2 - 1 <= sum([toInt(q16 > 1 + (n - 1) / 2) | q16 <- q12]))          | q12 <- parts(boxes)])"},
+ "49": {"onVariable:" "boxes"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|parts(boxes)| / 2 + 1 >= sum([toInt(and([q18 % 2 = 1 | q18 <- q17])) | q17 <- parts(boxes)]) /\\ |parts(boxes)| / 2 - 1 <= sum([toInt(and([q18 % 2 = 1 | q18 <- q17])) | q17 <- parts(boxes)])"},
+ "50": {"onVariable:" "boxes"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|parts(boxes)| / 2 + 1 >= sum([toInt(and([q18 % 2 = 0 | q18 <- q17])) | q17 <- parts(boxes)]) /\\ |parts(boxes)| / 2 - 1 <= sum([toInt(and([q18 % 2 = 0 | q18 <- q17])) | q17 <- parts(boxes)])"},
+ "51": {"onVariable:" "boxes"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|parts(boxes)| / 2 + 1 >= sum([toInt(and([q18 < 1 + (n - 1) / 2 | q18 <- q17]))          | q17 <- parts(boxes)]) /\\ |parts(boxes)| / 2 - 1 <= sum([toInt(and([q18 < 1 + (n - 1) / 2 | q18 <- q17]))          | q17 <- parts(boxes)])"},
+ "52": {"onVariable:" "boxes"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|parts(boxes)| / 2 + 1 >= sum([toInt(and([q18 > 1 + (n - 1) / 2 | q18 <- q17]))          | q17 <- parts(boxes)]) /\\ |parts(boxes)| / 2 - 1 <= sum([toInt(and([q18 > 1 + (n - 1) / 2 | q18 <- q17]))          | q17 <- parts(boxes)])"},
+ "53": {"onVariable:" "boxes"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|parts(boxes)| / 2 + 1 >= sum([toInt(|q17| / 2 = sum([toInt(q19 % 2 = 1) | q19 <- q17]))          | q17 <- parts(boxes)]) /\\ |parts(boxes)| / 2 - 1 <= sum([toInt(|q17| / 2 = sum([toInt(q19 % 2 = 1) | q19 <- q17]))          | q17 <- parts(boxes)])"},
+ "54": {"onVariable:" "boxes"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|parts(boxes)| / 2 + 1 >= sum([toInt(|q17| / 2 = sum([toInt(q19 % 2 = 0) | q19 <- q17]))          | q17 <- parts(boxes)]) /\\ |parts(boxes)| / 2 - 1 <= sum([toInt(|q17| / 2 = sum([toInt(q19 % 2 = 0) | q19 <- q17]))          | q17 <- parts(boxes)])"},
+ "55": {"onVariable:" "boxes"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|parts(boxes)| / 2 + 1 >= sum([toInt(|q17| / 2 =            sum([toInt(q19 < 1 + (n - 1) / 2) | q19 <- q17]))          | q17 <- parts(boxes)]) /\\ |parts(boxes)| / 2 - 1 <= sum([toInt(|q17| / 2 =            sum([toInt(q19 < 1 + (n - 1) / 2) | q19 <- q17]))          | q17 <- parts(boxes)])"},
+ "56": {"onVariable:" "boxes"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|parts(boxes)| / 2 + 1 >= sum([toInt(|q17| / 2 =            sum([toInt(q19 > 1 + (n - 1) / 2) | q19 <- q17]))          | q17 <- parts(boxes)]) /\\ |parts(boxes)| / 2 - 1 <= sum([toInt(|q17| / 2 =            sum([toInt(q19 > 1 + (n - 1) / 2) | q19 <- q17]))          | q17 <- parts(boxes)])"},
+ "57": {"onVariable:" "boxes"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|parts(boxes)| / 2 + 1 >= sum([toInt(1 >= sum([toInt(q20 % 2 = 1) | q20 <- q17]))          | q17 <- parts(boxes)]) /\\ |parts(boxes)| / 2 - 1 <= sum([toInt(1 >= sum([toInt(q20 % 2 = 1) | q20 <- q17]))          | q17 <- parts(boxes)])"},
+ "58": {"onVariable:" "boxes"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|parts(boxes)| / 2 + 1 >= sum([toInt(1 >= sum([toInt(q20 % 2 = 0) | q20 <- q17]))          | q17 <- parts(boxes)]) /\\ |parts(boxes)| / 2 - 1 <= sum([toInt(1 >= sum([toInt(q20 % 2 = 0) | q20 <- q17]))          | q17 <- parts(boxes)])"},
+ "59": {"onVariable:" "boxes"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|parts(boxes)| / 2 + 1 >= sum([toInt(1 >= sum([toInt(q20 < 1 + (n - 1) / 2) | q20 <- q17]))          | q17 <- parts(boxes)]) /\\ |parts(boxes)| / 2 - 1 <= sum([toInt(1 >= sum([toInt(q20 < 1 + (n - 1) / 2) | q20 <- q17]))          | q17 <- parts(boxes)])"},
+ "60": {"onVariable:" "boxes"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|parts(boxes)| / 2 + 1 >= sum([toInt(1 >= sum([toInt(q20 > 1 + (n - 1) / 2) | q20 <- q17]))          | q17 <- parts(boxes)]) /\\ |parts(boxes)| / 2 - 1 <= sum([toInt(1 >= sum([toInt(q20 > 1 + (n - 1) / 2) | q20 <- q17]))          | q17 <- parts(boxes)])"},
+ "61": {"onVariable:" "boxes"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|parts(boxes)| / 2 + 1 >= sum([toInt(|q17| / 2 + 1 >= sum([toInt(q21 % 2 = 1) | q21 <- q17])            /\\ |q17| / 2 - 1 <= sum([toInt(q21 % 2 = 1) | q21 <- q17]))          | q17 <- parts(boxes)]) /\\ |parts(boxes)| / 2 - 1 <= sum([toInt(|q17| / 2 + 1 >= sum([toInt(q21 % 2 = 1) | q21 <- q17])            /\\ |q17| / 2 - 1 <= sum([toInt(q21 % 2 = 1) | q21 <- q17]))          | q17 <- parts(boxes)])"},
+ "62": {"onVariable:" "boxes"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|parts(boxes)| / 2 + 1 >= sum([toInt(|q17| / 2 + 1 >= sum([toInt(q21 % 2 = 0) | q21 <- q17])            /\\ |q17| / 2 - 1 <= sum([toInt(q21 % 2 = 0) | q21 <- q17]))          | q17 <- parts(boxes)]) /\\ |parts(boxes)| / 2 - 1 <= sum([toInt(|q17| / 2 + 1 >= sum([toInt(q21 % 2 = 0) | q21 <- q17])            /\\ |q17| / 2 - 1 <= sum([toInt(q21 % 2 = 0) | q21 <- q17]))          | q17 <- parts(boxes)])"},
+ "63": {"onVariable:" "boxes"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|parts(boxes)| / 2 + 1 >= sum([toInt(|q17| / 2 + 1 >=            sum([toInt(q21 < 1 + (n - 1) / 2) | q21 <- q17])            /\\            |q17| / 2 - 1 <= sum([toInt(q21 < 1 + (n - 1) / 2) | q21 <- q17]))          | q17 <- parts(boxes)]) /\\ |parts(boxes)| / 2 - 1 <= sum([toInt(|q17| / 2 + 1 >=            sum([toInt(q21 < 1 + (n - 1) / 2) | q21 <- q17])            /\\            |q17| / 2 - 1 <= sum([toInt(q21 < 1 + (n - 1) / 2) | q21 <- q17]))          | q17 <- parts(boxes)])"},
+ "64": {"onVariable:" "boxes"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|parts(boxes)| / 2 + 1 >= sum([toInt(|q17| / 2 + 1 >=            sum([toInt(q21 > 1 + (n - 1) / 2) | q21 <- q17])            /\\            |q17| / 2 - 1 <= sum([toInt(q21 > 1 + (n - 1) / 2) | q21 <- q17]))          | q17 <- parts(boxes)]) /\\ |parts(boxes)| / 2 - 1 <= sum([toInt(|q17| / 2 + 1 >=            sum([toInt(q21 > 1 + (n - 1) / 2) | q21 <- q17])            /\\            |q17| / 2 - 1 <= sum([toInt(q21 > 1 + (n - 1) / 2) | q21 <- q17]))          | q17 <- parts(boxes)])"},
+ "65": {"onVariable:" "boxes"
+        "groups:" ["PartitionRegular"]
+        "constraint:" "minPartSize(boxes, |participants(boxes)| / |parts(boxes)| - 1) /\\ maxPartSize(boxes, |participants(boxes)| / |parts(boxes)| + 1)"}}

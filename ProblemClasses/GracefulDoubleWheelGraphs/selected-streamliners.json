@@ -1,0 +1,14 @@
+{
+ "45": {"onVariable:" "edgeID"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|range(edgeID)| / 2 = sum([toInt(q25 % 2 = 1) | q25 <- range(edgeID)])"},
+ "46": {"onVariable:" "edgeID"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|range(edgeID)| / 2 = sum([toInt(q25 % 2 = 0) | q25 <- range(edgeID)])"},
+ "48": {"onVariable:" "edgeID"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|range(edgeID)| / 2 = sum([toInt(q25 > 1 + (4 * n - 1) / 2) | q25 <- range(edgeID)])"},
+ "56": {"onVariable:" "edgeID"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|range(edgeID)| / 2 + 1 >= sum([toInt(q27 > 1 + (4 * n - 1) / 2) | q27 <- range(edgeID)]) /\\ |range(edgeID)| / 2 - 1 <= sum([toInt(q27 > 1 + (4 * n - 1) / 2) | q27 <- range(edgeID)])"},
+}

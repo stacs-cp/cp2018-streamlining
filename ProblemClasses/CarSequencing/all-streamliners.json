@@ -1,0 +1,108 @@
+{"1": {"onVariable:" "car"
+       "groups:" ["FuncIncreaseDecrease"]
+       "constraint:" "and([and([q1 < q2 -> image(car, q1) <= image(car, q2)               | q2 <- defined(car)])          | q1 <- defined(car)])"},
+ "2": {"onVariable:" "car"
+       "groups:" ["FuncIncreaseDecrease"]
+       "constraint:" "and([and([q3 < q4 -> image(car, q3) >= image(car, q4)               | q4 <- defined(car)])          | q3 <- defined(car)])"},
+ "3": {"onVariable:" "car"
+       "groups:" ["FuncIncreaseDecrease"]
+       "constraint:" "and([image(car, min(defined(car))) <= image(car, q5)          | q5 <- defined(car)])"},
+ "4": {"onVariable:" "car"
+       "groups:" ["FuncIncreaseDecrease"]
+       "constraint:" "and([image(car, max(defined(car))) >= image(car, q6)          | q6 <- defined(car)])"},
+ "5": {"onVariable:" "car"
+       "groups:" ["IntOddEven"]
+       "constraint:" "and([q8 % 2 = 1 | q8 <- range(car)])"},
+ "6": {"onVariable:" "car"
+       "groups:" ["IntOddEven"]
+       "constraint:" "and([q8 % 2 = 0 | q8 <- range(car)])"},
+ "7": {"onVariable:" "car"
+       "groups:" ["IntLowHigh"]
+       "constraint:" "and([q8 < 1 + (n_classes - 1) / 2 | q8 <- range(car)])"},
+ "8": {"onVariable:" "car"
+       "groups:" ["IntLowHigh"]
+       "constraint:" "and([q8 > 1 + (n_classes - 1) / 2 | q8 <- range(car)])"},
+ "9": {"onVariable:" "car"
+       "groups:" ["IntOddEven"]
+       "constraint:" "|range(car)| / 2 = sum([toInt(q9 % 2 = 1) | q9 <- range(car)])"},
+ "10": {"onVariable:" "car"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|range(car)| / 2 = sum([toInt(q9 % 2 = 0) | q9 <- range(car)])"},
+ "11": {"onVariable:" "car"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|range(car)| / 2 = sum([toInt(q9 < 1 + (n_classes - 1) / 2) | q9 <- range(car)])"},
+ "12": {"onVariable:" "car"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|range(car)| / 2 = sum([toInt(q9 > 1 + (n_classes - 1) / 2) | q9 <- range(car)])"},
+ "13": {"onVariable:" "car"
+        "groups:" ["IntOddEven"]
+        "constraint:" "1 >= sum([toInt(q10 % 2 = 1) | q10 <- range(car)])"},
+ "14": {"onVariable:" "car"
+        "groups:" ["IntOddEven"]
+        "constraint:" "1 >= sum([toInt(q10 % 2 = 0) | q10 <- range(car)])"},
+ "15": {"onVariable:" "car"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "1 >= sum([toInt(q10 < 1 + (n_classes - 1) / 2) | q10 <- range(car)])"},
+ "16": {"onVariable:" "car"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "1 >= sum([toInt(q10 > 1 + (n_classes - 1) / 2) | q10 <- range(car)])"},
+ "17": {"onVariable:" "car"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|range(car)| / 2 + 1 >= sum([toInt(q11 % 2 = 1) | q11 <- range(car)]) /\\ |range(car)| / 2 - 1 <= sum([toInt(q11 % 2 = 1) | q11 <- range(car)])"},
+ "18": {"onVariable:" "car"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|range(car)| / 2 + 1 >= sum([toInt(q11 % 2 = 0) | q11 <- range(car)]) /\\ |range(car)| / 2 - 1 <= sum([toInt(q11 % 2 = 0) | q11 <- range(car)])"},
+ "19": {"onVariable:" "car"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|range(car)| / 2 + 1 >= sum([toInt(q11 < 1 + (n_classes - 1) / 2) | q11 <- range(car)]) /\\ |range(car)| / 2 - 1 <= sum([toInt(q11 < 1 + (n_classes - 1) / 2) | q11 <- range(car)])"},
+ "20": {"onVariable:" "car"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|range(car)| / 2 + 1 >= sum([toInt(q11 > 1 + (n_classes - 1) / 2) | q11 <- range(car)]) /\\ |range(car)| / 2 - 1 <= sum([toInt(q11 > 1 + (n_classes - 1) / 2) | q11 <- range(car)])"},
+ "21": {"onVariable:" "car"
+        "groups:" ["IntOddEven"]
+        "constraint:" "and([q13 % 2 = 1 | q13 <- defined(car)])"},
+ "22": {"onVariable:" "car"
+        "groups:" ["IntOddEven"]
+        "constraint:" "and([q13 % 2 = 0 | q13 <- defined(car)])"},
+ "23": {"onVariable:" "car"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "and([q13 < 1 + (n_cars - 1) / 2 | q13 <- defined(car)])"},
+ "24": {"onVariable:" "car"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "and([q13 > 1 + (n_cars - 1) / 2 | q13 <- defined(car)])"},
+ "25": {"onVariable:" "car"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|defined(car)| / 2 = sum([toInt(q14 % 2 = 1) | q14 <- defined(car)])"},
+ "26": {"onVariable:" "car"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|defined(car)| / 2 = sum([toInt(q14 % 2 = 0) | q14 <- defined(car)])"},
+ "27": {"onVariable:" "car"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|defined(car)| / 2 = sum([toInt(q14 < 1 + (n_cars - 1) / 2) | q14 <- defined(car)])"},
+ "28": {"onVariable:" "car"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|defined(car)| / 2 = sum([toInt(q14 > 1 + (n_cars - 1) / 2) | q14 <- defined(car)])"},
+ "29": {"onVariable:" "car"
+        "groups:" ["IntOddEven"]
+        "constraint:" "1 >= sum([toInt(q15 % 2 = 1) | q15 <- defined(car)])"},
+ "30": {"onVariable:" "car"
+        "groups:" ["IntOddEven"]
+        "constraint:" "1 >= sum([toInt(q15 % 2 = 0) | q15 <- defined(car)])"},
+ "31": {"onVariable:" "car"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "1 >= sum([toInt(q15 < 1 + (n_cars - 1) / 2) | q15 <- defined(car)])"},
+ "32": {"onVariable:" "car"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "1 >= sum([toInt(q15 > 1 + (n_cars - 1) / 2) | q15 <- defined(car)])"},
+ "33": {"onVariable:" "car"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|defined(car)| / 2 + 1 >= sum([toInt(q16 % 2 = 1) | q16 <- defined(car)]) /\\ |defined(car)| / 2 - 1 <= sum([toInt(q16 % 2 = 1) | q16 <- defined(car)])"},
+ "34": {"onVariable:" "car"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|defined(car)| / 2 + 1 >= sum([toInt(q16 % 2 = 0) | q16 <- defined(car)]) /\\ |defined(car)| / 2 - 1 <= sum([toInt(q16 % 2 = 0) | q16 <- defined(car)])"},
+ "35": {"onVariable:" "car"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|defined(car)| / 2 + 1 >= sum([toInt(q16 < 1 + (n_cars - 1) / 2) | q16 <- defined(car)]) /\\ |defined(car)| / 2 - 1 <= sum([toInt(q16 < 1 + (n_cars - 1) / 2) | q16 <- defined(car)])"},
+ "36": {"onVariable:" "car"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|defined(car)| / 2 + 1 >= sum([toInt(q16 > 1 + (n_cars - 1) / 2) | q16 <- defined(car)]) /\\ |defined(car)| / 2 - 1 <= sum([toInt(q16 > 1 + (n_cars - 1) / 2) | q16 <- defined(car)])"}}

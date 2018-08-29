@@ -1,0 +1,216 @@
+{"1": {"onVariable:" "colouring"
+       "groups:" ["FuncIncreaseDecrease"]
+       "constraint:" "and([and([q1 < q2 -> image(colouring, q1) <= image(colouring, q2)               | q2 <- defined(colouring)])          | q1 <- defined(colouring)])"},
+ "2": {"onVariable:" "colouring"
+       "groups:" ["FuncIncreaseDecrease"]
+       "constraint:" "and([and([q3 < q4 -> image(colouring, q3) >= image(colouring, q4)               | q4 <- defined(colouring)])          | q3 <- defined(colouring)])"},
+ "3": {"onVariable:" "colouring"
+       "groups:" ["FuncIncreaseDecrease"]
+       "constraint:" "and([image(colouring, min(defined(colouring))) <=      image(colouring, q5)          | q5 <- defined(colouring)])"},
+ "4": {"onVariable:" "colouring"
+       "groups:" ["FuncIncreaseDecrease"]
+       "constraint:" "and([image(colouring, max(defined(colouring))) >=      image(colouring, q6)          | q6 <- defined(colouring)])"},
+ "5": {"onVariable:" "colouring"
+       "groups:" ["IntOddEven"]
+       "constraint:" "and([q8 % 2 = 1 | q8 <- range(colouring)])"},
+ "6": {"onVariable:" "colouring"
+       "groups:" ["IntOddEven"]
+       "constraint:" "and([q8 % 2 = 0 | q8 <- range(colouring)])"},
+ "7": {"onVariable:" "colouring"
+       "groups:" ["IntLowHigh"]
+       "constraint:" "and([q8 < 1 + (4 * n - 1) / 2 | q8 <- range(colouring)])"},
+ "8": {"onVariable:" "colouring"
+       "groups:" ["IntLowHigh"]
+       "constraint:" "and([q8 > 1 + (4 * n - 1) / 2 | q8 <- range(colouring)])"},
+ "9": {"onVariable:" "colouring"
+       "groups:" ["IntOddEven"]
+       "constraint:" "|range(colouring)| / 2 = sum([toInt(q9 % 2 = 1) | q9 <- range(colouring)])"},
+ "10": {"onVariable:" "colouring"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|range(colouring)| / 2 = sum([toInt(q9 % 2 = 0) | q9 <- range(colouring)])"},
+ "11": {"onVariable:" "colouring"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|range(colouring)| / 2 = sum([toInt(q9 < 1 + (4 * n - 1) / 2) | q9 <- range(colouring)])"},
+ "12": {"onVariable:" "colouring"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|range(colouring)| / 2 = sum([toInt(q9 > 1 + (4 * n - 1) / 2) | q9 <- range(colouring)])"},
+ "13": {"onVariable:" "colouring"
+        "groups:" ["IntOddEven"]
+        "constraint:" "1 >= sum([toInt(q10 % 2 = 1) | q10 <- range(colouring)])"},
+ "14": {"onVariable:" "colouring"
+        "groups:" ["IntOddEven"]
+        "constraint:" "1 >= sum([toInt(q10 % 2 = 0) | q10 <- range(colouring)])"},
+ "15": {"onVariable:" "colouring"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "1 >= sum([toInt(q10 < 1 + (4 * n - 1) / 2) | q10 <- range(colouring)])"},
+ "16": {"onVariable:" "colouring"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "1 >= sum([toInt(q10 > 1 + (4 * n - 1) / 2) | q10 <- range(colouring)])"},
+ "17": {"onVariable:" "colouring"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|range(colouring)| / 2 + 1 >= sum([toInt(q11 % 2 = 1) | q11 <- range(colouring)]) /\\ |range(colouring)| / 2 - 1 <= sum([toInt(q11 % 2 = 1) | q11 <- range(colouring)])"},
+ "18": {"onVariable:" "colouring"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|range(colouring)| / 2 + 1 >= sum([toInt(q11 % 2 = 0) | q11 <- range(colouring)]) /\\ |range(colouring)| / 2 - 1 <= sum([toInt(q11 % 2 = 0) | q11 <- range(colouring)])"},
+ "19": {"onVariable:" "colouring"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|range(colouring)| / 2 + 1 >= sum([toInt(q11 < 1 + (4 * n - 1) / 2) | q11 <- range(colouring)]) /\\ |range(colouring)| / 2 - 1 <= sum([toInt(q11 < 1 + (4 * n - 1) / 2) | q11 <- range(colouring)])"},
+ "20": {"onVariable:" "colouring"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|range(colouring)| / 2 + 1 >= sum([toInt(q11 > 1 + (4 * n - 1) / 2) | q11 <- range(colouring)]) /\\ |range(colouring)| / 2 - 1 <= sum([toInt(q11 > 1 + (4 * n - 1) / 2) | q11 <- range(colouring)])"},
+ "21": {"onVariable:" "colouring"
+        "groups:" ["IntOddEven"]
+        "constraint:" "and([q13 % 2 = 1 | q13 <- defined(colouring)])"},
+ "22": {"onVariable:" "colouring"
+        "groups:" ["IntOddEven"]
+        "constraint:" "and([q13 % 2 = 0 | q13 <- defined(colouring)])"},
+ "23": {"onVariable:" "colouring"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "and([q13 < 1 + (2 * n - 1) / 2 | q13 <- defined(colouring)])"},
+ "24": {"onVariable:" "colouring"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "and([q13 > 1 + (2 * n - 1) / 2 | q13 <- defined(colouring)])"},
+ "25": {"onVariable:" "colouring"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|defined(colouring)| / 2 = sum([toInt(q14 % 2 = 1) | q14 <- defined(colouring)])"},
+ "26": {"onVariable:" "colouring"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|defined(colouring)| / 2 = sum([toInt(q14 % 2 = 0) | q14 <- defined(colouring)])"},
+ "27": {"onVariable:" "colouring"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|defined(colouring)| / 2 = sum([toInt(q14 < 1 + (2 * n - 1) / 2) | q14 <- defined(colouring)])"},
+ "28": {"onVariable:" "colouring"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|defined(colouring)| / 2 = sum([toInt(q14 > 1 + (2 * n - 1) / 2) | q14 <- defined(colouring)])"},
+ "29": {"onVariable:" "colouring"
+        "groups:" ["IntOddEven"]
+        "constraint:" "1 >= sum([toInt(q15 % 2 = 1) | q15 <- defined(colouring)])"},
+ "30": {"onVariable:" "colouring"
+        "groups:" ["IntOddEven"]
+        "constraint:" "1 >= sum([toInt(q15 % 2 = 0) | q15 <- defined(colouring)])"},
+ "31": {"onVariable:" "colouring"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "1 >= sum([toInt(q15 < 1 + (2 * n - 1) / 2) | q15 <- defined(colouring)])"},
+ "32": {"onVariable:" "colouring"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "1 >= sum([toInt(q15 > 1 + (2 * n - 1) / 2) | q15 <- defined(colouring)])"},
+ "33": {"onVariable:" "colouring"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|defined(colouring)| / 2 + 1 >= sum([toInt(q16 % 2 = 1) | q16 <- defined(colouring)]) /\\ |defined(colouring)| / 2 - 1 <= sum([toInt(q16 % 2 = 1) | q16 <- defined(colouring)])"},
+ "34": {"onVariable:" "colouring"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|defined(colouring)| / 2 + 1 >= sum([toInt(q16 % 2 = 0) | q16 <- defined(colouring)]) /\\ |defined(colouring)| / 2 - 1 <= sum([toInt(q16 % 2 = 0) | q16 <- defined(colouring)])"},
+ "35": {"onVariable:" "colouring"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|defined(colouring)| / 2 + 1 >= sum([toInt(q16 < 1 + (2 * n - 1) / 2) | q16 <- defined(colouring)]) /\\ |defined(colouring)| / 2 - 1 <= sum([toInt(q16 < 1 + (2 * n - 1) / 2) | q16 <- defined(colouring)])"},
+ "36": {"onVariable:" "colouring"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|defined(colouring)| / 2 + 1 >= sum([toInt(q16 > 1 + (2 * n - 1) / 2) | q16 <- defined(colouring)]) /\\ |defined(colouring)| / 2 - 1 <= sum([toInt(q16 > 1 + (2 * n - 1) / 2) | q16 <- defined(colouring)])"},
+ "37": {"onVariable:" "edgeID"
+        "groups:" ["FuncIncreaseDecrease"]
+        "constraint:" "and([and([q17 < q18 -> image(edgeID, q17) <= image(edgeID, q18)               | q18 <- defined(edgeID)])          | q17 <- defined(edgeID)])"},
+ "38": {"onVariable:" "edgeID"
+        "groups:" ["FuncIncreaseDecrease"]
+        "constraint:" "and([and([q19 < q20 -> image(edgeID, q19) >= image(edgeID, q20)               | q20 <- defined(edgeID)])          | q19 <- defined(edgeID)])"},
+ "39": {"onVariable:" "edgeID"
+        "groups:" ["FuncIncreaseDecrease"]
+        "constraint:" "and([image(edgeID, min(defined(edgeID))) <= image(edgeID, q21)          | q21 <- defined(edgeID)])"},
+ "40": {"onVariable:" "edgeID"
+        "groups:" ["FuncIncreaseDecrease"]
+        "constraint:" "and([image(edgeID, max(defined(edgeID))) >= image(edgeID, q22)          | q22 <- defined(edgeID)])"},
+ "41": {"onVariable:" "edgeID"
+        "groups:" ["IntOddEven"]
+        "constraint:" "and([q24 % 2 = 1 | q24 <- range(edgeID)])"},
+ "42": {"onVariable:" "edgeID"
+        "groups:" ["IntOddEven"]
+        "constraint:" "and([q24 % 2 = 0 | q24 <- range(edgeID)])"},
+ "43": {"onVariable:" "edgeID"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "and([q24 < 1 + (4 * n - 1) / 2 | q24 <- range(edgeID)])"},
+ "44": {"onVariable:" "edgeID"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "and([q24 > 1 + (4 * n - 1) / 2 | q24 <- range(edgeID)])"},
+ "45": {"onVariable:" "edgeID"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|range(edgeID)| / 2 = sum([toInt(q25 % 2 = 1) | q25 <- range(edgeID)])"},
+ "46": {"onVariable:" "edgeID"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|range(edgeID)| / 2 = sum([toInt(q25 % 2 = 0) | q25 <- range(edgeID)])"},
+ "47": {"onVariable:" "edgeID"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|range(edgeID)| / 2 = sum([toInt(q25 < 1 + (4 * n - 1) / 2) | q25 <- range(edgeID)])"},
+ "48": {"onVariable:" "edgeID"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|range(edgeID)| / 2 = sum([toInt(q25 > 1 + (4 * n - 1) / 2) | q25 <- range(edgeID)])"},
+ "49": {"onVariable:" "edgeID"
+        "groups:" ["IntOddEven"]
+        "constraint:" "1 >= sum([toInt(q26 % 2 = 1) | q26 <- range(edgeID)])"},
+ "50": {"onVariable:" "edgeID"
+        "groups:" ["IntOddEven"]
+        "constraint:" "1 >= sum([toInt(q26 % 2 = 0) | q26 <- range(edgeID)])"},
+ "51": {"onVariable:" "edgeID"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "1 >= sum([toInt(q26 < 1 + (4 * n - 1) / 2) | q26 <- range(edgeID)])"},
+ "52": {"onVariable:" "edgeID"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "1 >= sum([toInt(q26 > 1 + (4 * n - 1) / 2) | q26 <- range(edgeID)])"},
+ "53": {"onVariable:" "edgeID"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|range(edgeID)| / 2 + 1 >= sum([toInt(q27 % 2 = 1) | q27 <- range(edgeID)]) /\\ |range(edgeID)| / 2 - 1 <= sum([toInt(q27 % 2 = 1) | q27 <- range(edgeID)])"},
+ "54": {"onVariable:" "edgeID"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|range(edgeID)| / 2 + 1 >= sum([toInt(q27 % 2 = 0) | q27 <- range(edgeID)]) /\\ |range(edgeID)| / 2 - 1 <= sum([toInt(q27 % 2 = 0) | q27 <- range(edgeID)])"},
+ "55": {"onVariable:" "edgeID"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|range(edgeID)| / 2 + 1 >= sum([toInt(q27 < 1 + (4 * n - 1) / 2) | q27 <- range(edgeID)]) /\\ |range(edgeID)| / 2 - 1 <= sum([toInt(q27 < 1 + (4 * n - 1) / 2) | q27 <- range(edgeID)])"},
+ "56": {"onVariable:" "edgeID"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|range(edgeID)| / 2 + 1 >= sum([toInt(q27 > 1 + (4 * n - 1) / 2) | q27 <- range(edgeID)]) /\\ |range(edgeID)| / 2 - 1 <= sum([toInt(q27 > 1 + (4 * n - 1) / 2) | q27 <- range(edgeID)])"},
+ "57": {"onVariable:" "edgeID"
+        "groups:" ["IntOddEven"]
+        "constraint:" "and([q29 % 2 = 1 | q29 <- defined(edgeID)])"},
+ "58": {"onVariable:" "edgeID"
+        "groups:" ["IntOddEven"]
+        "constraint:" "and([q29 % 2 = 0 | q29 <- defined(edgeID)])"},
+ "59": {"onVariable:" "edgeID"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "and([q29 < 1 + (4 * n - 1 - 1) / 2 | q29 <- defined(edgeID)])"},
+ "60": {"onVariable:" "edgeID"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "and([q29 > 1 + (4 * n - 1 - 1) / 2 | q29 <- defined(edgeID)])"},
+ "61": {"onVariable:" "edgeID"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|defined(edgeID)| / 2 = sum([toInt(q30 % 2 = 1) | q30 <- defined(edgeID)])"},
+ "62": {"onVariable:" "edgeID"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|defined(edgeID)| / 2 = sum([toInt(q30 % 2 = 0) | q30 <- defined(edgeID)])"},
+ "63": {"onVariable:" "edgeID"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|defined(edgeID)| / 2 = sum([toInt(q30 < 1 + (4 * n - 1 - 1) / 2)          | q30 <- defined(edgeID)])"},
+ "64": {"onVariable:" "edgeID"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|defined(edgeID)| / 2 = sum([toInt(q30 > 1 + (4 * n - 1 - 1) / 2)          | q30 <- defined(edgeID)])"},
+ "65": {"onVariable:" "edgeID"
+        "groups:" ["IntOddEven"]
+        "constraint:" "1 >= sum([toInt(q31 % 2 = 1) | q31 <- defined(edgeID)])"},
+ "66": {"onVariable:" "edgeID"
+        "groups:" ["IntOddEven"]
+        "constraint:" "1 >= sum([toInt(q31 % 2 = 0) | q31 <- defined(edgeID)])"},
+ "67": {"onVariable:" "edgeID"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "1 >= sum([toInt(q31 < 1 + (4 * n - 1 - 1) / 2)          | q31 <- defined(edgeID)])"},
+ "68": {"onVariable:" "edgeID"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "1 >= sum([toInt(q31 > 1 + (4 * n - 1 - 1) / 2)          | q31 <- defined(edgeID)])"},
+ "69": {"onVariable:" "edgeID"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|defined(edgeID)| / 2 + 1 >= sum([toInt(q32 % 2 = 1) | q32 <- defined(edgeID)]) /\\ |defined(edgeID)| / 2 - 1 <= sum([toInt(q32 % 2 = 1) | q32 <- defined(edgeID)])"},
+ "70": {"onVariable:" "edgeID"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|defined(edgeID)| / 2 + 1 >= sum([toInt(q32 % 2 = 0) | q32 <- defined(edgeID)]) /\\ |defined(edgeID)| / 2 - 1 <= sum([toInt(q32 % 2 = 0) | q32 <- defined(edgeID)])"},
+ "71": {"onVariable:" "edgeID"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|defined(edgeID)| / 2 + 1 >= sum([toInt(q32 < 1 + (4 * n - 1 - 1) / 2)          | q32 <- defined(edgeID)]) /\\ |defined(edgeID)| / 2 - 1 <= sum([toInt(q32 < 1 + (4 * n - 1 - 1) / 2)          | q32 <- defined(edgeID)])"},
+ "72": {"onVariable:" "edgeID"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|defined(edgeID)| / 2 + 1 >= sum([toInt(q32 > 1 + (4 * n - 1 - 1) / 2)          | q32 <- defined(edgeID)]) /\\ |defined(edgeID)| / 2 - 1 <= sum([toInt(q32 > 1 + (4 * n - 1 - 1) / 2)          | q32 <- defined(edgeID)])"}}

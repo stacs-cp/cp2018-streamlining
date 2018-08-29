@@ -1,0 +1,11 @@
+{
+ "25": {"onVariable:" "boxes"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|parts(boxes)| / 2 = sum([toInt(1 >= sum([toInt(q10 % 2 = 1) | q10 <- q7]))          | q7 <- parts(boxes)])"},
+ "27": {"onVariable:" "boxes"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|parts(boxes)| / 2 = sum([toInt(1 >= sum([toInt(q10 < 1 + (n - 1) / 2) | q10 <- q7]))          | q7 <- parts(boxes)])"},
+ "51": {"onVariable:" "boxes"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|parts(boxes)| / 2 + 1 >= sum([toInt(and([q18 < 1 + (n - 1) / 2 | q18 <- q17]))          | q17 <- parts(boxes)]) /\\ |parts(boxes)| / 2 - 1 <= sum([toInt(and([q18 < 1 + (n - 1) / 2 | q18 <- q17]))          | q17 <- parts(boxes)])"},
+}

@@ -1,0 +1,252 @@
+{"1": {"onVariable:" "plan"
+       "groups:" ["FuncIncreaseDecrease"]
+       "constraint:" "and([and([and([q2 < q3 -> image(q1, q2) <= image(q1, q3)                    | q3 <- defined(q1)])               | q2 <- defined(q1)])          | q1 <- plan])"},
+ "2": {"onVariable:" "plan"
+       "groups:" ["FuncIncreaseDecrease"]
+       "constraint:" "and([and([and([q4 < q5 -> image(q1, q4) >= image(q1, q5)                    | q5 <- defined(q1)])               | q4 <- defined(q1)])          | q1 <- plan])"},
+ "3": {"onVariable:" "plan"
+       "groups:" ["FuncIncreaseDecrease"]
+       "constraint:" "and([and([image(q1, min(defined(q1))) <= image(q1, q6)               | q6 <- defined(q1)])          | q1 <- plan])"},
+ "4": {"onVariable:" "plan"
+       "groups:" ["FuncIncreaseDecrease"]
+       "constraint:" "and([and([image(q1, max(defined(q1))) >= image(q1, q7)               | q7 <- defined(q1)])          | q1 <- plan])"},
+ "5": {"onVariable:" "plan"
+       "groups:" ["IntOddEven"]
+       "constraint:" "and([and([q9 % 2 = 1 | q9 <- range(q1)]) | q1 <- plan])"},
+ "6": {"onVariable:" "plan"
+       "groups:" ["IntOddEven"]
+       "constraint:" "and([and([q9 % 2 = 0 | q9 <- range(q1)]) | q1 <- plan])"},
+ "7": {"onVariable:" "plan"
+       "groups:" ["IntLowHigh"]
+       "constraint:" "and([and([q9 < 1 + (numberLocations - 1) / 2 | q9 <- range(q1)])          | q1 <- plan])"},
+ "8": {"onVariable:" "plan"
+       "groups:" ["IntLowHigh"]
+       "constraint:" "and([and([q9 > 1 + (numberLocations - 1) / 2 | q9 <- range(q1)])          | q1 <- plan])"},
+ "9": {"onVariable:" "plan"
+       "groups:" ["IntOddEven"]
+       "constraint:" "and([|range(q1)| / 2 = sum([toInt(q10 % 2 = 1) | q10 <- range(q1)])          | q1 <- plan])"},
+ "10": {"onVariable:" "plan"
+        "groups:" ["IntOddEven"]
+        "constraint:" "and([|range(q1)| / 2 = sum([toInt(q10 % 2 = 0) | q10 <- range(q1)])          | q1 <- plan])"},
+ "11": {"onVariable:" "plan"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "and([|range(q1)| / 2 =      sum([toInt(q10 < 1 + (numberLocations - 1) / 2)               | q10 <- range(q1)])          | q1 <- plan])"},
+ "12": {"onVariable:" "plan"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "and([|range(q1)| / 2 =      sum([toInt(q10 > 1 + (numberLocations - 1) / 2)               | q10 <- range(q1)])          | q1 <- plan])"},
+ "13": {"onVariable:" "plan"
+        "groups:" ["IntOddEven"]
+        "constraint:" "and([1 >= sum([toInt(q11 % 2 = 1) | q11 <- range(q1)])          | q1 <- plan])"},
+ "14": {"onVariable:" "plan"
+        "groups:" ["IntOddEven"]
+        "constraint:" "and([1 >= sum([toInt(q11 % 2 = 0) | q11 <- range(q1)])          | q1 <- plan])"},
+ "15": {"onVariable:" "plan"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "and([1 >=      sum([toInt(q11 < 1 + (numberLocations - 1) / 2)               | q11 <- range(q1)])          | q1 <- plan])"},
+ "16": {"onVariable:" "plan"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "and([1 >=      sum([toInt(q11 > 1 + (numberLocations - 1) / 2)               | q11 <- range(q1)])          | q1 <- plan])"},
+ "17": {"onVariable:" "plan"
+        "groups:" ["IntOddEven"]
+        "constraint:" "and([|range(q1)| / 2 + 1 >=      sum([toInt(q12 % 2 = 1) | q12 <- range(q1)])      /\\      |range(q1)| / 2 - 1 <= sum([toInt(q12 % 2 = 1) | q12 <- range(q1)])          | q1 <- plan])"},
+ "18": {"onVariable:" "plan"
+        "groups:" ["IntOddEven"]
+        "constraint:" "and([|range(q1)| / 2 + 1 >=      sum([toInt(q12 % 2 = 0) | q12 <- range(q1)])      /\\      |range(q1)| / 2 - 1 <= sum([toInt(q12 % 2 = 0) | q12 <- range(q1)])          | q1 <- plan])"},
+ "19": {"onVariable:" "plan"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "and([|range(q1)| / 2 + 1 >=      sum([toInt(q12 < 1 + (numberLocations - 1) / 2)               | q12 <- range(q1)])      /\\      |range(q1)| / 2 - 1 <=      sum([toInt(q12 < 1 + (numberLocations - 1) / 2)               | q12 <- range(q1)])          | q1 <- plan])"},
+ "20": {"onVariable:" "plan"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "and([|range(q1)| / 2 + 1 >=      sum([toInt(q12 > 1 + (numberLocations - 1) / 2)               | q12 <- range(q1)])      /\\      |range(q1)| / 2 - 1 <=      sum([toInt(q12 > 1 + (numberLocations - 1) / 2)               | q12 <- range(q1)])          | q1 <- plan])"},
+ "21": {"onVariable:" "plan"
+        "groups:" ["FuncIncreaseDecrease"]
+        "constraint:" "|plan| / 2 = sum([toInt(and([and([q14 < q15 ->                      image(q13, q14) <= image(q13, q15)                          | q15 <- defined(q13)])                     | q14 <- defined(q13)]))          | q13 <- plan])"},
+ "22": {"onVariable:" "plan"
+        "groups:" ["FuncIncreaseDecrease"]
+        "constraint:" "|plan| / 2 = sum([toInt(and([and([q16 < q17 ->                      image(q13, q16) >= image(q13, q17)                          | q17 <- defined(q13)])                     | q16 <- defined(q13)]))          | q13 <- plan])"},
+ "23": {"onVariable:" "plan"
+        "groups:" ["FuncIncreaseDecrease"]
+        "constraint:" "|plan| / 2 = sum([toInt(and([image(q13, min(defined(q13))) <= image(q13, q18)                     | q18 <- defined(q13)]))          | q13 <- plan])"},
+ "24": {"onVariable:" "plan"
+        "groups:" ["FuncIncreaseDecrease"]
+        "constraint:" "|plan| / 2 = sum([toInt(and([image(q13, max(defined(q13))) >= image(q13, q19)                     | q19 <- defined(q13)]))          | q13 <- plan])"},
+ "25": {"onVariable:" "plan"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|plan| / 2 = sum([toInt(and([q21 % 2 = 1 | q21 <- range(q13)])) | q13 <- plan])"},
+ "26": {"onVariable:" "plan"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|plan| / 2 = sum([toInt(and([q21 % 2 = 0 | q21 <- range(q13)])) | q13 <- plan])"},
+ "27": {"onVariable:" "plan"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|plan| / 2 = sum([toInt(and([q21 < 1 + (numberLocations - 1) / 2                     | q21 <- range(q13)]))          | q13 <- plan])"},
+ "28": {"onVariable:" "plan"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|plan| / 2 = sum([toInt(and([q21 > 1 + (numberLocations - 1) / 2                     | q21 <- range(q13)]))          | q13 <- plan])"},
+ "29": {"onVariable:" "plan"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|plan| / 2 = sum([toInt(|range(q13)| / 2 =            sum([toInt(q22 % 2 = 1) | q22 <- range(q13)]))          | q13 <- plan])"},
+ "30": {"onVariable:" "plan"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|plan| / 2 = sum([toInt(|range(q13)| / 2 =            sum([toInt(q22 % 2 = 0) | q22 <- range(q13)]))          | q13 <- plan])"},
+ "31": {"onVariable:" "plan"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|plan| / 2 = sum([toInt(|range(q13)| / 2 =            sum([toInt(q22 < 1 + (numberLocations - 1) / 2)                     | q22 <- range(q13)]))          | q13 <- plan])"},
+ "32": {"onVariable:" "plan"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|plan| / 2 = sum([toInt(|range(q13)| / 2 =            sum([toInt(q22 > 1 + (numberLocations - 1) / 2)                     | q22 <- range(q13)]))          | q13 <- plan])"},
+ "33": {"onVariable:" "plan"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|plan| / 2 = sum([toInt(1 >= sum([toInt(q23 % 2 = 1) | q23 <- range(q13)]))          | q13 <- plan])"},
+ "34": {"onVariable:" "plan"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|plan| / 2 = sum([toInt(1 >= sum([toInt(q23 % 2 = 0) | q23 <- range(q13)]))          | q13 <- plan])"},
+ "35": {"onVariable:" "plan"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|plan| / 2 = sum([toInt(1 >=            sum([toInt(q23 < 1 + (numberLocations - 1) / 2)                     | q23 <- range(q13)]))          | q13 <- plan])"},
+ "36": {"onVariable:" "plan"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|plan| / 2 = sum([toInt(1 >=            sum([toInt(q23 > 1 + (numberLocations - 1) / 2)                     | q23 <- range(q13)]))          | q13 <- plan])"},
+ "37": {"onVariable:" "plan"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|plan| / 2 = sum([toInt(|range(q13)| / 2 + 1 >=            sum([toInt(q24 % 2 = 1) | q24 <- range(q13)])            /\\            |range(q13)| / 2 - 1 <=            sum([toInt(q24 % 2 = 1) | q24 <- range(q13)]))          | q13 <- plan])"},
+ "38": {"onVariable:" "plan"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|plan| / 2 = sum([toInt(|range(q13)| / 2 + 1 >=            sum([toInt(q24 % 2 = 0) | q24 <- range(q13)])            /\\            |range(q13)| / 2 - 1 <=            sum([toInt(q24 % 2 = 0) | q24 <- range(q13)]))          | q13 <- plan])"},
+ "39": {"onVariable:" "plan"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|plan| / 2 = sum([toInt(|range(q13)| / 2 + 1 >=            sum([toInt(q24 < 1 + (numberLocations - 1) / 2)                     | q24 <- range(q13)])            /\\            |range(q13)| / 2 - 1 <=            sum([toInt(q24 < 1 + (numberLocations - 1) / 2)                     | q24 <- range(q13)]))          | q13 <- plan])"},
+ "40": {"onVariable:" "plan"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|plan| / 2 = sum([toInt(|range(q13)| / 2 + 1 >=            sum([toInt(q24 > 1 + (numberLocations - 1) / 2)                     | q24 <- range(q13)])            /\\            |range(q13)| / 2 - 1 <=            sum([toInt(q24 > 1 + (numberLocations - 1) / 2)                     | q24 <- range(q13)]))          | q13 <- plan])"},
+ "41": {"onVariable:" "plan"
+        "groups:" ["FuncIncreaseDecrease"]
+        "constraint:" "1 >= sum([toInt(and([and([q26 < q27 ->                      image(q25, q26) <= image(q25, q27)                          | q27 <- defined(q25)])                     | q26 <- defined(q25)]))          | q25 <- plan])"},
+ "42": {"onVariable:" "plan"
+        "groups:" ["FuncIncreaseDecrease"]
+        "constraint:" "1 >= sum([toInt(and([and([q28 < q29 ->                      image(q25, q28) >= image(q25, q29)                          | q29 <- defined(q25)])                     | q28 <- defined(q25)]))          | q25 <- plan])"},
+ "43": {"onVariable:" "plan"
+        "groups:" ["FuncIncreaseDecrease"]
+        "constraint:" "1 >= sum([toInt(and([image(q25, min(defined(q25))) <= image(q25, q30)                     | q30 <- defined(q25)]))          | q25 <- plan])"},
+ "44": {"onVariable:" "plan"
+        "groups:" ["FuncIncreaseDecrease"]
+        "constraint:" "1 >= sum([toInt(and([image(q25, max(defined(q25))) >= image(q25, q31)                     | q31 <- defined(q25)]))          | q25 <- plan])"},
+ "45": {"onVariable:" "plan"
+        "groups:" ["IntOddEven"]
+        "constraint:" "1 >= sum([toInt(and([q33 % 2 = 1 | q33 <- range(q25)])) | q25 <- plan])"},
+ "46": {"onVariable:" "plan"
+        "groups:" ["IntOddEven"]
+        "constraint:" "1 >= sum([toInt(and([q33 % 2 = 0 | q33 <- range(q25)])) | q25 <- plan])"},
+ "47": {"onVariable:" "plan"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "1 >= sum([toInt(and([q33 < 1 + (numberLocations - 1) / 2                     | q33 <- range(q25)]))          | q25 <- plan])"},
+ "48": {"onVariable:" "plan"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "1 >= sum([toInt(and([q33 > 1 + (numberLocations - 1) / 2                     | q33 <- range(q25)]))          | q25 <- plan])"},
+ "49": {"onVariable:" "plan"
+        "groups:" ["IntOddEven"]
+        "constraint:" "1 >= sum([toInt(|range(q25)| / 2 =            sum([toInt(q34 % 2 = 1) | q34 <- range(q25)]))          | q25 <- plan])"},
+ "50": {"onVariable:" "plan"
+        "groups:" ["IntOddEven"]
+        "constraint:" "1 >= sum([toInt(|range(q25)| / 2 =            sum([toInt(q34 % 2 = 0) | q34 <- range(q25)]))          | q25 <- plan])"},
+ "51": {"onVariable:" "plan"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "1 >= sum([toInt(|range(q25)| / 2 =            sum([toInt(q34 < 1 + (numberLocations - 1) / 2)                     | q34 <- range(q25)]))          | q25 <- plan])"},
+ "52": {"onVariable:" "plan"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "1 >= sum([toInt(|range(q25)| / 2 =            sum([toInt(q34 > 1 + (numberLocations - 1) / 2)                     | q34 <- range(q25)]))          | q25 <- plan])"},
+ "53": {"onVariable:" "plan"
+        "groups:" ["IntOddEven"]
+        "constraint:" "1 >= sum([toInt(1 >= sum([toInt(q35 % 2 = 1) | q35 <- range(q25)]))          | q25 <- plan])"},
+ "54": {"onVariable:" "plan"
+        "groups:" ["IntOddEven"]
+        "constraint:" "1 >= sum([toInt(1 >= sum([toInt(q35 % 2 = 0) | q35 <- range(q25)]))          | q25 <- plan])"},
+ "55": {"onVariable:" "plan"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "1 >= sum([toInt(1 >=            sum([toInt(q35 < 1 + (numberLocations - 1) / 2)                     | q35 <- range(q25)]))          | q25 <- plan])"},
+ "56": {"onVariable:" "plan"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "1 >= sum([toInt(1 >=            sum([toInt(q35 > 1 + (numberLocations - 1) / 2)                     | q35 <- range(q25)]))          | q25 <- plan])"},
+ "57": {"onVariable:" "plan"
+        "groups:" ["IntOddEven"]
+        "constraint:" "1 >= sum([toInt(|range(q25)| / 2 + 1 >=            sum([toInt(q36 % 2 = 1) | q36 <- range(q25)])            /\\            |range(q25)| / 2 - 1 <=            sum([toInt(q36 % 2 = 1) | q36 <- range(q25)]))          | q25 <- plan])"},
+ "58": {"onVariable:" "plan"
+        "groups:" ["IntOddEven"]
+        "constraint:" "1 >= sum([toInt(|range(q25)| / 2 + 1 >=            sum([toInt(q36 % 2 = 0) | q36 <- range(q25)])            /\\            |range(q25)| / 2 - 1 <=            sum([toInt(q36 % 2 = 0) | q36 <- range(q25)]))          | q25 <- plan])"},
+ "59": {"onVariable:" "plan"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "1 >= sum([toInt(|range(q25)| / 2 + 1 >=            sum([toInt(q36 < 1 + (numberLocations - 1) / 2)                     | q36 <- range(q25)])            /\\            |range(q25)| / 2 - 1 <=            sum([toInt(q36 < 1 + (numberLocations - 1) / 2)                     | q36 <- range(q25)]))          | q25 <- plan])"},
+ "60": {"onVariable:" "plan"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "1 >= sum([toInt(|range(q25)| / 2 + 1 >=            sum([toInt(q36 > 1 + (numberLocations - 1) / 2)                     | q36 <- range(q25)])            /\\            |range(q25)| / 2 - 1 <=            sum([toInt(q36 > 1 + (numberLocations - 1) / 2)                     | q36 <- range(q25)]))          | q25 <- plan])"},
+ "61": {"onVariable:" "plan"
+        "groups:" ["FuncIncreaseDecrease"]
+        "constraint:" "|plan| / 2 + 1 >= sum([toInt(and([and([q38 < q39 ->                      image(q37, q38) <= image(q37, q39)                          | q39 <- defined(q37)])                     | q38 <- defined(q37)]))          | q37 <- plan]) /\\ |plan| / 2 - 1 <= sum([toInt(and([and([q38 < q39 ->                      image(q37, q38) <= image(q37, q39)                          | q39 <- defined(q37)])                     | q38 <- defined(q37)]))          | q37 <- plan])"},
+ "62": {"onVariable:" "plan"
+        "groups:" ["FuncIncreaseDecrease"]
+        "constraint:" "|plan| / 2 + 1 >= sum([toInt(and([and([q40 < q41 ->                      image(q37, q40) >= image(q37, q41)                          | q41 <- defined(q37)])                     | q40 <- defined(q37)]))          | q37 <- plan]) /\\ |plan| / 2 - 1 <= sum([toInt(and([and([q40 < q41 ->                      image(q37, q40) >= image(q37, q41)                          | q41 <- defined(q37)])                     | q40 <- defined(q37)]))          | q37 <- plan])"},
+ "63": {"onVariable:" "plan"
+        "groups:" ["FuncIncreaseDecrease"]
+        "constraint:" "|plan| / 2 + 1 >= sum([toInt(and([image(q37, min(defined(q37))) <= image(q37, q42)                     | q42 <- defined(q37)]))          | q37 <- plan]) /\\ |plan| / 2 - 1 <= sum([toInt(and([image(q37, min(defined(q37))) <= image(q37, q42)                     | q42 <- defined(q37)]))          | q37 <- plan])"},
+ "64": {"onVariable:" "plan"
+        "groups:" ["FuncIncreaseDecrease"]
+        "constraint:" "|plan| / 2 + 1 >= sum([toInt(and([image(q37, max(defined(q37))) >= image(q37, q43)                     | q43 <- defined(q37)]))          | q37 <- plan]) /\\ |plan| / 2 - 1 <= sum([toInt(and([image(q37, max(defined(q37))) >= image(q37, q43)                     | q43 <- defined(q37)]))          | q37 <- plan])"},
+ "65": {"onVariable:" "plan"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|plan| / 2 + 1 >= sum([toInt(and([q45 % 2 = 1 | q45 <- range(q37)])) | q37 <- plan]) /\\ |plan| / 2 - 1 <= sum([toInt(and([q45 % 2 = 1 | q45 <- range(q37)])) | q37 <- plan])"},
+ "66": {"onVariable:" "plan"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|plan| / 2 + 1 >= sum([toInt(and([q45 % 2 = 0 | q45 <- range(q37)])) | q37 <- plan]) /\\ |plan| / 2 - 1 <= sum([toInt(and([q45 % 2 = 0 | q45 <- range(q37)])) | q37 <- plan])"},
+ "67": {"onVariable:" "plan"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|plan| / 2 + 1 >= sum([toInt(and([q45 < 1 + (numberLocations - 1) / 2                     | q45 <- range(q37)]))          | q37 <- plan]) /\\ |plan| / 2 - 1 <= sum([toInt(and([q45 < 1 + (numberLocations - 1) / 2                     | q45 <- range(q37)]))          | q37 <- plan])"},
+ "68": {"onVariable:" "plan"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|plan| / 2 + 1 >= sum([toInt(and([q45 > 1 + (numberLocations - 1) / 2                     | q45 <- range(q37)]))          | q37 <- plan]) /\\ |plan| / 2 - 1 <= sum([toInt(and([q45 > 1 + (numberLocations - 1) / 2                     | q45 <- range(q37)]))          | q37 <- plan])"},
+ "69": {"onVariable:" "plan"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|plan| / 2 + 1 >= sum([toInt(|range(q37)| / 2 =            sum([toInt(q46 % 2 = 1) | q46 <- range(q37)]))          | q37 <- plan]) /\\ |plan| / 2 - 1 <= sum([toInt(|range(q37)| / 2 =            sum([toInt(q46 % 2 = 1) | q46 <- range(q37)]))          | q37 <- plan])"},
+ "70": {"onVariable:" "plan"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|plan| / 2 + 1 >= sum([toInt(|range(q37)| / 2 =            sum([toInt(q46 % 2 = 0) | q46 <- range(q37)]))          | q37 <- plan]) /\\ |plan| / 2 - 1 <= sum([toInt(|range(q37)| / 2 =            sum([toInt(q46 % 2 = 0) | q46 <- range(q37)]))          | q37 <- plan])"},
+ "71": {"onVariable:" "plan"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|plan| / 2 + 1 >= sum([toInt(|range(q37)| / 2 =            sum([toInt(q46 < 1 + (numberLocations - 1) / 2)                     | q46 <- range(q37)]))          | q37 <- plan]) /\\ |plan| / 2 - 1 <= sum([toInt(|range(q37)| / 2 =            sum([toInt(q46 < 1 + (numberLocations - 1) / 2)                     | q46 <- range(q37)]))          | q37 <- plan])"},
+ "72": {"onVariable:" "plan"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|plan| / 2 + 1 >= sum([toInt(|range(q37)| / 2 =            sum([toInt(q46 > 1 + (numberLocations - 1) / 2)                     | q46 <- range(q37)]))          | q37 <- plan]) /\\ |plan| / 2 - 1 <= sum([toInt(|range(q37)| / 2 =            sum([toInt(q46 > 1 + (numberLocations - 1) / 2)                     | q46 <- range(q37)]))          | q37 <- plan])"},
+ "73": {"onVariable:" "plan"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|plan| / 2 + 1 >= sum([toInt(1 >= sum([toInt(q47 % 2 = 1) | q47 <- range(q37)]))          | q37 <- plan]) /\\ |plan| / 2 - 1 <= sum([toInt(1 >= sum([toInt(q47 % 2 = 1) | q47 <- range(q37)]))          | q37 <- plan])"},
+ "74": {"onVariable:" "plan"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|plan| / 2 + 1 >= sum([toInt(1 >= sum([toInt(q47 % 2 = 0) | q47 <- range(q37)]))          | q37 <- plan]) /\\ |plan| / 2 - 1 <= sum([toInt(1 >= sum([toInt(q47 % 2 = 0) | q47 <- range(q37)]))          | q37 <- plan])"},
+ "75": {"onVariable:" "plan"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|plan| / 2 + 1 >= sum([toInt(1 >=            sum([toInt(q47 < 1 + (numberLocations - 1) / 2)                     | q47 <- range(q37)]))          | q37 <- plan]) /\\ |plan| / 2 - 1 <= sum([toInt(1 >=            sum([toInt(q47 < 1 + (numberLocations - 1) / 2)                     | q47 <- range(q37)]))          | q37 <- plan])"},
+ "76": {"onVariable:" "plan"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|plan| / 2 + 1 >= sum([toInt(1 >=            sum([toInt(q47 > 1 + (numberLocations - 1) / 2)                     | q47 <- range(q37)]))          | q37 <- plan]) /\\ |plan| / 2 - 1 <= sum([toInt(1 >=            sum([toInt(q47 > 1 + (numberLocations - 1) / 2)                     | q47 <- range(q37)]))          | q37 <- plan])"},
+ "77": {"onVariable:" "plan"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|plan| / 2 + 1 >= sum([toInt(|range(q37)| / 2 + 1 >=            sum([toInt(q48 % 2 = 1) | q48 <- range(q37)])            /\\            |range(q37)| / 2 - 1 <=            sum([toInt(q48 % 2 = 1) | q48 <- range(q37)]))          | q37 <- plan]) /\\ |plan| / 2 - 1 <= sum([toInt(|range(q37)| / 2 + 1 >=            sum([toInt(q48 % 2 = 1) | q48 <- range(q37)])            /\\            |range(q37)| / 2 - 1 <=            sum([toInt(q48 % 2 = 1) | q48 <- range(q37)]))          | q37 <- plan])"},
+ "78": {"onVariable:" "plan"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|plan| / 2 + 1 >= sum([toInt(|range(q37)| / 2 + 1 >=            sum([toInt(q48 % 2 = 0) | q48 <- range(q37)])            /\\            |range(q37)| / 2 - 1 <=            sum([toInt(q48 % 2 = 0) | q48 <- range(q37)]))          | q37 <- plan]) /\\ |plan| / 2 - 1 <= sum([toInt(|range(q37)| / 2 + 1 >=            sum([toInt(q48 % 2 = 0) | q48 <- range(q37)])            /\\            |range(q37)| / 2 - 1 <=            sum([toInt(q48 % 2 = 0) | q48 <- range(q37)]))          | q37 <- plan])"},
+ "79": {"onVariable:" "plan"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|plan| / 2 + 1 >= sum([toInt(|range(q37)| / 2 + 1 >=            sum([toInt(q48 < 1 + (numberLocations - 1) / 2)                     | q48 <- range(q37)])            /\\            |range(q37)| / 2 - 1 <=            sum([toInt(q48 < 1 + (numberLocations - 1) / 2)                     | q48 <- range(q37)]))          | q37 <- plan]) /\\ |plan| / 2 - 1 <= sum([toInt(|range(q37)| / 2 + 1 >=            sum([toInt(q48 < 1 + (numberLocations - 1) / 2)                     | q48 <- range(q37)])            /\\            |range(q37)| / 2 - 1 <=            sum([toInt(q48 < 1 + (numberLocations - 1) / 2)                     | q48 <- range(q37)]))          | q37 <- plan])"},
+ "80": {"onVariable:" "plan"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|plan| / 2 + 1 >= sum([toInt(|range(q37)| / 2 + 1 >=            sum([toInt(q48 > 1 + (numberLocations - 1) / 2)                     | q48 <- range(q37)])            /\\            |range(q37)| / 2 - 1 <=            sum([toInt(q48 > 1 + (numberLocations - 1) / 2)                     | q48 <- range(q37)]))          | q37 <- plan]) /\\ |plan| / 2 - 1 <= sum([toInt(|range(q37)| / 2 + 1 >=            sum([toInt(q48 > 1 + (numberLocations - 1) / 2)                     | q48 <- range(q37)])            /\\            |range(q37)| / 2 - 1 <=            sum([toInt(q48 > 1 + (numberLocations - 1) / 2)                     | q48 <- range(q37)]))          | q37 <- plan])"},
+ "81": {"onVariable:" "optVar"
+        "groups:" ["IntOddEven"]
+        "constraint:" "optVar % 2 = 1"},
+ "82": {"onVariable:" "optVar"
+        "groups:" ["IntOddEven"]
+        "constraint:" "optVar % 2 = 0"},
+ "83": {"onVariable:" "optVar"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "optVar < 1 + (maxTotalCost - 1) / 2"},
+ "84": {"onVariable:" "optVar"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "optVar > 1 + (maxTotalCost - 1) / 2"}}

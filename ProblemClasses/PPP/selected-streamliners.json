@@ -1,0 +1,14 @@
+{
+ "6": {"onVariable:" "hosts"
+       "groups:" ["IntOddEven"]
+       "constraint:" "|hosts| / 2 = sum([toInt(q2 % 2 = 0) | q2 <- hosts])"},
+ "17": {"onVariable:" "sched"
+        "groups:" ["FuncIncreaseDecrease"]
+        "constraint:" "and([and([and([q6 < q7 -> image(q5, q6) <= image(q5, q7)                    | q7 <- defined(q5)])               | q6 <- defined(q5)])          | q5 <- sched])"},
+ "52": {"onVariable:" "sched"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "and([|defined(q5)| / 2 + 1 >=      sum([toInt(q21 > 1 + (n_boats - 1) / 2) | q21 <- defined(q5)])      /\\      |defined(q5)| / 2 - 1 <=      sum([toInt(q21 > 1 + (n_boats - 1) / 2) | q21 <- defined(q5)])          | q5 <- sched])"},
+ "67": {"onVariable:" "sched"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|sched| / 2 = sum([toInt(1 >=            sum([toInt(q32 < 1 + (n_boats - 1) / 2) | q32 <- range(q22)]))          | q22 <- sched])"},
+}

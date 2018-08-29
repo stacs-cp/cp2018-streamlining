@@ -1,0 +1,228 @@
+{"1": {"onVariable:" "parents"
+       "groups:" ["FuncIncreaseDecrease"]
+       "constraint:" "and([and([q1 < q2 -> image(parents, q1) <= image(parents, q2)               | q2 <- defined(parents)])          | q1 <- defined(parents)])"},
+ "2": {"onVariable:" "parents"
+       "groups:" ["FuncIncreaseDecrease"]
+       "constraint:" "and([and([q3 < q4 -> image(parents, q3) >= image(parents, q4)               | q4 <- defined(parents)])          | q3 <- defined(parents)])"},
+ "3": {"onVariable:" "parents"
+       "groups:" ["FuncIncreaseDecrease"]
+       "constraint:" "and([image(parents, min(defined(parents))) <= image(parents, q5)          | q5 <- defined(parents)])"},
+ "4": {"onVariable:" "parents"
+       "groups:" ["FuncIncreaseDecrease"]
+       "constraint:" "and([image(parents, max(defined(parents))) >= image(parents, q6)          | q6 <- defined(parents)])"},
+ "5": {"onVariable:" "parents"
+       "groups:" ["IntOddEven"]
+       "constraint:" "and([q8 % 2 = 1 | q8 <- range(parents)])"},
+ "6": {"onVariable:" "parents"
+       "groups:" ["IntOddEven"]
+       "constraint:" "and([q8 % 2 = 0 | q8 <- range(parents)])"},
+ "7": {"onVariable:" "parents"
+       "groups:" ["IntLowHigh"]
+       "constraint:" "and([q8 < 1 + (numberNodes - 1) / 2 | q8 <- range(parents)])"},
+ "8": {"onVariable:" "parents"
+       "groups:" ["IntLowHigh"]
+       "constraint:" "and([q8 > 1 + (numberNodes - 1) / 2 | q8 <- range(parents)])"},
+ "9": {"onVariable:" "parents"
+       "groups:" ["IntOddEven"]
+       "constraint:" "|range(parents)| / 2 = sum([toInt(q9 % 2 = 1) | q9 <- range(parents)])"},
+ "10": {"onVariable:" "parents"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|range(parents)| / 2 = sum([toInt(q9 % 2 = 0) | q9 <- range(parents)])"},
+ "11": {"onVariable:" "parents"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|range(parents)| / 2 = sum([toInt(q9 < 1 + (numberNodes - 1) / 2) | q9 <- range(parents)])"},
+ "12": {"onVariable:" "parents"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|range(parents)| / 2 = sum([toInt(q9 > 1 + (numberNodes - 1) / 2) | q9 <- range(parents)])"},
+ "13": {"onVariable:" "parents"
+        "groups:" ["IntOddEven"]
+        "constraint:" "1 >= sum([toInt(q10 % 2 = 1) | q10 <- range(parents)])"},
+ "14": {"onVariable:" "parents"
+        "groups:" ["IntOddEven"]
+        "constraint:" "1 >= sum([toInt(q10 % 2 = 0) | q10 <- range(parents)])"},
+ "15": {"onVariable:" "parents"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "1 >= sum([toInt(q10 < 1 + (numberNodes - 1) / 2)          | q10 <- range(parents)])"},
+ "16": {"onVariable:" "parents"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "1 >= sum([toInt(q10 > 1 + (numberNodes - 1) / 2)          | q10 <- range(parents)])"},
+ "17": {"onVariable:" "parents"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|range(parents)| / 2 + 1 >= sum([toInt(q11 % 2 = 1) | q11 <- range(parents)]) /\\ |range(parents)| / 2 - 1 <= sum([toInt(q11 % 2 = 1) | q11 <- range(parents)])"},
+ "18": {"onVariable:" "parents"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|range(parents)| / 2 + 1 >= sum([toInt(q11 % 2 = 0) | q11 <- range(parents)]) /\\ |range(parents)| / 2 - 1 <= sum([toInt(q11 % 2 = 0) | q11 <- range(parents)])"},
+ "19": {"onVariable:" "parents"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|range(parents)| / 2 + 1 >= sum([toInt(q11 < 1 + (numberNodes - 1) / 2)          | q11 <- range(parents)]) /\\ |range(parents)| / 2 - 1 <= sum([toInt(q11 < 1 + (numberNodes - 1) / 2)          | q11 <- range(parents)])"},
+ "20": {"onVariable:" "parents"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|range(parents)| / 2 + 1 >= sum([toInt(q11 > 1 + (numberNodes - 1) / 2)          | q11 <- range(parents)]) /\\ |range(parents)| / 2 - 1 <= sum([toInt(q11 > 1 + (numberNodes - 1) / 2)          | q11 <- range(parents)])"},
+ "21": {"onVariable:" "parents"
+        "groups:" ["IntOddEven"]
+        "constraint:" "and([q13 % 2 = 1 | q13 <- defined(parents)])"},
+ "22": {"onVariable:" "parents"
+        "groups:" ["IntOddEven"]
+        "constraint:" "and([q13 % 2 = 0 | q13 <- defined(parents)])"},
+ "23": {"onVariable:" "parents"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "and([q13 < 1 + (numberNodes - 1) / 2 | q13 <- defined(parents)])"},
+ "24": {"onVariable:" "parents"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "and([q13 > 1 + (numberNodes - 1) / 2 | q13 <- defined(parents)])"},
+ "25": {"onVariable:" "parents"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|defined(parents)| / 2 = sum([toInt(q14 % 2 = 1) | q14 <- defined(parents)])"},
+ "26": {"onVariable:" "parents"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|defined(parents)| / 2 = sum([toInt(q14 % 2 = 0) | q14 <- defined(parents)])"},
+ "27": {"onVariable:" "parents"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|defined(parents)| / 2 = sum([toInt(q14 < 1 + (numberNodes - 1) / 2)          | q14 <- defined(parents)])"},
+ "28": {"onVariable:" "parents"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|defined(parents)| / 2 = sum([toInt(q14 > 1 + (numberNodes - 1) / 2)          | q14 <- defined(parents)])"},
+ "29": {"onVariable:" "parents"
+        "groups:" ["IntOddEven"]
+        "constraint:" "1 >= sum([toInt(q15 % 2 = 1) | q15 <- defined(parents)])"},
+ "30": {"onVariable:" "parents"
+        "groups:" ["IntOddEven"]
+        "constraint:" "1 >= sum([toInt(q15 % 2 = 0) | q15 <- defined(parents)])"},
+ "31": {"onVariable:" "parents"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "1 >= sum([toInt(q15 < 1 + (numberNodes - 1) / 2)          | q15 <- defined(parents)])"},
+ "32": {"onVariable:" "parents"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "1 >= sum([toInt(q15 > 1 + (numberNodes - 1) / 2)          | q15 <- defined(parents)])"},
+ "33": {"onVariable:" "parents"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|defined(parents)| / 2 + 1 >= sum([toInt(q16 % 2 = 1) | q16 <- defined(parents)]) /\\ |defined(parents)| / 2 - 1 <= sum([toInt(q16 % 2 = 1) | q16 <- defined(parents)])"},
+ "34": {"onVariable:" "parents"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|defined(parents)| / 2 + 1 >= sum([toInt(q16 % 2 = 0) | q16 <- defined(parents)]) /\\ |defined(parents)| / 2 - 1 <= sum([toInt(q16 % 2 = 0) | q16 <- defined(parents)])"},
+ "35": {"onVariable:" "parents"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|defined(parents)| / 2 + 1 >= sum([toInt(q16 < 1 + (numberNodes - 1) / 2)          | q16 <- defined(parents)]) /\\ |defined(parents)| / 2 - 1 <= sum([toInt(q16 < 1 + (numberNodes - 1) / 2)          | q16 <- defined(parents)])"},
+ "36": {"onVariable:" "parents"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|defined(parents)| / 2 + 1 >= sum([toInt(q16 > 1 + (numberNodes - 1) / 2)          | q16 <- defined(parents)]) /\\ |defined(parents)| / 2 - 1 <= sum([toInt(q16 > 1 + (numberNodes - 1) / 2)          | q16 <- defined(parents)])"},
+ "37": {"onVariable:" "depths"
+        "groups:" ["FuncIncreaseDecrease"]
+        "constraint:" "and([and([q17 < q18 -> image(depths, q17) <= image(depths, q18)               | q18 <- defined(depths)])          | q17 <- defined(depths)])"},
+ "38": {"onVariable:" "depths"
+        "groups:" ["FuncIncreaseDecrease"]
+        "constraint:" "and([and([q19 < q20 -> image(depths, q19) >= image(depths, q20)               | q20 <- defined(depths)])          | q19 <- defined(depths)])"},
+ "39": {"onVariable:" "depths"
+        "groups:" ["FuncIncreaseDecrease"]
+        "constraint:" "and([image(depths, min(defined(depths))) <= image(depths, q21)          | q21 <- defined(depths)])"},
+ "40": {"onVariable:" "depths"
+        "groups:" ["FuncIncreaseDecrease"]
+        "constraint:" "and([image(depths, max(defined(depths))) >= image(depths, q22)          | q22 <- defined(depths)])"},
+ "41": {"onVariable:" "depths"
+        "groups:" ["IntOddEven"]
+        "constraint:" "and([q24 % 2 = 1 | q24 <- range(depths)])"},
+ "42": {"onVariable:" "depths"
+        "groups:" ["IntOddEven"]
+        "constraint:" "and([q24 % 2 = 0 | q24 <- range(depths)])"},
+ "43": {"onVariable:" "depths"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "and([q24 < 1 + (numberNodes - 1) / 2 | q24 <- range(depths)])"},
+ "44": {"onVariable:" "depths"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "and([q24 > 1 + (numberNodes - 1) / 2 | q24 <- range(depths)])"},
+ "45": {"onVariable:" "depths"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|range(depths)| / 2 = sum([toInt(q25 % 2 = 1) | q25 <- range(depths)])"},
+ "46": {"onVariable:" "depths"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|range(depths)| / 2 = sum([toInt(q25 % 2 = 0) | q25 <- range(depths)])"},
+ "47": {"onVariable:" "depths"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|range(depths)| / 2 = sum([toInt(q25 < 1 + (numberNodes - 1) / 2)          | q25 <- range(depths)])"},
+ "48": {"onVariable:" "depths"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|range(depths)| / 2 = sum([toInt(q25 > 1 + (numberNodes - 1) / 2)          | q25 <- range(depths)])"},
+ "49": {"onVariable:" "depths"
+        "groups:" ["IntOddEven"]
+        "constraint:" "1 >= sum([toInt(q26 % 2 = 1) | q26 <- range(depths)])"},
+ "50": {"onVariable:" "depths"
+        "groups:" ["IntOddEven"]
+        "constraint:" "1 >= sum([toInt(q26 % 2 = 0) | q26 <- range(depths)])"},
+ "51": {"onVariable:" "depths"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "1 >= sum([toInt(q26 < 1 + (numberNodes - 1) / 2)          | q26 <- range(depths)])"},
+ "52": {"onVariable:" "depths"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "1 >= sum([toInt(q26 > 1 + (numberNodes - 1) / 2)          | q26 <- range(depths)])"},
+ "53": {"onVariable:" "depths"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|range(depths)| / 2 + 1 >= sum([toInt(q27 % 2 = 1) | q27 <- range(depths)]) /\\ |range(depths)| / 2 - 1 <= sum([toInt(q27 % 2 = 1) | q27 <- range(depths)])"},
+ "54": {"onVariable:" "depths"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|range(depths)| / 2 + 1 >= sum([toInt(q27 % 2 = 0) | q27 <- range(depths)]) /\\ |range(depths)| / 2 - 1 <= sum([toInt(q27 % 2 = 0) | q27 <- range(depths)])"},
+ "55": {"onVariable:" "depths"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|range(depths)| / 2 + 1 >= sum([toInt(q27 < 1 + (numberNodes - 1) / 2)          | q27 <- range(depths)]) /\\ |range(depths)| / 2 - 1 <= sum([toInt(q27 < 1 + (numberNodes - 1) / 2)          | q27 <- range(depths)])"},
+ "56": {"onVariable:" "depths"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|range(depths)| / 2 + 1 >= sum([toInt(q27 > 1 + (numberNodes - 1) / 2)          | q27 <- range(depths)]) /\\ |range(depths)| / 2 - 1 <= sum([toInt(q27 > 1 + (numberNodes - 1) / 2)          | q27 <- range(depths)])"},
+ "57": {"onVariable:" "depths"
+        "groups:" ["IntOddEven"]
+        "constraint:" "and([q29 % 2 = 1 | q29 <- defined(depths)])"},
+ "58": {"onVariable:" "depths"
+        "groups:" ["IntOddEven"]
+        "constraint:" "and([q29 % 2 = 0 | q29 <- defined(depths)])"},
+ "59": {"onVariable:" "depths"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "and([q29 < 1 + (numberNodes - 1) / 2 | q29 <- defined(depths)])"},
+ "60": {"onVariable:" "depths"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "and([q29 > 1 + (numberNodes - 1) / 2 | q29 <- defined(depths)])"},
+ "61": {"onVariable:" "depths"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|defined(depths)| / 2 = sum([toInt(q30 % 2 = 1) | q30 <- defined(depths)])"},
+ "62": {"onVariable:" "depths"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|defined(depths)| / 2 = sum([toInt(q30 % 2 = 0) | q30 <- defined(depths)])"},
+ "63": {"onVariable:" "depths"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|defined(depths)| / 2 = sum([toInt(q30 < 1 + (numberNodes - 1) / 2)          | q30 <- defined(depths)])"},
+ "64": {"onVariable:" "depths"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|defined(depths)| / 2 = sum([toInt(q30 > 1 + (numberNodes - 1) / 2)          | q30 <- defined(depths)])"},
+ "65": {"onVariable:" "depths"
+        "groups:" ["IntOddEven"]
+        "constraint:" "1 >= sum([toInt(q31 % 2 = 1) | q31 <- defined(depths)])"},
+ "66": {"onVariable:" "depths"
+        "groups:" ["IntOddEven"]
+        "constraint:" "1 >= sum([toInt(q31 % 2 = 0) | q31 <- defined(depths)])"},
+ "67": {"onVariable:" "depths"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "1 >= sum([toInt(q31 < 1 + (numberNodes - 1) / 2)          | q31 <- defined(depths)])"},
+ "68": {"onVariable:" "depths"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "1 >= sum([toInt(q31 > 1 + (numberNodes - 1) / 2)          | q31 <- defined(depths)])"},
+ "69": {"onVariable:" "depths"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|defined(depths)| / 2 + 1 >= sum([toInt(q32 % 2 = 1) | q32 <- defined(depths)]) /\\ |defined(depths)| / 2 - 1 <= sum([toInt(q32 % 2 = 1) | q32 <- defined(depths)])"},
+ "70": {"onVariable:" "depths"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|defined(depths)| / 2 + 1 >= sum([toInt(q32 % 2 = 0) | q32 <- defined(depths)]) /\\ |defined(depths)| / 2 - 1 <= sum([toInt(q32 % 2 = 0) | q32 <- defined(depths)])"},
+ "71": {"onVariable:" "depths"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|defined(depths)| / 2 + 1 >= sum([toInt(q32 < 1 + (numberNodes - 1) / 2)          | q32 <- defined(depths)]) /\\ |defined(depths)| / 2 - 1 <= sum([toInt(q32 < 1 + (numberNodes - 1) / 2)          | q32 <- defined(depths)])"},
+ "72": {"onVariable:" "depths"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|defined(depths)| / 2 + 1 >= sum([toInt(q32 > 1 + (numberNodes - 1) / 2)          | q32 <- defined(depths)]) /\\ |defined(depths)| / 2 - 1 <= sum([toInt(q32 > 1 + (numberNodes - 1) / 2)          | q32 <- defined(depths)])"},
+ "73": {"onVariable:" "optVar"
+        "groups:" ["IntOddEven"]
+        "constraint:" "optVar % 2 = 1"},
+ "74": {"onVariable:" "optVar"
+        "groups:" ["IntOddEven"]
+        "constraint:" "optVar % 2 = 0"},
+ "75": {"onVariable:" "optVar"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "optVar < 1 + (numberNodes * max([cost | (_, cost) <- linkCosts]) - 1) / 2"},
+ "76": {"onVariable:" "optVar"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "optVar > 1 + (numberNodes * max([cost | (_, cost) <- linkCosts]) - 1) / 2"}}

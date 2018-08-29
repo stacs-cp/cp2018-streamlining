@@ -1,0 +1,11 @@
+{
+ "20": {"onVariable:" "colouring"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|range(colouring)| / 2 + 1 >= sum([toInt(q11 > 1 + (3 * n - 1) / 2) | q11 <- range(colouring)]) /\\ |range(colouring)| / 2 - 1 <= sum([toInt(q11 > 1 + (3 * n - 1) / 2) | q11 <- range(colouring)])"},
+ "53": {"onVariable:" "edgeID"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|range(edgeID)| / 2 + 1 >= sum([toInt(q27 % 2 = 1) | q27 <- range(edgeID)]) /\\ |range(edgeID)| / 2 - 1 <= sum([toInt(q27 % 2 = 1) | q27 <- range(edgeID)])"},
+ "54": {"onVariable:" "edgeID"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|range(edgeID)| / 2 + 1 >= sum([toInt(q27 % 2 = 0) | q27 <- range(edgeID)]) /\\ |range(edgeID)| / 2 - 1 <= sum([toInt(q27 % 2 = 0) | q27 <- range(edgeID)])"},
+}

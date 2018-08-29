@@ -1,0 +1,480 @@
+{"1": {"onVariable:" "hosts"
+       "groups:" ["IntOddEven"]
+       "constraint:" "and([q1 % 2 = 1 | q1 <- hosts])"},
+ "2": {"onVariable:" "hosts"
+       "groups:" ["IntOddEven"]
+       "constraint:" "and([q1 % 2 = 0 | q1 <- hosts])"},
+ "3": {"onVariable:" "hosts"
+       "groups:" ["IntLowHigh"]
+       "constraint:" "and([q1 < 1 + (n_boats - 1) / 2 | q1 <- hosts])"},
+ "4": {"onVariable:" "hosts"
+       "groups:" ["IntLowHigh"]
+       "constraint:" "and([q1 > 1 + (n_boats - 1) / 2 | q1 <- hosts])"},
+ "5": {"onVariable:" "hosts"
+       "groups:" ["IntOddEven"]
+       "constraint:" "|hosts| / 2 = sum([toInt(q2 % 2 = 1) | q2 <- hosts])"},
+ "6": {"onVariable:" "hosts"
+       "groups:" ["IntOddEven"]
+       "constraint:" "|hosts| / 2 = sum([toInt(q2 % 2 = 0) | q2 <- hosts])"},
+ "7": {"onVariable:" "hosts"
+       "groups:" ["IntLowHigh"]
+       "constraint:" "|hosts| / 2 = sum([toInt(q2 < 1 + (n_boats - 1) / 2) | q2 <- hosts])"},
+ "8": {"onVariable:" "hosts"
+       "groups:" ["IntLowHigh"]
+       "constraint:" "|hosts| / 2 = sum([toInt(q2 > 1 + (n_boats - 1) / 2) | q2 <- hosts])"},
+ "9": {"onVariable:" "hosts"
+       "groups:" ["IntOddEven"]
+       "constraint:" "1 >= sum([toInt(q3 % 2 = 1) | q3 <- hosts])"},
+ "10": {"onVariable:" "hosts"
+        "groups:" ["IntOddEven"]
+        "constraint:" "1 >= sum([toInt(q3 % 2 = 0) | q3 <- hosts])"},
+ "11": {"onVariable:" "hosts"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "1 >= sum([toInt(q3 < 1 + (n_boats - 1) / 2) | q3 <- hosts])"},
+ "12": {"onVariable:" "hosts"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "1 >= sum([toInt(q3 > 1 + (n_boats - 1) / 2) | q3 <- hosts])"},
+ "13": {"onVariable:" "hosts"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|hosts| / 2 + 1 >= sum([toInt(q4 % 2 = 1) | q4 <- hosts]) /\\ |hosts| / 2 - 1 <= sum([toInt(q4 % 2 = 1) | q4 <- hosts])"},
+ "14": {"onVariable:" "hosts"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|hosts| / 2 + 1 >= sum([toInt(q4 % 2 = 0) | q4 <- hosts]) /\\ |hosts| / 2 - 1 <= sum([toInt(q4 % 2 = 0) | q4 <- hosts])"},
+ "15": {"onVariable:" "hosts"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|hosts| / 2 + 1 >= sum([toInt(q4 < 1 + (n_boats - 1) / 2) | q4 <- hosts]) /\\ |hosts| / 2 - 1 <= sum([toInt(q4 < 1 + (n_boats - 1) / 2) | q4 <- hosts])"},
+ "16": {"onVariable:" "hosts"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|hosts| / 2 + 1 >= sum([toInt(q4 > 1 + (n_boats - 1) / 2) | q4 <- hosts]) /\\ |hosts| / 2 - 1 <= sum([toInt(q4 > 1 + (n_boats - 1) / 2) | q4 <- hosts])"},
+ "17": {"onVariable:" "sched"
+        "groups:" ["FuncIncreaseDecrease"]
+        "constraint:" "and([and([and([q6 < q7 -> image(q5, q6) <= image(q5, q7)                    | q7 <- defined(q5)])               | q6 <- defined(q5)])          | q5 <- sched])"},
+ "18": {"onVariable:" "sched"
+        "groups:" ["FuncIncreaseDecrease"]
+        "constraint:" "and([and([and([q8 < q9 -> image(q5, q8) >= image(q5, q9)                    | q9 <- defined(q5)])               | q8 <- defined(q5)])          | q5 <- sched])"},
+ "19": {"onVariable:" "sched"
+        "groups:" ["FuncIncreaseDecrease"]
+        "constraint:" "and([and([image(q5, min(defined(q5))) <= image(q5, q10)               | q10 <- defined(q5)])          | q5 <- sched])"},
+ "20": {"onVariable:" "sched"
+        "groups:" ["FuncIncreaseDecrease"]
+        "constraint:" "and([and([image(q5, max(defined(q5))) >= image(q5, q11)               | q11 <- defined(q5)])          | q5 <- sched])"},
+ "21": {"onVariable:" "sched"
+        "groups:" ["IntOddEven"]
+        "constraint:" "and([and([q13 % 2 = 1 | q13 <- range(q5)]) | q5 <- sched])"},
+ "22": {"onVariable:" "sched"
+        "groups:" ["IntOddEven"]
+        "constraint:" "and([and([q13 % 2 = 0 | q13 <- range(q5)]) | q5 <- sched])"},
+ "23": {"onVariable:" "sched"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "and([and([q13 < 1 + (n_boats - 1) / 2 | q13 <- range(q5)])          | q5 <- sched])"},
+ "24": {"onVariable:" "sched"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "and([and([q13 > 1 + (n_boats - 1) / 2 | q13 <- range(q5)])          | q5 <- sched])"},
+ "25": {"onVariable:" "sched"
+        "groups:" ["IntOddEven"]
+        "constraint:" "and([|range(q5)| / 2 = sum([toInt(q14 % 2 = 1) | q14 <- range(q5)])          | q5 <- sched])"},
+ "26": {"onVariable:" "sched"
+        "groups:" ["IntOddEven"]
+        "constraint:" "and([|range(q5)| / 2 = sum([toInt(q14 % 2 = 0) | q14 <- range(q5)])          | q5 <- sched])"},
+ "27": {"onVariable:" "sched"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "and([|range(q5)| / 2 =      sum([toInt(q14 < 1 + (n_boats - 1) / 2) | q14 <- range(q5)])          | q5 <- sched])"},
+ "28": {"onVariable:" "sched"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "and([|range(q5)| / 2 =      sum([toInt(q14 > 1 + (n_boats - 1) / 2) | q14 <- range(q5)])          | q5 <- sched])"},
+ "29": {"onVariable:" "sched"
+        "groups:" ["IntOddEven"]
+        "constraint:" "and([1 >= sum([toInt(q15 % 2 = 1) | q15 <- range(q5)])          | q5 <- sched])"},
+ "30": {"onVariable:" "sched"
+        "groups:" ["IntOddEven"]
+        "constraint:" "and([1 >= sum([toInt(q15 % 2 = 0) | q15 <- range(q5)])          | q5 <- sched])"},
+ "31": {"onVariable:" "sched"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "and([1 >=      sum([toInt(q15 < 1 + (n_boats - 1) / 2) | q15 <- range(q5)])          | q5 <- sched])"},
+ "32": {"onVariable:" "sched"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "and([1 >=      sum([toInt(q15 > 1 + (n_boats - 1) / 2) | q15 <- range(q5)])          | q5 <- sched])"},
+ "33": {"onVariable:" "sched"
+        "groups:" ["IntOddEven"]
+        "constraint:" "and([|range(q5)| / 2 + 1 >=      sum([toInt(q16 % 2 = 1) | q16 <- range(q5)])      /\\      |range(q5)| / 2 - 1 <= sum([toInt(q16 % 2 = 1) | q16 <- range(q5)])          | q5 <- sched])"},
+ "34": {"onVariable:" "sched"
+        "groups:" ["IntOddEven"]
+        "constraint:" "and([|range(q5)| / 2 + 1 >=      sum([toInt(q16 % 2 = 0) | q16 <- range(q5)])      /\\      |range(q5)| / 2 - 1 <= sum([toInt(q16 % 2 = 0) | q16 <- range(q5)])          | q5 <- sched])"},
+ "35": {"onVariable:" "sched"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "and([|range(q5)| / 2 + 1 >=      sum([toInt(q16 < 1 + (n_boats - 1) / 2) | q16 <- range(q5)])      /\\      |range(q5)| / 2 - 1 <=      sum([toInt(q16 < 1 + (n_boats - 1) / 2) | q16 <- range(q5)])          | q5 <- sched])"},
+ "36": {"onVariable:" "sched"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "and([|range(q5)| / 2 + 1 >=      sum([toInt(q16 > 1 + (n_boats - 1) / 2) | q16 <- range(q5)])      /\\      |range(q5)| / 2 - 1 <=      sum([toInt(q16 > 1 + (n_boats - 1) / 2) | q16 <- range(q5)])          | q5 <- sched])"},
+ "37": {"onVariable:" "sched"
+        "groups:" ["IntOddEven"]
+        "constraint:" "and([and([q18 % 2 = 1 | q18 <- defined(q5)]) | q5 <- sched])"},
+ "38": {"onVariable:" "sched"
+        "groups:" ["IntOddEven"]
+        "constraint:" "and([and([q18 % 2 = 0 | q18 <- defined(q5)]) | q5 <- sched])"},
+ "39": {"onVariable:" "sched"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "and([and([q18 < 1 + (n_boats - 1) / 2 | q18 <- defined(q5)])          | q5 <- sched])"},
+ "40": {"onVariable:" "sched"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "and([and([q18 > 1 + (n_boats - 1) / 2 | q18 <- defined(q5)])          | q5 <- sched])"},
+ "41": {"onVariable:" "sched"
+        "groups:" ["IntOddEven"]
+        "constraint:" "and([|defined(q5)| / 2 =      sum([toInt(q19 % 2 = 1) | q19 <- defined(q5)])          | q5 <- sched])"},
+ "42": {"onVariable:" "sched"
+        "groups:" ["IntOddEven"]
+        "constraint:" "and([|defined(q5)| / 2 =      sum([toInt(q19 % 2 = 0) | q19 <- defined(q5)])          | q5 <- sched])"},
+ "43": {"onVariable:" "sched"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "and([|defined(q5)| / 2 =      sum([toInt(q19 < 1 + (n_boats - 1) / 2) | q19 <- defined(q5)])          | q5 <- sched])"},
+ "44": {"onVariable:" "sched"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "and([|defined(q5)| / 2 =      sum([toInt(q19 > 1 + (n_boats - 1) / 2) | q19 <- defined(q5)])          | q5 <- sched])"},
+ "45": {"onVariable:" "sched"
+        "groups:" ["IntOddEven"]
+        "constraint:" "and([1 >= sum([toInt(q20 % 2 = 1) | q20 <- defined(q5)])          | q5 <- sched])"},
+ "46": {"onVariable:" "sched"
+        "groups:" ["IntOddEven"]
+        "constraint:" "and([1 >= sum([toInt(q20 % 2 = 0) | q20 <- defined(q5)])          | q5 <- sched])"},
+ "47": {"onVariable:" "sched"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "and([1 >=      sum([toInt(q20 < 1 + (n_boats - 1) / 2) | q20 <- defined(q5)])          | q5 <- sched])"},
+ "48": {"onVariable:" "sched"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "and([1 >=      sum([toInt(q20 > 1 + (n_boats - 1) / 2) | q20 <- defined(q5)])          | q5 <- sched])"},
+ "49": {"onVariable:" "sched"
+        "groups:" ["IntOddEven"]
+        "constraint:" "and([|defined(q5)| / 2 + 1 >=      sum([toInt(q21 % 2 = 1) | q21 <- defined(q5)])      /\\      |defined(q5)| / 2 - 1 <=      sum([toInt(q21 % 2 = 1) | q21 <- defined(q5)])          | q5 <- sched])"},
+ "50": {"onVariable:" "sched"
+        "groups:" ["IntOddEven"]
+        "constraint:" "and([|defined(q5)| / 2 + 1 >=      sum([toInt(q21 % 2 = 0) | q21 <- defined(q5)])      /\\      |defined(q5)| / 2 - 1 <=      sum([toInt(q21 % 2 = 0) | q21 <- defined(q5)])          | q5 <- sched])"},
+ "51": {"onVariable:" "sched"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "and([|defined(q5)| / 2 + 1 >=      sum([toInt(q21 < 1 + (n_boats - 1) / 2) | q21 <- defined(q5)])      /\\      |defined(q5)| / 2 - 1 <=      sum([toInt(q21 < 1 + (n_boats - 1) / 2) | q21 <- defined(q5)])          | q5 <- sched])"},
+ "52": {"onVariable:" "sched"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "and([|defined(q5)| / 2 + 1 >=      sum([toInt(q21 > 1 + (n_boats - 1) / 2) | q21 <- defined(q5)])      /\\      |defined(q5)| / 2 - 1 <=      sum([toInt(q21 > 1 + (n_boats - 1) / 2) | q21 <- defined(q5)])          | q5 <- sched])"},
+ "53": {"onVariable:" "sched"
+        "groups:" ["FuncIncreaseDecrease"]
+        "constraint:" "|sched| / 2 = sum([toInt(and([and([q23 < q24 ->                      image(q22, q23) <= image(q22, q24)                          | q24 <- defined(q22)])                     | q23 <- defined(q22)]))          | q22 <- sched])"},
+ "54": {"onVariable:" "sched"
+        "groups:" ["FuncIncreaseDecrease"]
+        "constraint:" "|sched| / 2 = sum([toInt(and([and([q25 < q26 ->                      image(q22, q25) >= image(q22, q26)                          | q26 <- defined(q22)])                     | q25 <- defined(q22)]))          | q22 <- sched])"},
+ "55": {"onVariable:" "sched"
+        "groups:" ["FuncIncreaseDecrease"]
+        "constraint:" "|sched| / 2 = sum([toInt(and([image(q22, min(defined(q22))) <= image(q22, q27)                     | q27 <- defined(q22)]))          | q22 <- sched])"},
+ "56": {"onVariable:" "sched"
+        "groups:" ["FuncIncreaseDecrease"]
+        "constraint:" "|sched| / 2 = sum([toInt(and([image(q22, max(defined(q22))) >= image(q22, q28)                     | q28 <- defined(q22)]))          | q22 <- sched])"},
+ "57": {"onVariable:" "sched"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|sched| / 2 = sum([toInt(and([q30 % 2 = 1 | q30 <- range(q22)])) | q22 <- sched])"},
+ "58": {"onVariable:" "sched"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|sched| / 2 = sum([toInt(and([q30 % 2 = 0 | q30 <- range(q22)])) | q22 <- sched])"},
+ "59": {"onVariable:" "sched"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|sched| / 2 = sum([toInt(and([q30 < 1 + (n_boats - 1) / 2 | q30 <- range(q22)]))          | q22 <- sched])"},
+ "60": {"onVariable:" "sched"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|sched| / 2 = sum([toInt(and([q30 > 1 + (n_boats - 1) / 2 | q30 <- range(q22)]))          | q22 <- sched])"},
+ "61": {"onVariable:" "sched"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|sched| / 2 = sum([toInt(|range(q22)| / 2 =            sum([toInt(q31 % 2 = 1) | q31 <- range(q22)]))          | q22 <- sched])"},
+ "62": {"onVariable:" "sched"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|sched| / 2 = sum([toInt(|range(q22)| / 2 =            sum([toInt(q31 % 2 = 0) | q31 <- range(q22)]))          | q22 <- sched])"},
+ "63": {"onVariable:" "sched"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|sched| / 2 = sum([toInt(|range(q22)| / 2 =            sum([toInt(q31 < 1 + (n_boats - 1) / 2) | q31 <- range(q22)]))          | q22 <- sched])"},
+ "64": {"onVariable:" "sched"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|sched| / 2 = sum([toInt(|range(q22)| / 2 =            sum([toInt(q31 > 1 + (n_boats - 1) / 2) | q31 <- range(q22)]))          | q22 <- sched])"},
+ "65": {"onVariable:" "sched"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|sched| / 2 = sum([toInt(1 >= sum([toInt(q32 % 2 = 1) | q32 <- range(q22)]))          | q22 <- sched])"},
+ "66": {"onVariable:" "sched"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|sched| / 2 = sum([toInt(1 >= sum([toInt(q32 % 2 = 0) | q32 <- range(q22)]))          | q22 <- sched])"},
+ "67": {"onVariable:" "sched"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|sched| / 2 = sum([toInt(1 >=            sum([toInt(q32 < 1 + (n_boats - 1) / 2) | q32 <- range(q22)]))          | q22 <- sched])"},
+ "68": {"onVariable:" "sched"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|sched| / 2 = sum([toInt(1 >=            sum([toInt(q32 > 1 + (n_boats - 1) / 2) | q32 <- range(q22)]))          | q22 <- sched])"},
+ "69": {"onVariable:" "sched"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|sched| / 2 = sum([toInt(|range(q22)| / 2 + 1 >=            sum([toInt(q33 % 2 = 1) | q33 <- range(q22)])            /\\            |range(q22)| / 2 - 1 <=            sum([toInt(q33 % 2 = 1) | q33 <- range(q22)]))          | q22 <- sched])"},
+ "70": {"onVariable:" "sched"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|sched| / 2 = sum([toInt(|range(q22)| / 2 + 1 >=            sum([toInt(q33 % 2 = 0) | q33 <- range(q22)])            /\\            |range(q22)| / 2 - 1 <=            sum([toInt(q33 % 2 = 0) | q33 <- range(q22)]))          | q22 <- sched])"},
+ "71": {"onVariable:" "sched"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|sched| / 2 = sum([toInt(|range(q22)| / 2 + 1 >=            sum([toInt(q33 < 1 + (n_boats - 1) / 2) | q33 <- range(q22)])            /\\            |range(q22)| / 2 - 1 <=            sum([toInt(q33 < 1 + (n_boats - 1) / 2) | q33 <- range(q22)]))          | q22 <- sched])"},
+ "72": {"onVariable:" "sched"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|sched| / 2 = sum([toInt(|range(q22)| / 2 + 1 >=            sum([toInt(q33 > 1 + (n_boats - 1) / 2) | q33 <- range(q22)])            /\\            |range(q22)| / 2 - 1 <=            sum([toInt(q33 > 1 + (n_boats - 1) / 2) | q33 <- range(q22)]))          | q22 <- sched])"},
+ "73": {"onVariable:" "sched"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|sched| / 2 = sum([toInt(and([q35 % 2 = 1 | q35 <- defined(q22)]))          | q22 <- sched])"},
+ "74": {"onVariable:" "sched"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|sched| / 2 = sum([toInt(and([q35 % 2 = 0 | q35 <- defined(q22)]))          | q22 <- sched])"},
+ "75": {"onVariable:" "sched"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|sched| / 2 = sum([toInt(and([q35 < 1 + (n_boats - 1) / 2                     | q35 <- defined(q22)]))          | q22 <- sched])"},
+ "76": {"onVariable:" "sched"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|sched| / 2 = sum([toInt(and([q35 > 1 + (n_boats - 1) / 2                     | q35 <- defined(q22)]))          | q22 <- sched])"},
+ "77": {"onVariable:" "sched"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|sched| / 2 = sum([toInt(|defined(q22)| / 2 =            sum([toInt(q36 % 2 = 1) | q36 <- defined(q22)]))          | q22 <- sched])"},
+ "78": {"onVariable:" "sched"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|sched| / 2 = sum([toInt(|defined(q22)| / 2 =            sum([toInt(q36 % 2 = 0) | q36 <- defined(q22)]))          | q22 <- sched])"},
+ "79": {"onVariable:" "sched"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|sched| / 2 = sum([toInt(|defined(q22)| / 2 =            sum([toInt(q36 < 1 + (n_boats - 1) / 2) | q36 <- defined(q22)]))          | q22 <- sched])"},
+ "80": {"onVariable:" "sched"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|sched| / 2 = sum([toInt(|defined(q22)| / 2 =            sum([toInt(q36 > 1 + (n_boats - 1) / 2) | q36 <- defined(q22)]))          | q22 <- sched])"},
+ "81": {"onVariable:" "sched"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|sched| / 2 = sum([toInt(1 >= sum([toInt(q37 % 2 = 1) | q37 <- defined(q22)]))          | q22 <- sched])"},
+ "82": {"onVariable:" "sched"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|sched| / 2 = sum([toInt(1 >= sum([toInt(q37 % 2 = 0) | q37 <- defined(q22)]))          | q22 <- sched])"},
+ "83": {"onVariable:" "sched"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|sched| / 2 = sum([toInt(1 >=            sum([toInt(q37 < 1 + (n_boats - 1) / 2) | q37 <- defined(q22)]))          | q22 <- sched])"},
+ "84": {"onVariable:" "sched"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|sched| / 2 = sum([toInt(1 >=            sum([toInt(q37 > 1 + (n_boats - 1) / 2) | q37 <- defined(q22)]))          | q22 <- sched])"},
+ "85": {"onVariable:" "sched"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|sched| / 2 = sum([toInt(|defined(q22)| / 2 + 1 >=            sum([toInt(q38 % 2 = 1) | q38 <- defined(q22)])            /\\            |defined(q22)| / 2 - 1 <=            sum([toInt(q38 % 2 = 1) | q38 <- defined(q22)]))          | q22 <- sched])"},
+ "86": {"onVariable:" "sched"
+        "groups:" ["IntOddEven"]
+        "constraint:" "|sched| / 2 = sum([toInt(|defined(q22)| / 2 + 1 >=            sum([toInt(q38 % 2 = 0) | q38 <- defined(q22)])            /\\            |defined(q22)| / 2 - 1 <=            sum([toInt(q38 % 2 = 0) | q38 <- defined(q22)]))          | q22 <- sched])"},
+ "87": {"onVariable:" "sched"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|sched| / 2 = sum([toInt(|defined(q22)| / 2 + 1 >=            sum([toInt(q38 < 1 + (n_boats - 1) / 2) | q38 <- defined(q22)])            /\\            |defined(q22)| / 2 - 1 <=            sum([toInt(q38 < 1 + (n_boats - 1) / 2) | q38 <- defined(q22)]))          | q22 <- sched])"},
+ "88": {"onVariable:" "sched"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "|sched| / 2 = sum([toInt(|defined(q22)| / 2 + 1 >=            sum([toInt(q38 > 1 + (n_boats - 1) / 2) | q38 <- defined(q22)])            /\\            |defined(q22)| / 2 - 1 <=            sum([toInt(q38 > 1 + (n_boats - 1) / 2) | q38 <- defined(q22)]))          | q22 <- sched])"},
+ "89": {"onVariable:" "sched"
+        "groups:" ["FuncIncreaseDecrease"]
+        "constraint:" "1 >= sum([toInt(and([and([q40 < q41 ->                      image(q39, q40) <= image(q39, q41)                          | q41 <- defined(q39)])                     | q40 <- defined(q39)]))          | q39 <- sched])"},
+ "90": {"onVariable:" "sched"
+        "groups:" ["FuncIncreaseDecrease"]
+        "constraint:" "1 >= sum([toInt(and([and([q42 < q43 ->                      image(q39, q42) >= image(q39, q43)                          | q43 <- defined(q39)])                     | q42 <- defined(q39)]))          | q39 <- sched])"},
+ "91": {"onVariable:" "sched"
+        "groups:" ["FuncIncreaseDecrease"]
+        "constraint:" "1 >= sum([toInt(and([image(q39, min(defined(q39))) <= image(q39, q44)                     | q44 <- defined(q39)]))          | q39 <- sched])"},
+ "92": {"onVariable:" "sched"
+        "groups:" ["FuncIncreaseDecrease"]
+        "constraint:" "1 >= sum([toInt(and([image(q39, max(defined(q39))) >= image(q39, q45)                     | q45 <- defined(q39)]))          | q39 <- sched])"},
+ "93": {"onVariable:" "sched"
+        "groups:" ["IntOddEven"]
+        "constraint:" "1 >= sum([toInt(and([q47 % 2 = 1 | q47 <- range(q39)])) | q39 <- sched])"},
+ "94": {"onVariable:" "sched"
+        "groups:" ["IntOddEven"]
+        "constraint:" "1 >= sum([toInt(and([q47 % 2 = 0 | q47 <- range(q39)])) | q39 <- sched])"},
+ "95": {"onVariable:" "sched"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "1 >= sum([toInt(and([q47 < 1 + (n_boats - 1) / 2 | q47 <- range(q39)]))          | q39 <- sched])"},
+ "96": {"onVariable:" "sched"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "1 >= sum([toInt(and([q47 > 1 + (n_boats - 1) / 2 | q47 <- range(q39)]))          | q39 <- sched])"},
+ "97": {"onVariable:" "sched"
+        "groups:" ["IntOddEven"]
+        "constraint:" "1 >= sum([toInt(|range(q39)| / 2 =            sum([toInt(q48 % 2 = 1) | q48 <- range(q39)]))          | q39 <- sched])"},
+ "98": {"onVariable:" "sched"
+        "groups:" ["IntOddEven"]
+        "constraint:" "1 >= sum([toInt(|range(q39)| / 2 =            sum([toInt(q48 % 2 = 0) | q48 <- range(q39)]))          | q39 <- sched])"},
+ "99": {"onVariable:" "sched"
+        "groups:" ["IntLowHigh"]
+        "constraint:" "1 >= sum([toInt(|range(q39)| / 2 =            sum([toInt(q48 < 1 + (n_boats - 1) / 2) | q48 <- range(q39)]))          | q39 <- sched])"},
+ "100": {"onVariable:" "sched"
+         "groups:" ["IntLowHigh"]
+         "constraint:" "1 >= sum([toInt(|range(q39)| / 2 =            sum([toInt(q48 > 1 + (n_boats - 1) / 2) | q48 <- range(q39)]))          | q39 <- sched])"},
+ "101": {"onVariable:" "sched"
+         "groups:" ["IntOddEven"]
+         "constraint:" "1 >= sum([toInt(1 >= sum([toInt(q49 % 2 = 1) | q49 <- range(q39)]))          | q39 <- sched])"},
+ "102": {"onVariable:" "sched"
+         "groups:" ["IntOddEven"]
+         "constraint:" "1 >= sum([toInt(1 >= sum([toInt(q49 % 2 = 0) | q49 <- range(q39)]))          | q39 <- sched])"},
+ "103": {"onVariable:" "sched"
+         "groups:" ["IntLowHigh"]
+         "constraint:" "1 >= sum([toInt(1 >=            sum([toInt(q49 < 1 + (n_boats - 1) / 2) | q49 <- range(q39)]))          | q39 <- sched])"},
+ "104": {"onVariable:" "sched"
+         "groups:" ["IntLowHigh"]
+         "constraint:" "1 >= sum([toInt(1 >=            sum([toInt(q49 > 1 + (n_boats - 1) / 2) | q49 <- range(q39)]))          | q39 <- sched])"},
+ "105": {"onVariable:" "sched"
+         "groups:" ["IntOddEven"]
+         "constraint:" "1 >= sum([toInt(|range(q39)| / 2 + 1 >=            sum([toInt(q50 % 2 = 1) | q50 <- range(q39)])            /\\            |range(q39)| / 2 - 1 <=            sum([toInt(q50 % 2 = 1) | q50 <- range(q39)]))          | q39 <- sched])"},
+ "106": {"onVariable:" "sched"
+         "groups:" ["IntOddEven"]
+         "constraint:" "1 >= sum([toInt(|range(q39)| / 2 + 1 >=            sum([toInt(q50 % 2 = 0) | q50 <- range(q39)])            /\\            |range(q39)| / 2 - 1 <=            sum([toInt(q50 % 2 = 0) | q50 <- range(q39)]))          | q39 <- sched])"},
+ "107": {"onVariable:" "sched"
+         "groups:" ["IntLowHigh"]
+         "constraint:" "1 >= sum([toInt(|range(q39)| / 2 + 1 >=            sum([toInt(q50 < 1 + (n_boats - 1) / 2) | q50 <- range(q39)])            /\\            |range(q39)| / 2 - 1 <=            sum([toInt(q50 < 1 + (n_boats - 1) / 2) | q50 <- range(q39)]))          | q39 <- sched])"},
+ "108": {"onVariable:" "sched"
+         "groups:" ["IntLowHigh"]
+         "constraint:" "1 >= sum([toInt(|range(q39)| / 2 + 1 >=            sum([toInt(q50 > 1 + (n_boats - 1) / 2) | q50 <- range(q39)])            /\\            |range(q39)| / 2 - 1 <=            sum([toInt(q50 > 1 + (n_boats - 1) / 2) | q50 <- range(q39)]))          | q39 <- sched])"},
+ "109": {"onVariable:" "sched"
+         "groups:" ["IntOddEven"]
+         "constraint:" "1 >= sum([toInt(and([q52 % 2 = 1 | q52 <- defined(q39)]))          | q39 <- sched])"},
+ "110": {"onVariable:" "sched"
+         "groups:" ["IntOddEven"]
+         "constraint:" "1 >= sum([toInt(and([q52 % 2 = 0 | q52 <- defined(q39)]))          | q39 <- sched])"},
+ "111": {"onVariable:" "sched"
+         "groups:" ["IntLowHigh"]
+         "constraint:" "1 >= sum([toInt(and([q52 < 1 + (n_boats - 1) / 2                     | q52 <- defined(q39)]))          | q39 <- sched])"},
+ "112": {"onVariable:" "sched"
+         "groups:" ["IntLowHigh"]
+         "constraint:" "1 >= sum([toInt(and([q52 > 1 + (n_boats - 1) / 2                     | q52 <- defined(q39)]))          | q39 <- sched])"},
+ "113": {"onVariable:" "sched"
+         "groups:" ["IntOddEven"]
+         "constraint:" "1 >= sum([toInt(|defined(q39)| / 2 =            sum([toInt(q53 % 2 = 1) | q53 <- defined(q39)]))          | q39 <- sched])"},
+ "114": {"onVariable:" "sched"
+         "groups:" ["IntOddEven"]
+         "constraint:" "1 >= sum([toInt(|defined(q39)| / 2 =            sum([toInt(q53 % 2 = 0) | q53 <- defined(q39)]))          | q39 <- sched])"},
+ "115": {"onVariable:" "sched"
+         "groups:" ["IntLowHigh"]
+         "constraint:" "1 >= sum([toInt(|defined(q39)| / 2 =            sum([toInt(q53 < 1 + (n_boats - 1) / 2) | q53 <- defined(q39)]))          | q39 <- sched])"},
+ "116": {"onVariable:" "sched"
+         "groups:" ["IntLowHigh"]
+         "constraint:" "1 >= sum([toInt(|defined(q39)| / 2 =            sum([toInt(q53 > 1 + (n_boats - 1) / 2) | q53 <- defined(q39)]))          | q39 <- sched])"},
+ "117": {"onVariable:" "sched"
+         "groups:" ["IntOddEven"]
+         "constraint:" "1 >= sum([toInt(1 >= sum([toInt(q54 % 2 = 1) | q54 <- defined(q39)]))          | q39 <- sched])"},
+ "118": {"onVariable:" "sched"
+         "groups:" ["IntOddEven"]
+         "constraint:" "1 >= sum([toInt(1 >= sum([toInt(q54 % 2 = 0) | q54 <- defined(q39)]))          | q39 <- sched])"},
+ "119": {"onVariable:" "sched"
+         "groups:" ["IntLowHigh"]
+         "constraint:" "1 >= sum([toInt(1 >=            sum([toInt(q54 < 1 + (n_boats - 1) / 2) | q54 <- defined(q39)]))          | q39 <- sched])"},
+ "120": {"onVariable:" "sched"
+         "groups:" ["IntLowHigh"]
+         "constraint:" "1 >= sum([toInt(1 >=            sum([toInt(q54 > 1 + (n_boats - 1) / 2) | q54 <- defined(q39)]))          | q39 <- sched])"},
+ "121": {"onVariable:" "sched"
+         "groups:" ["IntOddEven"]
+         "constraint:" "1 >= sum([toInt(|defined(q39)| / 2 + 1 >=            sum([toInt(q55 % 2 = 1) | q55 <- defined(q39)])            /\\            |defined(q39)| / 2 - 1 <=            sum([toInt(q55 % 2 = 1) | q55 <- defined(q39)]))          | q39 <- sched])"},
+ "122": {"onVariable:" "sched"
+         "groups:" ["IntOddEven"]
+         "constraint:" "1 >= sum([toInt(|defined(q39)| / 2 + 1 >=            sum([toInt(q55 % 2 = 0) | q55 <- defined(q39)])            /\\            |defined(q39)| / 2 - 1 <=            sum([toInt(q55 % 2 = 0) | q55 <- defined(q39)]))          | q39 <- sched])"},
+ "123": {"onVariable:" "sched"
+         "groups:" ["IntLowHigh"]
+         "constraint:" "1 >= sum([toInt(|defined(q39)| / 2 + 1 >=            sum([toInt(q55 < 1 + (n_boats - 1) / 2) | q55 <- defined(q39)])            /\\            |defined(q39)| / 2 - 1 <=            sum([toInt(q55 < 1 + (n_boats - 1) / 2) | q55 <- defined(q39)]))          | q39 <- sched])"},
+ "124": {"onVariable:" "sched"
+         "groups:" ["IntLowHigh"]
+         "constraint:" "1 >= sum([toInt(|defined(q39)| / 2 + 1 >=            sum([toInt(q55 > 1 + (n_boats - 1) / 2) | q55 <- defined(q39)])            /\\            |defined(q39)| / 2 - 1 <=            sum([toInt(q55 > 1 + (n_boats - 1) / 2) | q55 <- defined(q39)]))          | q39 <- sched])"},
+ "125": {"onVariable:" "sched"
+         "groups:" ["FuncIncreaseDecrease"]
+         "constraint:" "|sched| / 2 + 1 >= sum([toInt(and([and([q57 < q58 ->                      image(q56, q57) <= image(q56, q58)                          | q58 <- defined(q56)])                     | q57 <- defined(q56)]))          | q56 <- sched]) /\\ |sched| / 2 - 1 <= sum([toInt(and([and([q57 < q58 ->                      image(q56, q57) <= image(q56, q58)                          | q58 <- defined(q56)])                     | q57 <- defined(q56)]))          | q56 <- sched])"},
+ "126": {"onVariable:" "sched"
+         "groups:" ["FuncIncreaseDecrease"]
+         "constraint:" "|sched| / 2 + 1 >= sum([toInt(and([and([q59 < q60 ->                      image(q56, q59) >= image(q56, q60)                          | q60 <- defined(q56)])                     | q59 <- defined(q56)]))          | q56 <- sched]) /\\ |sched| / 2 - 1 <= sum([toInt(and([and([q59 < q60 ->                      image(q56, q59) >= image(q56, q60)                          | q60 <- defined(q56)])                     | q59 <- defined(q56)]))          | q56 <- sched])"},
+ "127": {"onVariable:" "sched"
+         "groups:" ["FuncIncreaseDecrease"]
+         "constraint:" "|sched| / 2 + 1 >= sum([toInt(and([image(q56, min(defined(q56))) <= image(q56, q61)                     | q61 <- defined(q56)]))          | q56 <- sched]) /\\ |sched| / 2 - 1 <= sum([toInt(and([image(q56, min(defined(q56))) <= image(q56, q61)                     | q61 <- defined(q56)]))          | q56 <- sched])"},
+ "128": {"onVariable:" "sched"
+         "groups:" ["FuncIncreaseDecrease"]
+         "constraint:" "|sched| / 2 + 1 >= sum([toInt(and([image(q56, max(defined(q56))) >= image(q56, q62)                     | q62 <- defined(q56)]))          | q56 <- sched]) /\\ |sched| / 2 - 1 <= sum([toInt(and([image(q56, max(defined(q56))) >= image(q56, q62)                     | q62 <- defined(q56)]))          | q56 <- sched])"},
+ "129": {"onVariable:" "sched"
+         "groups:" ["IntOddEven"]
+         "constraint:" "|sched| / 2 + 1 >= sum([toInt(and([q64 % 2 = 1 | q64 <- range(q56)])) | q56 <- sched]) /\\ |sched| / 2 - 1 <= sum([toInt(and([q64 % 2 = 1 | q64 <- range(q56)])) | q56 <- sched])"},
+ "130": {"onVariable:" "sched"
+         "groups:" ["IntOddEven"]
+         "constraint:" "|sched| / 2 + 1 >= sum([toInt(and([q64 % 2 = 0 | q64 <- range(q56)])) | q56 <- sched]) /\\ |sched| / 2 - 1 <= sum([toInt(and([q64 % 2 = 0 | q64 <- range(q56)])) | q56 <- sched])"},
+ "131": {"onVariable:" "sched"
+         "groups:" ["IntLowHigh"]
+         "constraint:" "|sched| / 2 + 1 >= sum([toInt(and([q64 < 1 + (n_boats - 1) / 2 | q64 <- range(q56)]))          | q56 <- sched]) /\\ |sched| / 2 - 1 <= sum([toInt(and([q64 < 1 + (n_boats - 1) / 2 | q64 <- range(q56)]))          | q56 <- sched])"},
+ "132": {"onVariable:" "sched"
+         "groups:" ["IntLowHigh"]
+         "constraint:" "|sched| / 2 + 1 >= sum([toInt(and([q64 > 1 + (n_boats - 1) / 2 | q64 <- range(q56)]))          | q56 <- sched]) /\\ |sched| / 2 - 1 <= sum([toInt(and([q64 > 1 + (n_boats - 1) / 2 | q64 <- range(q56)]))          | q56 <- sched])"},
+ "133": {"onVariable:" "sched"
+         "groups:" ["IntOddEven"]
+         "constraint:" "|sched| / 2 + 1 >= sum([toInt(|range(q56)| / 2 =            sum([toInt(q65 % 2 = 1) | q65 <- range(q56)]))          | q56 <- sched]) /\\ |sched| / 2 - 1 <= sum([toInt(|range(q56)| / 2 =            sum([toInt(q65 % 2 = 1) | q65 <- range(q56)]))          | q56 <- sched])"},
+ "134": {"onVariable:" "sched"
+         "groups:" ["IntOddEven"]
+         "constraint:" "|sched| / 2 + 1 >= sum([toInt(|range(q56)| / 2 =            sum([toInt(q65 % 2 = 0) | q65 <- range(q56)]))          | q56 <- sched]) /\\ |sched| / 2 - 1 <= sum([toInt(|range(q56)| / 2 =            sum([toInt(q65 % 2 = 0) | q65 <- range(q56)]))          | q56 <- sched])"},
+ "135": {"onVariable:" "sched"
+         "groups:" ["IntLowHigh"]
+         "constraint:" "|sched| / 2 + 1 >= sum([toInt(|range(q56)| / 2 =            sum([toInt(q65 < 1 + (n_boats - 1) / 2) | q65 <- range(q56)]))          | q56 <- sched]) /\\ |sched| / 2 - 1 <= sum([toInt(|range(q56)| / 2 =            sum([toInt(q65 < 1 + (n_boats - 1) / 2) | q65 <- range(q56)]))          | q56 <- sched])"},
+ "136": {"onVariable:" "sched"
+         "groups:" ["IntLowHigh"]
+         "constraint:" "|sched| / 2 + 1 >= sum([toInt(|range(q56)| / 2 =            sum([toInt(q65 > 1 + (n_boats - 1) / 2) | q65 <- range(q56)]))          | q56 <- sched]) /\\ |sched| / 2 - 1 <= sum([toInt(|range(q56)| / 2 =            sum([toInt(q65 > 1 + (n_boats - 1) / 2) | q65 <- range(q56)]))          | q56 <- sched])"},
+ "137": {"onVariable:" "sched"
+         "groups:" ["IntOddEven"]
+         "constraint:" "|sched| / 2 + 1 >= sum([toInt(1 >= sum([toInt(q66 % 2 = 1) | q66 <- range(q56)]))          | q56 <- sched]) /\\ |sched| / 2 - 1 <= sum([toInt(1 >= sum([toInt(q66 % 2 = 1) | q66 <- range(q56)]))          | q56 <- sched])"},
+ "138": {"onVariable:" "sched"
+         "groups:" ["IntOddEven"]
+         "constraint:" "|sched| / 2 + 1 >= sum([toInt(1 >= sum([toInt(q66 % 2 = 0) | q66 <- range(q56)]))          | q56 <- sched]) /\\ |sched| / 2 - 1 <= sum([toInt(1 >= sum([toInt(q66 % 2 = 0) | q66 <- range(q56)]))          | q56 <- sched])"},
+ "139": {"onVariable:" "sched"
+         "groups:" ["IntLowHigh"]
+         "constraint:" "|sched| / 2 + 1 >= sum([toInt(1 >=            sum([toInt(q66 < 1 + (n_boats - 1) / 2) | q66 <- range(q56)]))          | q56 <- sched]) /\\ |sched| / 2 - 1 <= sum([toInt(1 >=            sum([toInt(q66 < 1 + (n_boats - 1) / 2) | q66 <- range(q56)]))          | q56 <- sched])"},
+ "140": {"onVariable:" "sched"
+         "groups:" ["IntLowHigh"]
+         "constraint:" "|sched| / 2 + 1 >= sum([toInt(1 >=            sum([toInt(q66 > 1 + (n_boats - 1) / 2) | q66 <- range(q56)]))          | q56 <- sched]) /\\ |sched| / 2 - 1 <= sum([toInt(1 >=            sum([toInt(q66 > 1 + (n_boats - 1) / 2) | q66 <- range(q56)]))          | q56 <- sched])"},
+ "141": {"onVariable:" "sched"
+         "groups:" ["IntOddEven"]
+         "constraint:" "|sched| / 2 + 1 >= sum([toInt(|range(q56)| / 2 + 1 >=            sum([toInt(q67 % 2 = 1) | q67 <- range(q56)])            /\\            |range(q56)| / 2 - 1 <=            sum([toInt(q67 % 2 = 1) | q67 <- range(q56)]))          | q56 <- sched]) /\\ |sched| / 2 - 1 <= sum([toInt(|range(q56)| / 2 + 1 >=            sum([toInt(q67 % 2 = 1) | q67 <- range(q56)])            /\\            |range(q56)| / 2 - 1 <=            sum([toInt(q67 % 2 = 1) | q67 <- range(q56)]))          | q56 <- sched])"},
+ "142": {"onVariable:" "sched"
+         "groups:" ["IntOddEven"]
+         "constraint:" "|sched| / 2 + 1 >= sum([toInt(|range(q56)| / 2 + 1 >=            sum([toInt(q67 % 2 = 0) | q67 <- range(q56)])            /\\            |range(q56)| / 2 - 1 <=            sum([toInt(q67 % 2 = 0) | q67 <- range(q56)]))          | q56 <- sched]) /\\ |sched| / 2 - 1 <= sum([toInt(|range(q56)| / 2 + 1 >=            sum([toInt(q67 % 2 = 0) | q67 <- range(q56)])            /\\            |range(q56)| / 2 - 1 <=            sum([toInt(q67 % 2 = 0) | q67 <- range(q56)]))          | q56 <- sched])"},
+ "143": {"onVariable:" "sched"
+         "groups:" ["IntLowHigh"]
+         "constraint:" "|sched| / 2 + 1 >= sum([toInt(|range(q56)| / 2 + 1 >=            sum([toInt(q67 < 1 + (n_boats - 1) / 2) | q67 <- range(q56)])            /\\            |range(q56)| / 2 - 1 <=            sum([toInt(q67 < 1 + (n_boats - 1) / 2) | q67 <- range(q56)]))          | q56 <- sched]) /\\ |sched| / 2 - 1 <= sum([toInt(|range(q56)| / 2 + 1 >=            sum([toInt(q67 < 1 + (n_boats - 1) / 2) | q67 <- range(q56)])            /\\            |range(q56)| / 2 - 1 <=            sum([toInt(q67 < 1 + (n_boats - 1) / 2) | q67 <- range(q56)]))          | q56 <- sched])"},
+ "144": {"onVariable:" "sched"
+         "groups:" ["IntLowHigh"]
+         "constraint:" "|sched| / 2 + 1 >= sum([toInt(|range(q56)| / 2 + 1 >=            sum([toInt(q67 > 1 + (n_boats - 1) / 2) | q67 <- range(q56)])            /\\            |range(q56)| / 2 - 1 <=            sum([toInt(q67 > 1 + (n_boats - 1) / 2) | q67 <- range(q56)]))          | q56 <- sched]) /\\ |sched| / 2 - 1 <= sum([toInt(|range(q56)| / 2 + 1 >=            sum([toInt(q67 > 1 + (n_boats - 1) / 2) | q67 <- range(q56)])            /\\            |range(q56)| / 2 - 1 <=            sum([toInt(q67 > 1 + (n_boats - 1) / 2) | q67 <- range(q56)]))          | q56 <- sched])"},
+ "145": {"onVariable:" "sched"
+         "groups:" ["IntOddEven"]
+         "constraint:" "|sched| / 2 + 1 >= sum([toInt(and([q69 % 2 = 1 | q69 <- defined(q56)]))          | q56 <- sched]) /\\ |sched| / 2 - 1 <= sum([toInt(and([q69 % 2 = 1 | q69 <- defined(q56)]))          | q56 <- sched])"},
+ "146": {"onVariable:" "sched"
+         "groups:" ["IntOddEven"]
+         "constraint:" "|sched| / 2 + 1 >= sum([toInt(and([q69 % 2 = 0 | q69 <- defined(q56)]))          | q56 <- sched]) /\\ |sched| / 2 - 1 <= sum([toInt(and([q69 % 2 = 0 | q69 <- defined(q56)]))          | q56 <- sched])"},
+ "147": {"onVariable:" "sched"
+         "groups:" ["IntLowHigh"]
+         "constraint:" "|sched| / 2 + 1 >= sum([toInt(and([q69 < 1 + (n_boats - 1) / 2                     | q69 <- defined(q56)]))          | q56 <- sched]) /\\ |sched| / 2 - 1 <= sum([toInt(and([q69 < 1 + (n_boats - 1) / 2                     | q69 <- defined(q56)]))          | q56 <- sched])"},
+ "148": {"onVariable:" "sched"
+         "groups:" ["IntLowHigh"]
+         "constraint:" "|sched| / 2 + 1 >= sum([toInt(and([q69 > 1 + (n_boats - 1) / 2                     | q69 <- defined(q56)]))          | q56 <- sched]) /\\ |sched| / 2 - 1 <= sum([toInt(and([q69 > 1 + (n_boats - 1) / 2                     | q69 <- defined(q56)]))          | q56 <- sched])"},
+ "149": {"onVariable:" "sched"
+         "groups:" ["IntOddEven"]
+         "constraint:" "|sched| / 2 + 1 >= sum([toInt(|defined(q56)| / 2 =            sum([toInt(q70 % 2 = 1) | q70 <- defined(q56)]))          | q56 <- sched]) /\\ |sched| / 2 - 1 <= sum([toInt(|defined(q56)| / 2 =            sum([toInt(q70 % 2 = 1) | q70 <- defined(q56)]))          | q56 <- sched])"},
+ "150": {"onVariable:" "sched"
+         "groups:" ["IntOddEven"]
+         "constraint:" "|sched| / 2 + 1 >= sum([toInt(|defined(q56)| / 2 =            sum([toInt(q70 % 2 = 0) | q70 <- defined(q56)]))          | q56 <- sched]) /\\ |sched| / 2 - 1 <= sum([toInt(|defined(q56)| / 2 =            sum([toInt(q70 % 2 = 0) | q70 <- defined(q56)]))          | q56 <- sched])"},
+ "151": {"onVariable:" "sched"
+         "groups:" ["IntLowHigh"]
+         "constraint:" "|sched| / 2 + 1 >= sum([toInt(|defined(q56)| / 2 =            sum([toInt(q70 < 1 + (n_boats - 1) / 2) | q70 <- defined(q56)]))          | q56 <- sched]) /\\ |sched| / 2 - 1 <= sum([toInt(|defined(q56)| / 2 =            sum([toInt(q70 < 1 + (n_boats - 1) / 2) | q70 <- defined(q56)]))          | q56 <- sched])"},
+ "152": {"onVariable:" "sched"
+         "groups:" ["IntLowHigh"]
+         "constraint:" "|sched| / 2 + 1 >= sum([toInt(|defined(q56)| / 2 =            sum([toInt(q70 > 1 + (n_boats - 1) / 2) | q70 <- defined(q56)]))          | q56 <- sched]) /\\ |sched| / 2 - 1 <= sum([toInt(|defined(q56)| / 2 =            sum([toInt(q70 > 1 + (n_boats - 1) / 2) | q70 <- defined(q56)]))          | q56 <- sched])"},
+ "153": {"onVariable:" "sched"
+         "groups:" ["IntOddEven"]
+         "constraint:" "|sched| / 2 + 1 >= sum([toInt(1 >= sum([toInt(q71 % 2 = 1) | q71 <- defined(q56)]))          | q56 <- sched]) /\\ |sched| / 2 - 1 <= sum([toInt(1 >= sum([toInt(q71 % 2 = 1) | q71 <- defined(q56)]))          | q56 <- sched])"},
+ "154": {"onVariable:" "sched"
+         "groups:" ["IntOddEven"]
+         "constraint:" "|sched| / 2 + 1 >= sum([toInt(1 >= sum([toInt(q71 % 2 = 0) | q71 <- defined(q56)]))          | q56 <- sched]) /\\ |sched| / 2 - 1 <= sum([toInt(1 >= sum([toInt(q71 % 2 = 0) | q71 <- defined(q56)]))          | q56 <- sched])"},
+ "155": {"onVariable:" "sched"
+         "groups:" ["IntLowHigh"]
+         "constraint:" "|sched| / 2 + 1 >= sum([toInt(1 >=            sum([toInt(q71 < 1 + (n_boats - 1) / 2) | q71 <- defined(q56)]))          | q56 <- sched]) /\\ |sched| / 2 - 1 <= sum([toInt(1 >=            sum([toInt(q71 < 1 + (n_boats - 1) / 2) | q71 <- defined(q56)]))          | q56 <- sched])"},
+ "156": {"onVariable:" "sched"
+         "groups:" ["IntLowHigh"]
+         "constraint:" "|sched| / 2 + 1 >= sum([toInt(1 >=            sum([toInt(q71 > 1 + (n_boats - 1) / 2) | q71 <- defined(q56)]))          | q56 <- sched]) /\\ |sched| / 2 - 1 <= sum([toInt(1 >=            sum([toInt(q71 > 1 + (n_boats - 1) / 2) | q71 <- defined(q56)]))          | q56 <- sched])"},
+ "157": {"onVariable:" "sched"
+         "groups:" ["IntOddEven"]
+         "constraint:" "|sched| / 2 + 1 >= sum([toInt(|defined(q56)| / 2 + 1 >=            sum([toInt(q72 % 2 = 1) | q72 <- defined(q56)])            /\\            |defined(q56)| / 2 - 1 <=            sum([toInt(q72 % 2 = 1) | q72 <- defined(q56)]))          | q56 <- sched]) /\\ |sched| / 2 - 1 <= sum([toInt(|defined(q56)| / 2 + 1 >=            sum([toInt(q72 % 2 = 1) | q72 <- defined(q56)])            /\\            |defined(q56)| / 2 - 1 <=            sum([toInt(q72 % 2 = 1) | q72 <- defined(q56)]))          | q56 <- sched])"},
+ "158": {"onVariable:" "sched"
+         "groups:" ["IntOddEven"]
+         "constraint:" "|sched| / 2 + 1 >= sum([toInt(|defined(q56)| / 2 + 1 >=            sum([toInt(q72 % 2 = 0) | q72 <- defined(q56)])            /\\            |defined(q56)| / 2 - 1 <=            sum([toInt(q72 % 2 = 0) | q72 <- defined(q56)]))          | q56 <- sched]) /\\ |sched| / 2 - 1 <= sum([toInt(|defined(q56)| / 2 + 1 >=            sum([toInt(q72 % 2 = 0) | q72 <- defined(q56)])            /\\            |defined(q56)| / 2 - 1 <=            sum([toInt(q72 % 2 = 0) | q72 <- defined(q56)]))          | q56 <- sched])"},
+ "159": {"onVariable:" "sched"
+         "groups:" ["IntLowHigh"]
+         "constraint:" "|sched| / 2 + 1 >= sum([toInt(|defined(q56)| / 2 + 1 >=            sum([toInt(q72 < 1 + (n_boats - 1) / 2) | q72 <- defined(q56)])            /\\            |defined(q56)| / 2 - 1 <=            sum([toInt(q72 < 1 + (n_boats - 1) / 2) | q72 <- defined(q56)]))          | q56 <- sched]) /\\ |sched| / 2 - 1 <= sum([toInt(|defined(q56)| / 2 + 1 >=            sum([toInt(q72 < 1 + (n_boats - 1) / 2) | q72 <- defined(q56)])            /\\            |defined(q56)| / 2 - 1 <=            sum([toInt(q72 < 1 + (n_boats - 1) / 2) | q72 <- defined(q56)]))          | q56 <- sched])"},
+ "160": {"onVariable:" "sched"
+         "groups:" ["IntLowHigh"]
+         "constraint:" "|sched| / 2 + 1 >= sum([toInt(|defined(q56)| / 2 + 1 >=            sum([toInt(q72 > 1 + (n_boats - 1) / 2) | q72 <- defined(q56)])            /\\            |defined(q56)| / 2 - 1 <=            sum([toInt(q72 > 1 + (n_boats - 1) / 2) | q72 <- defined(q56)]))          | q56 <- sched]) /\\ |sched| / 2 - 1 <= sum([toInt(|defined(q56)| / 2 + 1 >=            sum([toInt(q72 > 1 + (n_boats - 1) / 2) | q72 <- defined(q56)])            /\\            |defined(q56)| / 2 - 1 <=            sum([toInt(q72 > 1 + (n_boats - 1) / 2) | q72 <- defined(q56)]))          | q56 <- sched])"}}

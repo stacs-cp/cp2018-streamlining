@@ -1,0 +1,14 @@
+{
+ "6": {"onVariable:" "p"
+       "groups:" ["IntOddEven"]
+       "constraint:" "and([|q2| / 2 = sum([toInt(q4 % 2 = 0) | q4 <- q2])          | q2 <- parts(p)])"},
+ "7": {"onVariable:" "p"
+       "groups:" ["IntLowHigh"]
+       "constraint:" "and([|q2| / 2 = sum([toInt(q4 < 1 + (n - 1) / 2) | q4 <- q2])          | q2 <- parts(p)])"},
+ "8": {"onVariable:" "p"
+       "groups:" ["IntLowHigh"]
+       "constraint:" "and([|q2| / 2 = sum([toInt(q4 > 1 + (n - 1) / 2) | q4 <- q2])          | q2 <- parts(p)])"},
+ "65": {"onVariable:" "p"
+        "groups:" ["PartitionRegular"]
+        "constraint:" "minPartSize(p, |participants(p)| / |parts(p)| - 1) /\\ maxPartSize(p, |participants(p)| / |parts(p)| + 1)"}
+}
