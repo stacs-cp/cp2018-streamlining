@@ -48,11 +48,11 @@
 - |range(edgeID)| / 2 + 1 >= sum([toInt(q27 > 1 + (2 * n - 1) / 2) | q27 <- range(edgeID)]) /\ |range(edgeID)| / 2 - 1 <= sum([toInt(q27 > 1 + (2 * n - 1) / 2) | q27 <- range(edgeID)])
 
 
-# PPP
+# PPP
 
 - |hosts| / 2 = sum([toInt(q2 % 2 = 0) | q2 <- hosts])
 - and([and([and([q6 < q7 -> image(q5, q6) <= image(q5, q7) | q7 <- defined(q5)]) | q6 <- defined(q5)]) | q5 <- sched])
-- `and([|defined(q5)| / 2 + 1 >= sum([toInt(q21 > 1 + (n_boats - 1) / 2) | q21 <- defined(q5)]) /\ |defined(q5)| / 2 - 1 <= sum([toInt(q21 > 1 + (n_boats - 1) / 2) | q21 <- defined(q5)]) | q5 <- sched])`
+- and([|defined(q5)| / 2 + 1 >= sum([toInt(q21 > 1 + (n_boats - 1) / 2) | q21 <- defined(q5)]) /\ |defined(q5)| / 2 - 1 <= sum([toInt(q21 > 1 + (n_boats - 1) / 2) | q21 <- defined(q5)]) | q5 <- sched])
 - |sched| / 2 = sum([toInt(1 >= sum([toInt(q32 < 1 + (n_boats - 1) / 2) | q32 <- range(q22)])) | q22 <- sched])
 
 
